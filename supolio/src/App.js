@@ -7,13 +7,12 @@ import {
 import Main from "./pages/main.tsx";
 import Info from "./pages/info.tsx";
 import Header from "./components/Header.tsx";
-import Footer from "./components/Footer.tsx";
 import Project from "./pages/project.tsx";
 
 const App = () => {
   return (
     <Router>
-      <div className="App flex flex-col min-h-screen justify-between">
+      <div className="App flex flex-col h-screen">
         <Header />
         <div className="flex-grow">
           <Routes>
@@ -23,7 +22,6 @@ const App = () => {
             <Route path="/project" element={<Project />} />
           </Routes>
         </div>
-        <Footer />
       </div>
     </Router>
   );
