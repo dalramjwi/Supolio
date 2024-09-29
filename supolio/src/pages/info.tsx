@@ -1,78 +1,224 @@
-// pages/info.tsx
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import React, { useState } from "react";
 
 const Info: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [animateText, setAnimateText] = useState(true); // 애니메이션 제어용 상태
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText("dalramjwi@gmail.com");
+    setShowEmailModal(true); // 이메일 클릭 시 모달 띄우기
+  };
+
+  const handleAboutStudyClick = () => {
+    setShowModal(true);
+    setAnimateText(false); // 모달 클릭하면 애니메이션 제거
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const closeEmailModal = () => {
+    setShowEmailModal(false);
+  };
+
   return (
-    <>
-      <div>
-        <p>전화번호: 010-9823-3662</p>
-        <p>이메일: dalramjwi@gmail.com</p>
-        <p>깃허브: [깃허브 주소]</p>
-
-        <h2>Stack</h2>
-        <ul>
-          <li>
-            <strong>Language:</strong> JavaScript, TypeScript, Python
-          </li>
-          <li>
-            <strong>Framework / Library:</strong> React, Next.js, Nest.js,
-            Node.js, TailwindCSS, Vanilla Extract
-          </li>
-          <li>
-            <strong>MarkUp:</strong> HTML5, CSS3
-          </li>
-          <li>
-            <strong>Database:</strong> Sqlite3, PostgreSQL, MongoDB
-          </li>
-          <li>
-            <strong>Tool:</strong> Git, GitHub, Figma, Notion
-          </li>
-          <li>
-            <strong>AWS:</strong> S3, Amplify, EC2
-          </li>
-        </ul>
-
-        <h2>공부 과정</h2>
-        <h3>일일 ToDo 리스트</h3>
-        <ul>
-          <li>매일 아침, 그날의 목표 및 학습할 내용을 정리</li>
-          <li>중요한 과제, 공부할 주제, 실습할 코드 등을 포함</li>
-          <li>완료한 항목에 체크하여 성취감 느끼기</li>
-        </ul>
-
-        <h3>일일 일지 / 작업 기록</h3>
-        <ul>
-          <li>매일 학습한 내용을 요약하고 느낀 점 기록</li>
-          <li>어떤 문제를 해결했는지, 어떤 개념을 이해했는지 적기</li>
-          <li>하루의 학습 성과와 개선할 점 기록</li>
-        </ul>
-
-        <h3>문제 해결 방식</h3>
-        <ul>
-          <li>발생한 문제를 구체적으로 기록하고 해결 과정 정리</li>
-          <li>예시: 에러 메시지, 시도한 해결 방법, 최종적으로 해결한 방법</li>
-          <li>비슷한 문제 발생 시 참고할 수 있는 자료로 활용</li>
-        </ul>
-
-        <h3>헷갈리는 개념 정리</h3>
-        <ul>
-          <li>공식 문서, 블로그, 유튜브 강의 등을 참고하여 정리</li>
-          <li>자신이 이해한 내용을 문서 또는 노트에 기록</li>
-          <li>이해한 내용을 다른 사람에게 설명하며 점검</li>
-        </ul>
-
-        <h3>GPT 활용</h3>
-        <ul>
-          <li>학습한 개념이나 문제에 대해 GPT에게 질문하여 피드백 받기</li>
-          <li>내가 이해한 내용을 정리하고 GPT와 비교하며 부족한 부분 보완</li>
-          <li>특정 개념을 더 깊이 이해하고 싶을 때, 추가 정보나 예제를 요청</li>
-        </ul>
+    <div className="p-10 relative">
+      {/* 상단에 배치된 3열 구조 */}
+      <div className="grid grid-cols-3 text-center gap-8">
+        <div className="pb-4 mb-4">
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
+            PHONE NUMBER
+          </h3>
+          <p>010 - 9823 - 3662</p>
+        </div>
+        <div className="pb-4 mb-4">
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
+            E - MAIL
+          </h3>
+          <p
+            onClick={handleEmailClick}
+            className="cursor-pointer text-blue-500 underline"
+          >
+            dalramjwi@gmail.com
+          </p>
+        </div>
+        <div className="pb-4 mb-4">
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
+            GITHUB
+          </h3>
+          <a href="https://github.com" className="text-blue-500 underline">
+            GITHUB LINK
+          </a>
+        </div>
       </div>
-      <footer>
-        <Link to="/project">project</Link>
-      </footer>
-    </>
+
+      {/* 기술 스택을 분류별로 배치 */}
+      <div className="grid grid-cols-2 text-center gap-8">
+        <div className="pb-4 mb-4">
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
+            STACK
+          </h3>
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">Language</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
+                JavaScript
+              </span>
+              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
+                TypeScript
+              </span>
+              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
+                Python
+              </span>
+            </div>
+          </div>
+
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">Framework / Library</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                React
+              </span>
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                Next.js
+              </span>
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                Nest.js
+              </span>
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                Node.js
+              </span>
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                TailwindCSS
+              </span>
+              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
+                Vanilla Extract
+              </span>
+            </div>
+          </div>
+
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">MarkUp</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-green-100 rounded-lg border border-green-300">
+                HTML5
+              </span>
+              <span className="px-2 py-1 bg-green-100 rounded-lg border border-green-300">
+                CSS3
+              </span>
+            </div>
+          </div>
+
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">Database</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
+                Sqlite3
+              </span>
+              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
+                PostgreSQL
+              </span>
+              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
+                MongoDB
+              </span>
+            </div>
+          </div>
+
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">Tool</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
+                Git
+              </span>
+              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
+                GitHub
+              </span>
+              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
+                Figma
+              </span>
+              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
+                Notion
+              </span>
+            </div>
+          </div>
+
+          <div className="text-left mb-4">
+            <h4 className="text-lg font-semibold mb-2">AWS</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
+                S3
+              </span>
+              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
+                Amplify
+              </span>
+              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
+                EC2
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* About Studying... with animation */}
+        <div
+          className="pb-4 mb-4 cursor-pointer"
+          onClick={handleAboutStudyClick}
+        >
+          <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
+            HOW STUDY
+          </h3>
+          <ul className="list-none">
+            <li className="flex justify-center">
+              <span
+                className={`text-2xl font-bold ${
+                  animateText ? "animate-pulse" : ""
+                }`}
+              >
+                ABOUT STUDYING
+              </span>
+              <span
+                className={`ml-1 text-2xl ${
+                  animateText ? "animate-pulse" : ""
+                }`}
+              >
+                ...
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Email Modal */}
+      {showEmailModal && (
+        <div
+          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50"
+          onClick={closeEmailModal} // 모달 외부 클릭 시 닫히게 처리
+        >
+          <div
+            className="bg-white text-black p-6 rounded-lg shadow-lg"
+            onClick={(e) => e.stopPropagation()} // 모달 안 클릭 시 닫히지 않게
+          >
+            <p>E-mail이 클립보드에 복사되었습니다!</p>
+          </div>
+        </div>
+      )}
+
+      {/* Modal - 클릭하면 나오는 모달 */}
+      {showModal && (
+        <div
+          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50"
+          onClick={closeModal} // 모달 외부 클릭 시 닫히게 처리
+        >
+          <div
+            className="bg-white text-black p-6 rounded-lg shadow-lg"
+            onClick={(e) => e.stopPropagation()} // 모달 안 클릭 시 닫히지 않게
+          >
+            <p>Study Details</p>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
