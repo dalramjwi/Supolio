@@ -59,14 +59,14 @@ const Overview: React.FC = () => {
   const weeks: number[][] = generateCalendar(currentYear, currentMonth);
 
   return (
-    <div className="p-10 text-center">
-      <h2 className="text-4xl font-bold mb-6">{months[currentMonth - 4]}</h2>
+    <div className="pt-10 pr-10 pb-0 pl-10 text-center">
+      <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
       {/* 달 출력 */}
       {/* 이전 달과 다음 달로 이동하는 버튼 */}
-      <div className="flex justify-between mb-6">
+      <div className="flex justify-between mb-4">
         <button
           onClick={handlePrevMonth}
-          className={`px-4 py-2 bg-gray-200 rounded ${
+          className={`px-6 py-2 bg-gray-200 rounded ${
             currentMonth === 4 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={currentMonth === 4} // May가 최소값이므로 이동 제한
@@ -75,7 +75,7 @@ const Overview: React.FC = () => {
         </button>
         <button
           onClick={handleNextMonth}
-          className={`px-4 py-2 bg-gray-200 rounded ${
+          className={`px-6 py-2 bg-gray-200 rounded ${
             currentMonth === 9 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={currentMonth === 9} // October이 최대값이므로 이동 제한
@@ -84,11 +84,14 @@ const Overview: React.FC = () => {
         </button>
       </div>
       {/* 달력 테이블 */}
-      <table className="table-fixed w-full border-collapse border border-gray-400">
+      <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
         <thead>
           <tr>
             {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
-              <th key={day} className="w-1/7 border border-gray-400 py-2">
+              <th
+                key={day}
+                className="w-1/7 border border-gray-400 py-4 text-xl"
+              >
                 {day}
               </th>
             ))}
@@ -98,7 +101,10 @@ const Overview: React.FC = () => {
           {weeks.map((week, i) => (
             <tr key={i}>
               {week.map((day, j) => (
-                <td key={j} className="border border-gray-400 py-2 text-center">
+                <td
+                  key={j}
+                  className="border border-gray-400 py-6 text-xl text-center h-24"
+                >
                   {isNaN(day) ? "" : day}
                 </td>
               ))}
