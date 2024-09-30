@@ -16,10 +16,10 @@ const App = () => {
         <Header />
         <div className="flex-grow border border-black border-t-0">
           <Routes>
-            <Route path="/" element={<Navigate to="/project" />} />
+            <Route path="/" element={<Navigate to="/overview" />} />
             <Route path="/main" element={<Main />} />
             <Route path="/info" element={<Info />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/overview" element={<Project />} />
           </Routes>
         </div>
       </div>
