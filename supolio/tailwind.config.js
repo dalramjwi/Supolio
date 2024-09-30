@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "tab-green": "#98a88a",
-        "tab-gray": "#c7ccb5",
-        "tab-dark": "#2b3435",
+        "tab-green": "#84A98C",
+        "tab-gray": "#CAD2C5",
+        "tab-dark": "#2F3E46",
       },
       fontSize: {
         "heading-lg": "3.5rem",
