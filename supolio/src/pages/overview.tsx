@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// 작업 기간 데이터
 const workPeriod = {
   personal: {
     수록: { start: "5.24", end: "6.12" },
@@ -16,10 +17,12 @@ const workPeriod = {
   },
 };
 
+// 주어진 연도와 달에 대한 주차별 날짜 배열 생성
 const generateCalendar = (year: number, month: number): number[][] => {
   const date = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDayIndex = date.getDay();
+
   const weeks: number[][] = [];
   let week: number[] = new Array(firstDayIndex).fill(NaN);
 
@@ -41,8 +44,44 @@ const generateCalendar = (year: number, month: number): number[][] => {
   return weeks;
 };
 
+// 날짜를 '5.24' 형식에서 Date 객체로 변환
+const parseDate = (dateStr: string, year: number) => {
+  const [month, day] = dateStr.split(".").map(Number);
+  return new Date(year, month - 1, day);
+};
+
+// 주어진 날짜가 작업 기간 내에 포함되는지 확인
+const getProjectInDay = (
+  day: number,
+  month: number,
+  year: number,
+  workPeriod: { [key: string]: { start: string; end: string } }
+) => {
+  return Object.keys(workPeriod).filter((project) => {
+    const start = parseDate(workPeriod[project].start, year);
+    const end =
+      workPeriod[project].end === "NaN"
+        ? new Date()
+        : parseDate(workPeriod[project].end, year);
+    const current = new Date(year, month, day);
+    return current >= start && current <= end;
+  });
+};
+
+const projectColors: { [key: string]: string } = {
+  수록: "bg-red-200",
+  내꿈은급식왕: "bg-blue-200",
+  CustomWidgets: "bg-green-200",
+  도타임: "bg-purple-200",
+  수폴리오: "bg-yellow-200",
+  수상한자판기: "bg-orange-200",
+  DelaN: "bg-pink-200",
+  갈라테이아: "bg-indigo-200",
+  호랑이: "bg-teal-200",
+};
+
 const Overview: React.FC = () => {
-  const [currentMonth, setCurrentMonth] = useState<number>(4);
+  const [currentMonth, setCurrentMonth] = useState<number>(4); // May (0: Jan, 4: May)
   const [currentYear, setCurrentYear] = useState<number>(2024);
 
   const months = ["May", "June", "July", "August", "September", "October"];
@@ -102,14 +141,56 @@ const Overview: React.FC = () => {
         <tbody>
           {weeks.map((week, i) => (
             <tr key={i}>
-              {week.map((day, j) => (
-                <td
-                  key={j}
-                  className="border border-gray-400 py-1 text-xl text-right align-top pr-2 h-24"
-                >
-                  {isNaN(day) ? "" : day}
-                </td>
-              ))}
+              {week.map((day, j) => {
+                const personalProjects = getProjectInDay(
+                  day,
+                  currentMonth,
+                  currentYear,
+                  workPeriod.personal
+                );
+                const teamProjects = getProjectInDay(
+                  day,
+                  currentMonth,
+                  currentYear,
+                  workPeriod.team
+                );
+
+                return (
+                  <td
+                    key={j}
+                    className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
+                  >
+                    {/* 날짜 표시 */}
+                    {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
+                    {/* 개인 프로젝트 막대 */}
+                    {personalProjects.map((project, index) => (
+                      <div
+                        key={project}
+                        className={`${projectColors[project]} absolute w-full h-4 left-0`}
+                        title={project}
+                        style={{ bottom: `${(index + 1) * 8}px` }}
+                      >
+                        <span className="text-xs">{project}</span>
+                      </div>
+                    ))}
+                    {/* 팀 프로젝트 막대 */}
+                    {teamProjects.map((project, index) => (
+                      <div
+                        key={project}
+                        className={`${projectColors[project]} absolute w-full h-4 left-0`}
+                        title={project}
+                        style={{
+                          bottom: `${
+                            (index + personalProjects.length + 1) * 8
+                          }px`,
+                        }}
+                      >
+                        <span className="text-xs">{project}</span>
+                      </div>
+                    ))}
+                  </td>
+                );
+              })}
             </tr>
           ))}
         </tbody>
