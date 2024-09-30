@@ -161,19 +161,16 @@ const Info: React.FC = () => {
         </div>
 
         {/* About Studying... with animation */}
-        <div
-          className="pb-4 mb-4 cursor-pointer"
-          onClick={handleAboutStudyClick}
-        >
+        <div className="pb-4 mb-4">
           <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
             HOW STUDY
           </h3>
           <ul className="list-none">
-            <li className="flex justify-center">
+            <li className="flex justify-center" onClick={handleAboutStudyClick}>
               <span
-                className={`text-2xl font-bold ${
+                className={`text-2xl font-bold cursor-pointer ${
                   animateText ? "animate-pulse" : ""
-                }`}
+                } `}
               >
                 ABOUT STUDYING
               </span>
