@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// 작업 기간 데이터
 const workPeriod = {
   personal: {
     수록: { start: "5.24", end: "6.12" },
@@ -17,7 +16,23 @@ const workPeriod = {
   },
 };
 
-// 주어진 연도와 달에 대한 주차별 날짜 배열 생성
+const projectColors: { [key: string]: string } = {
+  수록: "bg-yellow-400",
+  내꿈은급식왕: "bg-green-400",
+  CustomWidgets: "bg-teal-400",
+  도타임: "bg-blue-400",
+  수폴리오: "bg-purple-400",
+  수상한자판기: "bg-orange-400",
+  DelaN: "bg-pink-400",
+  갈라테이아: "bg-indigo-400",
+  호랑이: "bg-green-400",
+};
+
+const parseDate = (dateStr: string, year: number) => {
+  const [month, day] = dateStr.split(".").map(Number);
+  return new Date(year, month - 1, day);
+};
+
 const generateCalendar = (year: number, month: number): number[][] => {
   const date = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -44,13 +59,6 @@ const generateCalendar = (year: number, month: number): number[][] => {
   return weeks;
 };
 
-// 날짜를 '5.24' 형식에서 Date 객체로 변환
-const parseDate = (dateStr: string, year: number) => {
-  const [month, day] = dateStr.split(".").map(Number);
-  return new Date(year, month - 1, day);
-};
-
-// 주어진 날짜가 작업 기간 내에 포함되는지 확인
 const getProjectInDay = (
   day: number,
   month: number,
@@ -68,52 +76,64 @@ const getProjectInDay = (
   });
 };
 
-const projectColors: { [key: string]: string } = {
-  수록: "bg-red-200",
-  내꿈은급식왕: "bg-blue-200",
-  CustomWidgets: "bg-green-200",
-  도타임: "bg-purple-200",
-  수폴리오: "bg-yellow-200",
-  수상한자판기: "bg-orange-200",
-  DelaN: "bg-pink-200",
-  갈라테이아: "bg-indigo-200",
-  호랑이: "bg-teal-200",
-};
-
 const Overview: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState<number>(4); // May (0: Jan, 4: May)
   const [currentYear, setCurrentYear] = useState<number>(2024);
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const months = ["May", "June", "July", "August", "September", "October"];
 
   const handlePrevMonth = () => {
-    if (currentMonth === 4) {
-      return;
+    if (currentMonth > 4) {
+      setCurrentMonth(currentMonth - 1);
     }
-    setCurrentMonth(currentMonth - 1);
   };
 
   const handleNextMonth = () => {
-    if (currentMonth === 9) {
-      return;
+    if (currentMonth < 9) {
+      setCurrentMonth(currentMonth + 1);
     }
-    setCurrentMonth(currentMonth + 1);
+  };
+
+  const handleProjectClick = (project: string) => {
+    setSelectedProject(project);
+    const projectStart = parseDate(
+      workPeriod.personal[project]?.start || workPeriod.team[project]?.start,
+      currentYear
+    );
+    setCurrentMonth(projectStart.getMonth());
+    setCurrentYear(projectStart.getFullYear());
   };
 
   const weeks: number[][] = generateCalendar(currentYear, currentMonth);
 
   return (
-    <div>
-      <div className="h-64 w-1/4 bg-gray-200 fixed right-10 top-20">
-        프로젝트 리스트
+    <div className="flex justify-center items-end">
+      {/* 프로젝트 리스트 */}
+      <div className="flex flex-col justify-center gap-4 pl-8">
+        {" "}
+        {/* padding-left을 추가하여 여백 유지 */}
+        {Object.keys(projectColors).map((project) => (
+          <div
+            key={project}
+            className={`p-3 text-black rounded flex items-center justify-between cursor-pointer ${projectColors[project]}`}
+            onClick={() => handleProjectClick(project)}
+          >
+            {project}
+            <span>▶</span>
+          </div>
+        ))}
       </div>
+      {/* 달력 및 이전/다음 달 버튼 */}
       <div className="pt-10 pr-10 pb-0 pl-10 text-center">
         <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
         <div className="flex justify-center mb-4 gap-x-custom-gap">
           <button
             onClick={handlePrevMonth}
             className={`px-6 py-2 bg-gray-200 rounded ${
-              currentMonth === 4 ? "opacity-50 cursor-not-allowed" : ""
+              currentMonth === 4
+                ? "opacity-30 cursor-not-allowed"
+                : "opacity-100"
             }`}
             disabled={currentMonth === 4}
           >
@@ -122,13 +142,17 @@ const Overview: React.FC = () => {
           <button
             onClick={handleNextMonth}
             className={`px-6 py-2 bg-gray-200 rounded ${
-              currentMonth === 9 ? "opacity-50 cursor-not-allowed" : ""
+              currentMonth === 9
+                ? "opacity-30 cursor-not-allowed"
+                : "opacity-100"
             }`}
             disabled={currentMonth === 9}
           >
             다음 달
           </button>
         </div>
+
+        {/* 달력 */}
         <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
           <thead>
             <tr>
@@ -145,56 +169,53 @@ const Overview: React.FC = () => {
           <tbody>
             {weeks.map((week, i) => (
               <tr key={i}>
-                {week.map((day, j) => {
-                  const personalProjects = getProjectInDay(
-                    day,
-                    currentMonth,
-                    currentYear,
-                    workPeriod.personal
-                  );
-                  const teamProjects = getProjectInDay(
-                    day,
-                    currentMonth,
-                    currentYear,
-                    workPeriod.team
-                  );
-
-                  return (
-                    <td
-                      key={j}
-                      className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
-                    >
-                      {/* 날짜 표시 */}
-                      {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
-                      {/* 개인 프로젝트 막대 */}
-                      {personalProjects.map((project, index) => (
-                        <div
-                          key={project}
-                          className={`${projectColors[project]} absolute w-full h-4 left-0`}
-                          title={project}
-                          style={{ bottom: `${(index + 1) * 8}px` }}
-                        >
-                          <span className="text-xs">{project}</span>
-                        </div>
-                      ))}
-                      {/* 팀 프로젝트 막대 */}
-                      {teamProjects.map((project, index) => (
-                        <div
-                          key={project}
-                          className={`${projectColors[project]} absolute w-full h-4 left-0`}
-                          title={project}
-                          style={{
-                            bottom: `${
-                              (index + personalProjects.length + 1) * 8
-                            }px`,
-                          }}
-                        >
-                          <span className="text-xs">{project}</span>
-                        </div>
-                      ))}
-                    </td>
-                  );
-                })}
+                {week.map((day, j) => (
+                  <td
+                    key={j}
+                    className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
+                  >
+                    {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
+                    {/* 선택된 프로젝트가 있을 때만 프로젝트 표시 */}
+                    {selectedProject &&
+                      getProjectInDay(
+                        day,
+                        currentMonth,
+                        currentYear,
+                        workPeriod.personal
+                      )
+                        .filter((project) => project === selectedProject)
+                        .map((project, index) => (
+                          <div
+                            key={project}
+                            className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
+                            title={project}
+                            style={{
+                              top: "60%", // 막대 바를 살짝 아래로 이동
+                              transform: "translateY(-50%)",
+                            }}
+                          ></div>
+                        ))}
+                    {selectedProject &&
+                      getProjectInDay(
+                        day,
+                        currentMonth,
+                        currentYear,
+                        workPeriod.team
+                      )
+                        .filter((project) => project === selectedProject)
+                        .map((project, index) => (
+                          <div
+                            key={project}
+                            className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
+                            title={project}
+                            style={{
+                              top: "60%", // 막대 바를 살짝 아래로 이동
+                              transform: "translateY(-50%)",
+                            }}
+                          ></div>
+                        ))}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
