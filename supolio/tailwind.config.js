@@ -17,7 +17,7 @@ module.exports = {
       },
       spacing: {
         "custom-padding": "2.5rem",
-        "custom-gap": "35rem",
+        "custom-gap": "25rem",
       },
     },
   },
