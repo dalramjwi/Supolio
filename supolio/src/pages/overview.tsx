@@ -109,25 +109,12 @@ const Overview: React.FC = () => {
 
   return (
     <div className="flex justify-center items-end">
-      {/* 프로젝트 리스트 */}
-      <div className="flex flex-col justify-center gap-4 pl-8">
-        {" "}
-        {/* padding-left을 추가하여 여백 유지 */}
-        {Object.keys(projectColors).map((project) => (
-          <div
-            key={project}
-            className={`p-3 text-black rounded flex items-center justify-between cursor-pointer ${projectColors[project]}`}
-            onClick={() => handleProjectClick(project)}
-          >
-            {project}
-            <span>▶</span>
-          </div>
-        ))}
-      </div>
       {/* 달력 및 이전/다음 달 버튼 */}
       <div className="pt-10 pr-10 pb-0 pl-10 text-center">
-        <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
-        <div className="flex justify-center mb-4 gap-x-custom-gap">
+        <h2 className="text-5xl font-bold mb-2 ml-52">
+          {months[currentMonth - 4]}
+        </h2>
+        <div className="flex justify-end mb-4 ">
           <button
             onClick={handlePrevMonth}
             className={`px-6 py-2 bg-gray-200 rounded ${
@@ -151,75 +138,92 @@ const Overview: React.FC = () => {
             다음 달
           </button>
         </div>
-
-        {/* 달력 */}
-        <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
-          <thead>
-            <tr>
-              {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
-                <th
-                  key={day}
-                  className="w-1/7 border border-gray-400 py-4 text-xl"
-                >
-                  {day}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {weeks.map((week, i) => (
-              <tr key={i}>
-                {week.map((day, j) => (
-                  <td
-                    key={j}
-                    className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
-                  >
-                    {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
-                    {/* 선택된 프로젝트가 있을 때만 프로젝트 표시 */}
-                    {selectedProject &&
-                      getProjectInDay(
-                        day,
-                        currentMonth,
-                        currentYear,
-                        workPeriod.personal
-                      )
-                        .filter((project) => project === selectedProject)
-                        .map((project, index) => (
-                          <div
-                            key={project}
-                            className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
-                            title={project}
-                            style={{
-                              top: "60%", // 막대 바를 살짝 아래로 이동
-                              transform: "translateY(-50%)",
-                            }}
-                          ></div>
-                        ))}
-                    {selectedProject &&
-                      getProjectInDay(
-                        day,
-                        currentMonth,
-                        currentYear,
-                        workPeriod.team
-                      )
-                        .filter((project) => project === selectedProject)
-                        .map((project, index) => (
-                          <div
-                            key={project}
-                            className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
-                            title={project}
-                            style={{
-                              top: "60%", // 막대 바를 살짝 아래로 이동
-                              transform: "translateY(-50%)",
-                            }}
-                          ></div>
-                        ))}
-                  </td>
-                ))}
-              </tr>
+        <div className="flex flex-row gap-10">
+          {/* 프로젝트 리스트 */}
+          <div className="flex flex-col justify-center gap-4 pl-8">
+            {/* padding-left을 추가하여 여백 유지 */}
+            {Object.keys(projectColors).map((project) => (
+              <div
+                key={project}
+                className={`p-3 text-black rounded flex items-center justify-between cursor-pointer ${projectColors[project]}`}
+                onClick={() => handleProjectClick(project)}
+              >
+                {project}
+                <span>▶</span>
+              </div>
             ))}
-          </tbody>
-        </table>
+          </div>
+          {/* 달력 */}
+          <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
+            <thead>
+              <tr>
+                {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map(
+                  (day) => (
+                    <th
+                      key={day}
+                      className="w-1/7 border border-gray-400 py-4 text-xl"
+                    >
+                      {day}
+                    </th>
+                  )
+                )}
+              </tr>
+            </thead>
+            <tbody>
+              {weeks.map((week, i) => (
+                <tr key={i}>
+                  {week.map((day, j) => (
+                    <td
+                      key={j}
+                      className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
+                    >
+                      {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
+                      {/* 선택된 프로젝트가 있을 때만 프로젝트 표시 */}
+                      {selectedProject &&
+                        getProjectInDay(
+                          day,
+                          currentMonth,
+                          currentYear,
+                          workPeriod.personal
+                        )
+                          .filter((project) => project === selectedProject)
+                          .map((project, index) => (
+                            <div
+                              key={project}
+                              className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
+                              title={project}
+                              style={{
+                                top: "60%", // 막대 바를 살짝 아래로 이동
+                                transform: "translateY(-50%)",
+                              }}
+                            ></div>
+                          ))}
+                      {selectedProject &&
+                        getProjectInDay(
+                          day,
+                          currentMonth,
+                          currentYear,
+                          workPeriod.team
+                        )
+                          .filter((project) => project === selectedProject)
+                          .map((project, index) => (
+                            <div
+                              key={project}
+                              className={`${projectColors[project]} absolute w-full h-6 left-0`} // 막대 높이 유지
+                              title={project}
+                              style={{
+                                top: "60%", // 막대 바를 살짝 아래로 이동
+                                transform: "translateY(-50%)",
+                              }}
+                            ></div>
+                          ))}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
