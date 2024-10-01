@@ -105,7 +105,7 @@ const Overview: React.FC = () => {
   return (
     <div className="pt-10 pr-10 pb-0 pl-10 text-center">
       <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
-      <div className="flex justify-between mb-4">
+      <div className="flex justify-center mb-4 gap-x-custom-gap">
         <button
           onClick={handlePrevMonth}
           className={`px-6 py-2 bg-gray-200 rounded ${
