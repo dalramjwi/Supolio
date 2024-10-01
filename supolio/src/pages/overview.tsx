@@ -103,98 +103,103 @@ const Overview: React.FC = () => {
   const weeks: number[][] = generateCalendar(currentYear, currentMonth);
 
   return (
-    <div className="pt-10 pr-10 pb-0 pl-10 text-center">
-      <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
-      <div className="flex justify-center mb-4 gap-x-custom-gap">
-        <button
-          onClick={handlePrevMonth}
-          className={`px-6 py-2 bg-gray-200 rounded ${
-            currentMonth === 4 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={currentMonth === 4}
-        >
-          이전 달
-        </button>
-        <button
-          onClick={handleNextMonth}
-          className={`px-6 py-2 bg-gray-200 rounded ${
-            currentMonth === 9 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={currentMonth === 9}
-        >
-          다음 달
-        </button>
+    <div>
+      <div className="h-64 w-1/4 bg-gray-200 fixed right-10 top-20">
+        프로젝트 리스트
       </div>
-      <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
-        <thead>
-          <tr>
-            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
-              <th
-                key={day}
-                className="w-1/7 border border-gray-400 py-4 text-xl"
-              >
-                {day}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {weeks.map((week, i) => (
-            <tr key={i}>
-              {week.map((day, j) => {
-                const personalProjects = getProjectInDay(
-                  day,
-                  currentMonth,
-                  currentYear,
-                  workPeriod.personal
-                );
-                const teamProjects = getProjectInDay(
-                  day,
-                  currentMonth,
-                  currentYear,
-                  workPeriod.team
-                );
-
-                return (
-                  <td
-                    key={j}
-                    className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
-                  >
-                    {/* 날짜 표시 */}
-                    {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
-                    {/* 개인 프로젝트 막대 */}
-                    {personalProjects.map((project, index) => (
-                      <div
-                        key={project}
-                        className={`${projectColors[project]} absolute w-full h-4 left-0`}
-                        title={project}
-                        style={{ bottom: `${(index + 1) * 8}px` }}
-                      >
-                        <span className="text-xs">{project}</span>
-                      </div>
-                    ))}
-                    {/* 팀 프로젝트 막대 */}
-                    {teamProjects.map((project, index) => (
-                      <div
-                        key={project}
-                        className={`${projectColors[project]} absolute w-full h-4 left-0`}
-                        title={project}
-                        style={{
-                          bottom: `${
-                            (index + personalProjects.length + 1) * 8
-                          }px`,
-                        }}
-                      >
-                        <span className="text-xs">{project}</span>
-                      </div>
-                    ))}
-                  </td>
-                );
-              })}
+      <div className="pt-10 pr-10 pb-0 pl-10 text-center">
+        <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
+        <div className="flex justify-center mb-4 gap-x-custom-gap">
+          <button
+            onClick={handlePrevMonth}
+            className={`px-6 py-2 bg-gray-200 rounded ${
+              currentMonth === 4 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={currentMonth === 4}
+          >
+            이전 달
+          </button>
+          <button
+            onClick={handleNextMonth}
+            className={`px-6 py-2 bg-gray-200 rounded ${
+              currentMonth === 9 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={currentMonth === 9}
+          >
+            다음 달
+          </button>
+        </div>
+        <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
+          <thead>
+            <tr>
+              {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
+                <th
+                  key={day}
+                  className="w-1/7 border border-gray-400 py-4 text-xl"
+                >
+                  {day}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {weeks.map((week, i) => (
+              <tr key={i}>
+                {week.map((day, j) => {
+                  const personalProjects = getProjectInDay(
+                    day,
+                    currentMonth,
+                    currentYear,
+                    workPeriod.personal
+                  );
+                  const teamProjects = getProjectInDay(
+                    day,
+                    currentMonth,
+                    currentYear,
+                    workPeriod.team
+                  );
+
+                  return (
+                    <td
+                      key={j}
+                      className="relative border border-gray-400 text-xl text-right align-top pr-2 h-24"
+                    >
+                      {/* 날짜 표시 */}
+                      {!isNaN(day) && <div className="z-10 pt-1">{day}</div>}
+                      {/* 개인 프로젝트 막대 */}
+                      {personalProjects.map((project, index) => (
+                        <div
+                          key={project}
+                          className={`${projectColors[project]} absolute w-full h-4 left-0`}
+                          title={project}
+                          style={{ bottom: `${(index + 1) * 8}px` }}
+                        >
+                          <span className="text-xs">{project}</span>
+                        </div>
+                      ))}
+                      {/* 팀 프로젝트 막대 */}
+                      {teamProjects.map((project, index) => (
+                        <div
+                          key={project}
+                          className={`${projectColors[project]} absolute w-full h-4 left-0`}
+                          title={project}
+                          style={{
+                            bottom: `${
+                              (index + personalProjects.length + 1) * 8
+                            }px`,
+                          }}
+                        >
+                          <span className="text-xs">{project}</span>
+                        </div>
+                      ))}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
