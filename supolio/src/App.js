@@ -4,7 +4,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Main from "./pages/ㅁain.tsx";
+import Main from "./pages/main.tsx";
 import Info from "./pages/ㅁnfo.tsx";
 import Header from "./components/Header.tsx";
 import Project from "./pages/ㅁverview.tsx";
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Router>
       <div className="App flex flex-col h-screen">
-        <Header />
+        <Header />ㅎ{" "}
         <div className="flex-grow border border-black border-t-0">
           <Routes>
             <Route path="/" element={<Navigate to="/overview" />} />
