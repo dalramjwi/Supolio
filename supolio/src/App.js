@@ -4,12 +4,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Main from "./pages/main.tsx";
-import Info from "./pages/info.tsx";
+import Main from "./pages/ㅁain.tsx";
+import Info from "./pages/ㅁnfo.tsx";
 import Header from "./components/Header.tsx";
-import Project from "./pages/overview.tsx";
-import Overview from "./pages/overview.tsx";
-import Single from "./pages/single.tsx";
+import Project from "./pages/ㅁverview.tsx";
+import Overview from "./pages/ㅁverview.tsx";
+import Single from "./pages/ㅁingle.tsx";
 
 const App = () => {
   return (
