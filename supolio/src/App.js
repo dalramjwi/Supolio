@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Router>
       <div className="App flex flex-col h-screen">
-        <Header />ㅎ{" "}
+        <Header />
         <div className="flex-grow border border-black border-t-0">
           <Routes>
             <Route path="/" element={<Navigate to="/overview" />} />
