@@ -1,3 +1,4 @@
+// 각 프로젝트의 상세 정보들을 모아놓은 객체
 export const projectData = {
   single: {
     수록: {

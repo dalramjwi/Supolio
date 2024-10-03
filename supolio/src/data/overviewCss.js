@@ -1,3 +1,4 @@
+// 프로젝트별로 배정된 배경색을 나타내는 객체
 export const projectColors = {
   수록: "bg-yellow-400",
   내꿈은급식왕: "bg-green-400",

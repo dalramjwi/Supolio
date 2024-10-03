@@ -1,3 +1,4 @@
+// 개인 프로젝트 및 팀 프로젝트의 기간을 나타내는 데이터 객체
 export const workPeriod = {
   personal: {
     수록: { start: "5.24", end: "6.12" },
