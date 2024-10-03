@@ -18,7 +18,7 @@ const App = () => {
         <Header />
         <div className="flex-grow border border-black border-t-0">
           <Routes>
-            <Route path="/" element={<Navigate to="/overview" />} />
+            <Route path="/" element={<Navigate to="/single" />} />
             <Route path="/main" element={<Main />} />
             <Route path="/info" element={<Info />} />
             <Route path="/overview" element={<Overview />} />
