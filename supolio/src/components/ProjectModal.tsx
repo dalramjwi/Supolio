@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import Modal from "./Modal.tsx";
 
 // 프로젝트의 구조에 맞는 타입 정의
-interface ProjectDetails {
-  version: string;
-  description: string;
-}
-
 interface Project {
   title: string;
   period: string;
-  stack: string[];
+  stack?: string[];
   data: string[];
   content: string;
-  details?: ProjectDetails[];
+  details?: string;
   review?: string;
 }
 
@@ -53,7 +48,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       <div className="flex justify-center items-center mb-4">
         <div className="text-sm font-bold text-center">{project.title}</div>
       </div>
-      <div className="text-sm italic mb-4">{project.stack.join(", ")}</div>
+
+      {project.stack && (
+        <div className="text-sm italic mb-4">{project.stack.join(", ")}</div>
+      )}
 
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
@@ -85,14 +83,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <div className="text-sm mt-2">{project.content}</div>
         </div>
 
-        {project.details && project.details.length > 0 && (
+        {project.details && (
           <div>
             <div className="font-bold">상세기능</div>
-            {project.details.map((detail, index) => (
-              <div key={index} className="text-sm mt-2">
-                {detail.version}: {detail.description}
-              </div>
-            ))}
+            <div className="text-sm mt-2">{project.details}</div>
           </div>
         )}
 

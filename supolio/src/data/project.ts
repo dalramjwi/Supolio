@@ -13,34 +13,11 @@ export const projectData = {
         "3차": "6.6 - 6.12",
       },
       content: "게시글 작성, 수정, 삭제, 조회, 검색",
-      details: [
-        {
-          version: "첫 번째 버전",
-          description:
-            "기본적인 HTTP 모듈을 사용해 서버를 구축하였고, 게시글 조회 기능을 포함한 블로그 사이트를 구현하였다. 그러나 이 과정에서 서버에 생성된 HTML은 최초 요청 시의 게시글만을 보여주었고, 새로운 게시글 추가 시 실시간 업데이트가 되지 않는 문제를 겪었다.",
-        },
-        {
-          version: "두 번째 버전",
-          description:
-            "서버 사이드 렌더링(SSR) 개념을 적용하여 이러한 문제를 해결하였다. HTTP 모듈을 통해 서버에서 동적으로 HTML을 생성 및 전달하는 방식을 채택하여, 새로운 게시글 작성 및 조회 시 동적으로 업데이트된 내용을 보여줄 수 있도록 하였다.",
-        },
-        {
-          version: "세 번째 버전",
-          description:
-            "코드를 모듈 단위로 분리하여 리팩토링을 진행하였다. 이 과정에서 각 기능을 독립된 모듈로 쪼개고, 이를 통해 유지보수성을 크게 향상시켰다. 또한, 코드 내 주석 작업을 통해 코드 설명을 강화하며, 코드의 가독성을 높이고 협업 환경에서의 코드 공유와 이해도를 높이는 것을 목표로 하였다.",
-        },
-      ],
+      details:
+        "기본적인 HTTP 모듈을 사용하여 서버를 구축하고, 블로그 사이트를 구현. SSR을 적용하여 실시간 업데이트 문제를 해결했으며, 리팩토링을 통해 유지보수성을 높였다.",
       data: [
         "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/346c0833-cb8f-4651-910b-d33bb08e2d67/%EC%88%98%EB%A1%9D_version1_main.png",
         "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/da5596b2-f485-499c-83a3-fb9093c1d8a4/%EC%88%98%EB%A1%9D_version1_write.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/e4f7045e-6fa6-4b96-af67-5dbde7be5c25/%EC%88%98%EB%A1%9D_version2_main.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/48ac7921-8b1b-4546-9cde-e237b2574d3f/%EC%88%98%EB%A1%9D_version2_search.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/9095385d-be24-4336-9a89-f29194d041eb/%EC%88%98%EB%A1%9D_version3_main.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/038b7ef6-7b90-4537-bb7d-0735a8bcc82e/%EC%88%98%EB%A1%9D_version3_write.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/93af16bf-b612-4533-8dc7-403a7084ea58/%EC%88%98%EB%A1%9D_version3_serach.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/77cc5af2-707f-4273-aaff-1c21547abefa/%EC%88%98%EB%A1%9D_version1_arkit.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/2722a698-3407-46ed-861d-245d4282758c/%EC%88%98%EB%A1%9D_version2_arkit.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/d3a4f445-8df6-41d5-925c-29d25756d8fb/%EC%88%98%EB%A1%9D_version3_arkit.png",
       ],
       review:
         "오늘 정말로 완성하며 느낀 코딩에 있어서 중요한 것은 집중력 뿐만 아니라 코드를 계속 볼 수 있는 인내심이라는 것을 알게 되었다.",
@@ -91,7 +68,7 @@ export const projectData = {
       title: "도타임",
       description:
         "독서를 좋아하는 만큼 다양한 종류의 독서에 관심이 있었다. 웹소설과 같은 전자책을 쉽게 제작하고 조회할 수 있는 플랫폼을 제작하려는 프로젝트를 시작하였다.",
-      stack: "미정",
+      stack: ["미정"],
       period: "9.19 - 진행중",
       content: "전자책 제작 기능 및 조회 기능 제공",
       details: "",
