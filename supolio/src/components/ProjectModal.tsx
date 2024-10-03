@@ -1,15 +1,31 @@
 import React, { useState } from "react";
 import Modal from "./Modal.tsx";
 
+// 프로젝트의 구조에 맞는 타입 정의
+interface ProjectDetails {
+  version: string;
+  description: string;
+}
+
+interface Project {
+  title: string;
+  period: string;
+  stack: string[];
+  data: string[];
+  content: string;
+  details?: ProjectDetails[];
+  review?: string;
+}
+
 interface ProjectModalProps {
-  images: string[];
+  project: Project;
   show: boolean;
   onClose: () => void;
 }
 
 // ProjectModal 컴포넌트
 const ProjectModal: React.FC<ProjectModalProps> = ({
-  images,
+  project,
   show,
   onClose,
 }) => {
@@ -17,13 +33,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? project.data.length - 1 : prevIndex - 1
     );
   };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === project.data.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -31,64 +47,66 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   const content = (
     <div>
       <div className="text-sm text-center font-medium mb-4">
-        기간: 5.24 - 6.12
+        기간: {project.period}
       </div>
       {/* 제목을 가운데 정렬 */}
       <div className="flex justify-center items-center mb-4">
-        <div className="text-sm font-bold text-center">임시 제목</div>
+        <div className="text-sm font-bold text-center">{project.title}</div>
       </div>
-      <div className="text-sm italic mb-4">javascript 스택</div>
+      <div className="text-sm italic mb-4">{project.stack.join(", ")}</div>
 
       {/* 이미지 스와이프 영역 */}
-      <div className="w-full h-40 bg-white rounded-md flex items-center justify-center border relative mb-4">
-        <button
-          className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
-          onClick={handlePrevImage}
-        >
-          ◀
-        </button>
-        <img
-          src={images[currentImageIndex]}
-          alt="Modal content"
-          className="w-full h-full object-cover rounded-md"
-        />
-        <button
-          className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
-          onClick={handleNextImage}
-        >
-          ▶
-        </button>
-      </div>
+      {project.data && project.data.length > 0 && (
+        <div className="w-full h-40 bg-white rounded-md flex items-center justify-center border relative mb-4">
+          <button
+            className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
+            onClick={handlePrevImage}
+          >
+            ◀
+          </button>
+          <img
+            src={project.data[currentImageIndex]}
+            alt="Project content"
+            className="w-full h-full object-cover rounded-md"
+          />
+          <button
+            className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
+            onClick={handleNextImage}
+          >
+            ▶
+          </button>
+        </div>
+      )}
 
       {/* 기능, 상세기능, 후기 섹션 */}
       <div className="flex flex-col gap-4">
         <div>
           <div className="font-bold">기능</div>
-          <div className="text-sm mt-2">
-            기능 설명: 게시글 작성 및 수정 기능 포함
-          </div>
+          <div className="text-sm mt-2">{project.content}</div>
         </div>
 
-        <div>
-          <div className="font-bold">상세기능</div>
-          <div className="text-sm mt-2">
-            상세기능 설명: 삭제 및 조회 기능 포함
+        {project.details && project.details.length > 0 && (
+          <div>
+            <div className="font-bold">상세기능</div>
+            {project.details.map((detail, index) => (
+              <div key={index} className="text-sm mt-2">
+                {detail.version}: {detail.description}
+              </div>
+            ))}
           </div>
-        </div>
+        )}
 
-        <div>
-          <div className="font-bold">후기</div>
-          <div className="text-sm mt-2">
-            후기: 서버 사이드 렌더링 중요성 깨달음
+        {project.review && (
+          <div>
+            <div className="font-bold">후기</div>
+            <div className="text-sm mt-2">{project.review}</div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 
-  return (
-    <Modal show={show} close={onClose} content={content} /> // Modal 컴포넌트 사용
-  );
+  return <Modal show={show} close={onClose} content={content} />;
 };
 
 export default ProjectModal;
