@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-
+import Modal from "../components/Modal.tsx";
+import { stackData } from "../data/stackData.ts";
+import TechStack from "../components/TeckStack.tsx";
 const Info: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
-  const [animateText, setAnimateText] = useState(true); // 애니메이션 제어용 상태
+  const [animateText, setAnimateText] = useState(true);
 
   const handleEmailClick = () => {
     navigator.clipboard.writeText("dalramjwi@gmail.com");
-    setShowEmailModal(true); // 이메일 클릭 시 모달 띄우기
+    // 이메일 클릭 시 모달 띄우기
+    setShowEmailModal(true);
   };
 
   const handleAboutStudyClick = () => {
     setShowModal(true);
-    setAnimateText(false); // 모달 클릭하면 애니메이션 제거
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const closeEmailModal = () => {
-    setShowEmailModal(false);
+    // 모달 클릭하면 애니메이션 제거
+    setAnimateText(false);
   };
 
   return (
     <div className="p-10 relative">
-      {/* 상단에 배치된 3열 구조 */}
+      {/* 상단 연락처 정보 */}
       <div className="grid grid-cols-3 text-center gap-8">
         <div className="pb-4 mb-4">
           <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
@@ -48,8 +44,11 @@ const Info: React.FC = () => {
           <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
             GITHUB
           </h3>
-          <a href="https://github.com" className="text-blue-500 underline">
-            GITHUB LINK
+          <a
+            href="https://github.com/dalramjwi"
+            className="text-blue-500 underline"
+          >
+            CONNECT TO GITHUB PAGE
           </a>
         </div>
       </div>
@@ -60,107 +59,19 @@ const Info: React.FC = () => {
           <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
             STACK
           </h3>
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">Language</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
-                JavaScript
-              </span>
-              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
-                TypeScript
-              </span>
-              <span className="px-2 py-1 bg-yellow-100 rounded-lg border border-yellow-300">
-                Python
-              </span>
-            </div>
-          </div>
 
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">Framework / Library</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                React
-              </span>
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                Next.js
-              </span>
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                Nest.js
-              </span>
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                Node.js
-              </span>
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                TailwindCSS
-              </span>
-              <span className="px-2 py-1 bg-blue-100 rounded-lg border border-blue-300">
-                Vanilla Extract
-              </span>
-            </div>
-          </div>
-
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">MarkUp</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-green-100 rounded-lg border border-green-300">
-                HTML5
-              </span>
-              <span className="px-2 py-1 bg-green-100 rounded-lg border border-green-300">
-                CSS3
-              </span>
-            </div>
-          </div>
-
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">Database</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
-                Sqlite3
-              </span>
-              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
-                PostgreSQL
-              </span>
-              <span className="px-2 py-1 bg-gray-100 rounded-lg border border-gray-300">
-                MongoDB
-              </span>
-            </div>
-          </div>
-
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">Tool</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
-                Git
-              </span>
-              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
-                GitHub
-              </span>
-              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
-                Figma
-              </span>
-              <span className="px-2 py-1 bg-purple-100 rounded-lg border border-purple-300">
-                Notion
-              </span>
-            </div>
-          </div>
-
-          <div className="text-left mb-4">
-            <h4 className="text-lg font-semibold mb-2">AWS</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
-                S3
-              </span>
-              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
-                Amplify
-              </span>
-              <span className="px-2 py-1 bg-orange-100 rounded-lg border border-orange-300">
-                EC2
-              </span>
-            </div>
-          </div>
+          {/* stackData 배열을 이용하여 각 기술 스택을 렌더링 */}
+          {stackData.map((stack) => (
+            <TechStack
+              key={stack.title}
+              title={stack.title}
+              items={stack.items}
+              colorClass={stack.colorClass}
+            />
+          ))}
         </div>
 
-        {/* About Studying... with animation */}
+        {/* ABOUT STUDY 섹션 */}
         <div className="pb-4 mb-4">
           <h3 className="text-xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
             HOW STUDY
@@ -170,7 +81,7 @@ const Info: React.FC = () => {
               <span
                 className={`text-2xl font-bold cursor-pointer ${
                   animateText ? "animate-pulse" : ""
-                } `}
+                }`}
               >
                 ABOUT STUDYING
               </span>
@@ -187,34 +98,18 @@ const Info: React.FC = () => {
       </div>
 
       {/* Email Modal */}
-      {showEmailModal && (
-        <div
-          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50"
-          onClick={closeEmailModal} // 모달 외부 클릭 시 닫히게 처리
-        >
-          <div
-            className="bg-white text-black p-6 rounded-lg shadow-lg"
-            onClick={(e) => e.stopPropagation()} // 모달 안 클릭 시 닫히지 않게
-          >
-            <p>E-mail이 클립보드에 복사되었습니다!</p>
-          </div>
-        </div>
-      )}
+      <Modal
+        show={showEmailModal}
+        close={() => setShowEmailModal(false)}
+        content={<p>E-mail이 클립보드에 복사되었습니다!</p>}
+      />
 
-      {/* Modal - 클릭하면 나오는 모달 */}
-      {showModal && (
-        <div
-          className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50"
-          onClick={closeModal} // 모달 외부 클릭 시 닫히게 처리
-        >
-          <div
-            className="bg-white text-black p-6 rounded-lg shadow-lg"
-            onClick={(e) => e.stopPropagation()} // 모달 안 클릭 시 닫히지 않게
-          >
-            <p>Study Details</p>
-          </div>
-        </div>
-      )}
+      {/* Study Modal */}
+      <Modal
+        show={showModal}
+        close={() => setShowModal(false)}
+        content={<p>Study Details</p>}
+      />
     </div>
   );
 };
