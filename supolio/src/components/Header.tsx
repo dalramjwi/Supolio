@@ -2,7 +2,8 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
-  const location = useLocation(); // 현재 경로 가져오기
+  // 현재 경로 가져오기
+  const location = useLocation();
 
   // 프로젝트 페이지 또는 프로젝트 관련 하위 경로일 때 추가 탭 표시
   const isProjectRelatedPage =
@@ -83,7 +84,7 @@ const Header: React.FC = () => {
         </div>
       )}
 
-      {/* 기본 배경 색상 설정 (기존 설정 복원) */}
+      {/* 기본 배경 색상 설정*/}
       <div className="absolute top-[45%] w-full bg-tab-dark h-[55%] z-0 rounded-t-2xl"></div>
 
       <div className="absolute bottom-0 w-full border-t border-black" />
