@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { workPeriod } from "../data/overview.js";
-import { projectColors } from "../data/overviewCss.js";
+import { workPeriod } from "../data/overview.ts";
+import { projectColors } from "../data/overviewCss.ts";
 import { getProjectInDay } from "../utils/projectUtils.ts";
 import MonthNavigation from "../components/MonthNavigation.tsx";
 import ProjectList from "../components/ProjectList.tsx";
