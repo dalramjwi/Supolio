@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProjectModal from "../components/ProjectModal.tsx"; // ProjectModal 컴포넌트 불러오기
-import { projectData } from "../data/project.ts"; // 프로젝트 데이터를 불러옴
+import ProjectModal from "../components/ProjectModal.tsx";
+import { projectData } from "../data/project.ts";
 
 const Single: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
