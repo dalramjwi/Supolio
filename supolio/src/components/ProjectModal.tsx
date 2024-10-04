@@ -50,7 +50,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       </div>
 
       {project.stack && (
-        <div className="text-sm italic mb-4">{project.stack.join(", ")}</div>
+        <div className="text-sm mb-4">{project.stack.join(", ")}</div>
       )}
 
       {/* 이미지 스와이프 영역 */}
