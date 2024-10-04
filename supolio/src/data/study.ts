@@ -20,11 +20,11 @@ export const contentData = [
   {
     title: "작업 과정에서 발생한 궁금증 해결 및 기록",
     description: `작업 중 발생한 문제를 구체적으로 기록하고, 이를 해결한 과정을 정리해 유사한 문제 발생 시 참고하거나 동료에게 공유하며 문제를 해결하는 방안으로 활용했습니다.`,
-    imageUrl: "path/to/your/image3.jpg", // 이미지 경로를 지정하세요.
+    imageUrl: "/img/study_question.jpg",
   },
   {
     title: "개념 학습 정리",
     description: `개념을 학습한 후, 이를 체계적으로 정리하는 과정을 통해 이해도를 높이고 기억을 강화했습니다.`,
-    imageUrl: "path/to/your/image4.jpg", // 이미지 경로를 지정하세요.
+    imageUrl: "/img/study_logic.jpg",
   },
 ];
