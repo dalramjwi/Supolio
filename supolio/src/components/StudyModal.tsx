@@ -23,29 +23,39 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
   const content = (
     <div className="flex">
       <div className="p-4 w-1/2">
-        {" "}
         {/* 왼쪽 글 부분 */}
-        <h2 className="text-2xl font-bold mb-2">
-          {contentData[currentIndex].title}
-        </h2>
-        <p className="text-gray-700 whitespace-pre-line mb-4">
-          {contentData[currentIndex].description}
-        </p>
-        <div className="flex justify-between">
-          <button
-            onClick={() => handleSwipe("prev")}
-            disabled={currentIndex === 0}
-            className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
-          >
-            ◀
-          </button>
-          <button
-            onClick={() => handleSwipe("next")}
-            disabled={currentIndex === contentData.length - 1}
-            className="bg-black text-white px-4 py-2 rounded disabled:opacity-50"
-          >
-            ▶
-          </button>
+        <div className="flex flex-col min-h-full">
+          <div className="flex flex-col flex-grow bg-white rounded-lg shadow-lg p-6 border border-gray-300">
+            <h2 className="text-2xl font-bold">
+              {contentData[currentIndex].title}
+            </h2>
+            {/* 이동 버튼 */}
+            <div className="flex justify-end pb-4 gap-x-2">
+              <button
+                onClick={() => handleSwipe("prev")}
+                disabled={currentIndex === 0}
+                className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
+                  currentIndex === 0 ? "" : "hover:bg-gray-500"
+                }`}
+              >
+                ◀
+              </button>
+              <button
+                onClick={() => handleSwipe("next")}
+                disabled={currentIndex === contentData.length - 1}
+                className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
+                  currentIndex === contentData.length - 1
+                    ? ""
+                    : "hover:bg-gray-500"
+                }`}
+              >
+                ▶
+              </button>
+            </div>
+            <p className="text-gray-700 whitespace-pre-line mb-4">
+              {contentData[currentIndex].description}
+            </p>
+          </div>
         </div>
       </div>
       <img
