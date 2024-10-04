@@ -7,9 +7,9 @@ import {
 import Main from "./pages/Main.tsx";
 import Info from "./pages/Info.tsx";
 import Header from "./components/Header.tsx";
-import Project from "./pages/Overview.tsx";
 import Overview from "./pages/Overview.tsx";
 import Single from "./pages/Single.tsx";
+import Team from "./pages/Team.tsx";
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/info" element={<Info />} />
             <Route path="/overview" element={<Overview />} />
             <Route path="/single" element={<Single />} />
-            <Route path="/team" element={<Project />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
         </div>
       </div>
