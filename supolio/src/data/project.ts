@@ -22,6 +22,14 @@ export const projectData = {
         "/img/수록_version3_main.png",
         "/img/수록_version3_serach.png",
       ],
+      imgnavigate: {
+        0: "수록 프로젝트의 첫 번째 버전 메인 화면입니다.",
+        1: "첫 번째 버전 글 작성 페이지입니다.",
+        2: "두 번째 버전 메인 화면입니다.",
+        3: "검색 기능이 추가된 두 번째 버전입니다.",
+        4: "세 번째 버전 메인 화면입니다.",
+        5: "검색 기능이 적용된 세 번째 버전입니다.",
+      },
       review:
         "오늘 정말로 완성하며 느낀 코딩에 있어서 중요한 것은 집중력 뿐만 아니라 코드를 계속 볼 수 있는 인내심이라는 것을 알게 되었다.",
       githubLink: [
@@ -52,6 +60,14 @@ export const projectData = {
         "/img/급식왕_version2_cafe.png",
         "/img/급식왕_version2_end.png",
       ],
+      imgnavigate: {
+        0: "급식왕 프로젝트의 첫 번째 버전 ARKit 화면입니다.",
+        1: "첫 번째 버전 메인 화면입니다.",
+        2: "첫 번째 버전 메뉴 화면입니다.",
+        3: "두 번째 버전 ARKit 화면입니다.",
+        4: "두 번째 버전 카페 화면입니다.",
+        5: "게임 엔딩 화면입니다.",
+      },
       review:
         "CSS의 추가 수정과, 로직 부분에 있어 완성을 진행했다. 설계가 매우 중요하다는 것을 깨닫게 되었다.",
       githubLink: [
@@ -74,6 +90,11 @@ export const projectData = {
         "/img/customwidgets_custom.png",
         "/img/customwidgets_base.png",
       ],
+      imgnavigate: {
+        0: "Custom Widgets 프로젝트의 메인 화면입니다.",
+        1: "커스텀 위젯 설정 화면입니다.",
+        2: "기본 위젯 화면입니다.",
+      },
       review:
         "custom widgets 프로젝트를 완성하였으며, 짧은 기간 동안 집중력을 발휘해 만족스러운 결과를 낼 수 있었다.",
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
@@ -85,8 +106,8 @@ export const projectData = {
       stack: ["미정"],
       period: "2024.09-19 ~ 진행중",
       content: "전자책 제작 기능 및 조회 기능 제공",
-      details: "",
       data: [],
+      imgnavigate: {},
       review: "",
       githubLink: "",
     },
@@ -101,8 +122,8 @@ export const projectData = {
         "기술 스택 및 경험 상세화",
         "연락처 및 소셜 미디어 링크 제공",
       ],
-      details: "",
       data: [],
+      imgnavigate: {},
       review: "",
       githubLink: ["https://github.com/dalramjwi/Supolio"],
     },
@@ -124,6 +145,16 @@ export const projectData = {
         "DB 외래키 문제 해결",
         "회원가입 관련 기능 구현",
       ],
+      data: [
+        "/img/자판기_version1_main.png",
+        "/img/자판기_version2_main.png",
+        "/img/자판기_version2_purchase.png",
+      ],
+      imgnavigate: {
+        0: "수상한 자판기 프로젝트의 첫 번째 버전 메인 화면입니다.",
+        1: "두 번째 버전 메인 화면입니다.",
+        2: "제품 구매 화면입니다.",
+      },
       review:
         "팀 프로젝트를 진행하면서 설계적 측면에서의 협업의 중요성을 깨달았다.",
       githubLink: [
@@ -149,6 +180,7 @@ export const projectData = {
       ],
       details: ["ERD 구조 반영 및 문서 제작"],
       data: [],
+      imgnavigate: {},
       review: "",
       githubLink: "",
     },
@@ -159,7 +191,16 @@ export const projectData = {
       stack: ["Django", "Next", "PostgreSQL", "WebSocket"],
       period: "2024.07-24 ~ 진행중",
       content: ["회원가입, 로그인, 캐릭터 생성 및 공유, 카카오톡 챗봇 연동"],
-      details: "",
+      data: [
+        "/img/갈라테이아_main.png",
+        "/img/갈라테이아_character.png",
+        "/img/갈라테이아_chatbot.png",
+      ],
+      imgnavigate: {
+        0: "갈라테이아 프로젝트의 메인 화면입니다.",
+        1: "캐릭터 생성 화면입니다.",
+        2: "챗봇 연동 화면입니다.",
+      },
       review: "",
       githubLink: "",
     },
@@ -178,6 +219,16 @@ export const projectData = {
       details: [
         "데이터 전처리 및 다양한 머신 러닝 알고리즘을 적용하여 최적 모델을 찾기 위한 실험 수행",
       ],
+      data: [
+        "/img/호랑이_data_processing.png",
+        "/img/호랑이_model_training.png",
+        "/img/호랑이_prediction.png",
+      ],
+      imgnavigate: {
+        0: "호랑이 프로젝트의 데이터 전처리 과정입니다.",
+        1: "모델 학습 과정입니다.",
+        2: "예측 결과 시각화 화면입니다.",
+      },
       review: "",
       githubLink: "",
     },
