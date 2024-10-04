@@ -14,7 +14,7 @@ import Team from "./pages/Team.tsx";
 const App = () => {
   return (
     <Router>
-      <div className="App flex flex-col h-screen">
+      <div className="App flex flex-col h-screen overflow-y-scroll scrollbar-hidden">
         <Header />
         <div className="flex-grow border border-black border-t-0">
           <Routes>
