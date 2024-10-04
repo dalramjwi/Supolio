@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal.tsx";
+import { stackColors } from "../data/stackCss.ts";
 
 // 프로젝트의 구조에 맞는 타입 정의
 interface Project {
@@ -49,15 +50,27 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         <div className="text-3xl font-bold text-center">{project.title}</div>
       </div>
 
+      {/* 스택 부분: 각 스택에 해당하는 색상을 배경으로 설정 */}
       {project.stack && (
-        <div className=" text-center text-base mb-4">
-          {project.stack.join(" ")}
+        <div className="flex justify-center gap-2 flex-wrap mb-4">
+          {project.stack.map((tech) => (
+            <div
+              key={tech}
+              className="text-black px-2 py-1 rounded-md text-base"
+              style={{ backgroundColor: stackColors[tech] || "#333" }}
+            >
+              {tech}
+            </div>
+          ))}
         </div>
       )}
+
+      {/* 기능 섹션 */}
       <div>
         <div className="font-bold">기능</div>
         <div className="text-sm mt-2">{project.content}</div>
       </div>
+
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
         <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
