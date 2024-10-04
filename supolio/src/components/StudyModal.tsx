@@ -21,34 +21,38 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
   };
 
   const content = (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-2">
-        {contentData[currentIndex].title}
-      </h2>
+    <div className="flex">
+      <div className="p-4 w-1/2">
+        {" "}
+        {/* 왼쪽 글 부분 */}
+        <h2 className="text-2xl font-bold mb-2">
+          {contentData[currentIndex].title}
+        </h2>
+        <p className="text-gray-700 whitespace-pre-line mb-4">
+          {contentData[currentIndex].description}
+        </p>
+        <div className="flex justify-between">
+          <button
+            onClick={() => handleSwipe("prev")}
+            disabled={currentIndex === 0}
+            className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
+          >
+            ◀
+          </button>
+          <button
+            onClick={() => handleSwipe("next")}
+            disabled={currentIndex === contentData.length - 1}
+            className="bg-black text-white px-4 py-2 rounded disabled:opacity-50"
+          >
+            ▶
+          </button>
+        </div>
+      </div>
       <img
         src={contentData[currentIndex].imageUrl}
         alt={contentData[currentIndex].title}
-        className="w-full h-40 object-cover mb-2" // 이미지 자리에 임시 이미지 경로 사용
+        className="w-1/2 h-auto max-h-[80vh] object-contain" // 오른쪽에 배치된 이미지
       />
-      <p className="text-gray-700 whitespace-pre-line mb-4">
-        {contentData[currentIndex].description}
-      </p>
-      <div className="flex justify-between">
-        <button
-          onClick={() => handleSwipe("prev")}
-          disabled={currentIndex === 0}
-          className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
-        >
-          ◀
-        </button>
-        <button
-          onClick={() => handleSwipe("next")}
-          disabled={currentIndex === contentData.length - 1}
-          className="bg-black text-white px-4 py-2 rounded disabled:opacity-50"
-        >
-          ▶
-        </button>
-      </div>
     </div>
   );
 
