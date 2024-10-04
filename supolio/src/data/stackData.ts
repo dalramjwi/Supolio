@@ -32,8 +32,8 @@ export const stackData = [
     colorClass: "bg-purple-100 border-purple-300",
   },
   {
-    title: "AWS",
-    items: ["S3", "Amplify", "EC2"],
+    title: "DevOps",
+    items: ["AWS S3", "AWS Amplify", "AWS EC2", "Docker"],
     colorClass: "bg-orange-100 border-orange-300",
   },
 ];
