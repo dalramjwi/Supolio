@@ -18,35 +18,40 @@ const Team: React.FC = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-4">
+      {/* 최대 3개 열로 설정 */}
       {/* 프로젝트 데이터를 반복하여 카드 생성 */}
       {Object.keys(projectData.team).map((projectKey) => {
         const project = projectData.team[projectKey];
         return (
           <div
             key={project.title}
-            className="w-52 h-72 bg-gray-200 rounded-lg shadow-lg p-4 flex flex-col justify-between cursor-pointer"
+            className="h-[65vh] w-full bg-gray-200 rounded-lg shadow-lg flex flex-col justify-between cursor-pointer transition-all hover:shadow-xl overflow-hidden" // 카드 높이 및 너비 설정
             onClick={() => openModal(project)}
           >
-            <div className="flex justify-between items-center">
-              <div className="text-sm font-bold">{project.title}</div>
-              <div className="flex items-center gap-1">
-                {project.stack &&
-                  Array.isArray(project.stack) &&
-                  project.stack.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="w-2.5 h-2.5 rounded-full"
-                      style={{ backgroundColor: stackColors[tech] || "#000" }} // 스택 색상 적용
-                    ></span>
-                  ))}
+            <div className="flex flex-col p-4 h-full justify-between">
+              <div className="flex justify-between items-center mb-2">
+                <div className="text-sm font-bold">{project.title}</div>
+                <div className="flex items-center gap-1">
+                  {project.stack &&
+                    Array.isArray(project.stack) &&
+                    project.stack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: stackColors[tech] || "#000" }} // 스택 색상 적용
+                      ></span>
+                    ))}
+                </div>
               </div>
-            </div>
-            <div className="w-full h-40 bg-white rounded-md mt-4 flex items-center justify-center">
-              이미지
-            </div>
-            <div className="w-full text-center bg-gray-600 text-white font-bold py-2 rounded mt-4">
-              {project.description.slice(0, 20)}...
+              <div className="w-full h-40 bg-white rounded-md flex items-center justify-center">
+                {/* 이미지 표시 부분 */}
+                이미지
+              </div>
+              {/* 설명 부분의 고정 높이 증가 */}
+              <div className="w-full text-center bg-gray-600 text-white font-bold py-2 rounded h-20 flex items-center justify-center">
+                {project.description} {/* 고정 높이에 맞춰 설명 표시 */}
+              </div>
             </div>
           </div>
         );
