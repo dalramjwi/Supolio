@@ -55,7 +55,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
-        <div className="w-full h-40 bg-white rounded-md flex items-center justify-center border relative mb-4">
+        <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
           <button
             className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
             onClick={handlePrevImage}
@@ -65,7 +65,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <img
             src={project.data[currentImageIndex]}
             alt="Project content"
-            className="w-full h-full object-cover rounded-md"
+            className="w-full h-full object-contain rounded-md" // object-contain 사용하여 이미지 비율 유지
           />
           <button
             className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
