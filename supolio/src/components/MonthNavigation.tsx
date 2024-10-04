@@ -13,7 +13,7 @@ const MonthNavigation: React.FC<Props> = ({
   handleNextMonth,
 }) => {
   return (
-    <div className="flex justify-end mb-4">
+    <div className="flex justify-end mb-4 gap-x-0.5">
       <button
         onClick={handlePrevMonth}
         className={`px-6 py-2 bg-gray-200 rounded ${

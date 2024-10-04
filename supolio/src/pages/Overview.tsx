@@ -42,9 +42,7 @@ const Overview: React.FC = () => {
   return (
     <div className="flex justify-center items-end">
       <div className="pt-10 pr-10 pb-0 pl-10 text-center">
-        <h2 className="text-5xl font-bold mb-2 ml-52">
-          {months[currentMonth - 4]}
-        </h2>
+        <h2 className="text-5xl font-bold mb-2">{months[currentMonth - 4]}</h2>
 
         {/* 이전/다음 달 버튼 */}
         <MonthNavigation
