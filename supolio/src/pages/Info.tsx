@@ -81,7 +81,7 @@ const Info: React.FC = () => {
                 onClick={handleAboutStudyClick}
               >
                 <span
-                  className={`text-2xl cursor-pointer ${
+                  className={`text-2xl cursor-pointer font-bold ${
                     animateText ? "animate-pulse" : ""
                   }`}
                 >
