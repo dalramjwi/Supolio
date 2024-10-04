@@ -40,7 +40,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   // 모달 내부 콘텐츠 정의
   const content = (
-    <div>
+    <div className="max-h-full overflow-y-auto">
       <div className="text-sm text-center font-medium mb-4">
         기간: {project.period}
       </div>
@@ -100,7 +100,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     </div>
   );
 
-  return <Modal show={show} close={onClose} content={content} />;
+  return (
+    <Modal
+      show={show}
+      close={onClose}
+      content={
+        <div className="w-[80vw] h-[80vh] min-w-[80vw] max-w-[80vw] min-h-[80vh] max-h-[80vh] overflow-y-auto">
+          {content}
+        </div>
+      }
+    />
+  );
 };
 
 export default ProjectModal;
