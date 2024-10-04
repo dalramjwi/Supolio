@@ -1,4 +1,3 @@
-// 각 프로젝트의 상세 정보들을 모아놓은 객체
 export const projectData = {
   single: {
     수록: {
@@ -6,11 +5,11 @@ export const projectData = {
       description:
         "소프트웨어 기획 및 설계 과제로 개인 기록 사이트(블로그)를 제작하였다. JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 제작하며, 프로젝트는 세 차례의 리팩토링을 거쳐 발전해왔다.",
       stack: ["html5", "css3", "javascript", "node.js"],
-      period: "5.24 - 6.12",
+      period: "2024.05-24 ~ 2024.06-12",
       subPeriods: {
-        "1차": "5.24 - 5.29",
-        "2차": "5.29 - 6.5",
-        "3차": "6.6 - 6.12",
+        "1차": "2024.05-24 ~ 2024.05-29",
+        "2차": "2024.05-29 ~ 2024.06-05",
+        "3차": "2024.06-06 ~ 2024.06-12",
       },
       content: "게시글 작성, 수정, 삭제, 조회, 검색",
       details:
@@ -36,10 +35,10 @@ export const projectData = {
       description:
         "Node.js를 배우면서 서버에서 여러 페이지를 처리하는 방식을 익혔다. 특히, SSR(Server-Side Rendering) 방식을 통해 웹페이지 요청에 따라 HTML을 동적으로 조합해 다양한 이벤트 페이지를 보여주는 아이디어가 흥미로웠다.",
       stack: ["html5", "css3", "javascript", "node.js", "sqlite3"],
-      period: "5.8 - 9.11",
+      period: "2024.05-08 ~ 2024.09-11",
       subPeriods: {
-        "1차": "5.8 - 5.21",
-        "2차": "6.10 - 9.11",
+        "1차": "2024.05-08 ~ 2024.05-21",
+        "2차": "2024.06-10 ~ 2024.09-11",
       },
       content:
         "사용자가 선택한 메뉴에 따라 변경되는 이벤트 및 랜덤 이벤트에 따라 변동되는 값에 따른 엔딩 포인트 분기점을 제공하는 간단한 게임 형식의 웹사이트",
@@ -65,7 +64,7 @@ export const projectData = {
       description:
         "React를 배우게 되면서, React를 활용한 프로젝트를 만들어보고 싶었다. 이에 리액트 상태 관리 개념을 적극적으로 활용할 수 있는 위젯을 만들어보자는 생각이 떠올랐다.",
       stack: ["typescript", "react", "tailwindcss"],
-      period: "7.17 - 9.18",
+      period: "2024.07-17 ~ 2024.09-18",
       content:
         "입력한 값에 따라 변경되는 위젯, 위젯 위치 변경 기능 (드래그 앤 드롭), 위젯 숫자 조정 기능",
       details:
@@ -84,7 +83,7 @@ export const projectData = {
       description:
         "독서를 좋아하는 만큼 다양한 종류의 독서에 관심이 있었다. 웹소설과 같은 전자책을 쉽게 제작하고 조회할 수 있는 플랫폼을 제작하려는 프로젝트를 시작하였다.",
       stack: ["미정"],
-      period: "9.19 - 진행중",
+      period: "2024.09-19 ~ 진행중",
       content: "전자책 제작 기능 및 조회 기능 제공",
       details: "",
       data: [],
@@ -96,7 +95,7 @@ export const projectData = {
       description:
         "이력서를 작성하고 취업 준비를 하면서, 개인 포트폴리오를 사이트로 배포하는 것이 AWS 연습과 나를 소개하는 데 큰 도움이 될 것 같았다.",
       stack: ["react"],
-      period: "9.20 - 현재",
+      period: "2024.09-20 ~ 현재",
       content: [
         "개인 프로젝트 및 팀 프로젝트 소개",
         "기술 스택 및 경험 상세화",
@@ -114,7 +113,7 @@ export const projectData = {
       description:
         "교육 과정 수료 중 데이터베이스 기능 모델을 포함한 자판기 웹 어플리케이션을 구현해야 했다. 도메인과 관련해 “비현실적인” 물건을 판매하는 자판기 프로젝트.",
       stack: ["html", "css", "javascript", "sqlite3"],
-      period: "6.20 - 7.15",
+      period: "2024.06-20 ~ 2024.07-15",
       content: [
         "관리자 페이지와 사용자 페이지 구분",
         "제품 정보 조회",
@@ -143,7 +142,7 @@ export const projectData = {
         "Nest",
         "Next",
       ],
-      period: "7.16 - 8.14 (리팩토링: 8.22 - 진행중)",
+      period: "2024.07-16 ~ 2024.08-14",
       content: [
         "관리자: 업무 할당, 근태 확인, 회원가입 승인, 권한 및 월급 설정",
         "사용자: 프로필 관리, 프로젝트 칸반 보드, 캘린더",
@@ -158,7 +157,7 @@ export const projectData = {
       description:
         "생성형 프롬프트와 관련된 프로젝트로, 개인이 학습시킬 수 있는 AI 템플릿을 제작하여 제공하는 플랫폼을 목표로 하고 있다.",
       stack: ["Django", "Next", "PostgreSQL", "WebSocket"],
-      period: "7.24 - 진행중",
+      period: "2024.07-24 ~ 진행중",
       content: ["회원가입, 로그인, 캐릭터 생성 및 공유, 카카오톡 챗봇 연동"],
       details: "",
       review: "",
