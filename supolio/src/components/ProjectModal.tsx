@@ -8,6 +8,7 @@ interface Project {
   period: string;
   stack?: string[];
   data: string[];
+  imgnavigate?: { [key: number]: string };
   content: string;
   details?: string;
   review?: string;
@@ -64,13 +65,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           ))}
         </div>
       )}
-
-      {/* 기능 섹션 */}
       <div>
         <div className="font-bold">기능</div>
         <div className="text-sm mt-2">{project.content}</div>
       </div>
-
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
         <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
@@ -94,7 +92,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
       )}
 
-      {/* 기능, 상세기능, 후기 섹션 */}
+      {/* 이미지 설명 영역 */}
+      {project.imgnavigate && project.imgnavigate[currentImageIndex] && (
+        <div className="text-sm text-center italic mb-4">
+          {project.imgnavigate[currentImageIndex]}
+        </div>
+      )}
+
+      {/* 상세기능, 후기 섹션 */}
       <div className="flex flex-col gap-4">
         {project.details && (
           <div>
