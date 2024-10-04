@@ -37,6 +37,7 @@ export const projectData = {
         "https://github.com/dalramjwi/record-subject_5_trans",
         "https://github.com/dalramjwi/RECORD-trans",
       ],
+      notionLink: "https://notion.so/sample1", // 임시 Notion 링크
     },
     내꿈은급식왕: {
       title: "내 꿈은 급식왕",
@@ -74,6 +75,7 @@ export const projectData = {
         "https://github.com/dalramjwi/SchoolMealKing",
         "https://github.com/dalramjwi/NEW-schoolMealKING",
       ],
+      notionLink: "https://notion.so/sample2", // 임시 Notion 링크
     },
     CustomWidgets: {
       title: "Custom Widgets",
@@ -98,6 +100,7 @@ export const projectData = {
       review:
         "custom widgets 프로젝트를 완성하였으며, 짧은 기간 동안 집중력을 발휘해 만족스러운 결과를 낼 수 있었다.",
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
+      notionLink: "https://notion.so/sample3", // 임시 Notion 링크
     },
     도타임: {
       title: "도타임",
@@ -110,6 +113,7 @@ export const projectData = {
       imgnavigate: {},
       review: "",
       githubLink: "",
+      notionLink: "https://notion.so/sample4", // 임시 Notion 링크
     },
     수폴리오: {
       title: "수폴리오",
@@ -126,6 +130,7 @@ export const projectData = {
       imgnavigate: {},
       review: "",
       githubLink: ["https://github.com/dalramjwi/Supolio"],
+      notionLink: "https://notion.so/sample5", // 임시 Notion 링크
     },
   },
   team: {
@@ -160,6 +165,7 @@ export const projectData = {
       githubLink: [
         "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectA-3team",
       ],
+      notionLink: "https://notion.so/sample6", // 임시 Notion 링크
     },
     DelaN: {
       title: "DelaN",
@@ -183,6 +189,7 @@ export const projectData = {
       imgnavigate: {},
       review: "",
       githubLink: "",
+      notionLink: "https://notion.so/sample7", // 임시 Notion 링크
     },
     갈라테이아: {
       title: "갈라테이아",
@@ -203,6 +210,7 @@ export const projectData = {
       },
       review: "",
       githubLink: "",
+      notionLink: "https://notion.so/sample8", // 임시 Notion 링크
     },
     호랑이: {
       title: "호랑이",
@@ -231,6 +239,7 @@ export const projectData = {
       },
       review: "",
       githubLink: "",
+      notionLink: "https://notion.so/sample9", // 임시 Notion 링크
     },
   },
 };
