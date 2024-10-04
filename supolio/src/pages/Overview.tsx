@@ -55,7 +55,9 @@ const Overview: React.FC = () => {
 
         <div className="flex flex-row gap-10">
           {/* 프로젝트 리스트 */}
-          <ProjectList handleProjectClick={handleProjectClick} />
+          <div className="fixed left-80 z-10">
+            <ProjectList handleProjectClick={handleProjectClick} />
+          </div>
 
           {/* 달력 */}
           <table className="table-fixed w-full max-w-3xl mx-auto border-collapse border border-gray-400">
