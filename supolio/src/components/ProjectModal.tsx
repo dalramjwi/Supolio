@@ -41,18 +41,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   // 모달 내부 콘텐츠 정의
   const content = (
     <div className="max-h-full overflow-y-auto">
-      <div className="text-sm text-center font-medium mb-4">
-        기간: {project.period}
+      <div className="text-base text-center font-medium mb-2">
+        {project.period}
       </div>
       {/* 제목을 가운데 정렬 */}
-      <div className="flex justify-center items-center mb-4">
-        <div className="text-sm font-bold text-center">{project.title}</div>
+      <div className="flex justify-center items-center mb-2">
+        <div className="text-3xl font-bold text-center">{project.title}</div>
       </div>
 
       {project.stack && (
-        <div className="text-sm mb-4">{project.stack.join(", ")}</div>
+        <div className=" text-center text-base mb-4">
+          {project.stack.join(" ")}
+        </div>
       )}
-
+      <div>
+        <div className="font-bold">기능</div>
+        <div className="text-sm mt-2">{project.content}</div>
+      </div>
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
         <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
@@ -78,11 +83,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
       {/* 기능, 상세기능, 후기 섹션 */}
       <div className="flex flex-col gap-4">
-        <div>
-          <div className="font-bold">기능</div>
-          <div className="text-sm mt-2">{project.content}</div>
-        </div>
-
         {project.details && (
           <div>
             <div className="font-bold">상세기능</div>
