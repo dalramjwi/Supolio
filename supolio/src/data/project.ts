@@ -16,8 +16,12 @@ export const projectData = {
       details:
         "기본적인 HTTP 모듈을 사용하여 서버를 구축하고, 블로그 사이트를 구현. SSR을 적용하여 실시간 업데이트 문제를 해결했으며, 리팩토링을 통해 유지보수성을 높였다.",
       data: [
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/346c0833-cb8f-4651-910b-d33bb08e2d67/%EC%88%98%EB%A1%9D_version1_main.png",
-        "https://prod-files-secure.s3.us-west-2.amazonaws.com/e5acc962-4ecc-4f29-9dc7-6348dfa00542/da5596b2-f485-499c-83a3-fb9093c1d8a4/%EC%88%98%EB%A1%9D_version1_write.png",
+        "/img/수록_version1_main.png",
+        "/img/수록_version1_write.png",
+        "/img/수록_version2_main.png",
+        "/img/수록_version2_search.png",
+        "/img/수록_version3_main.png",
+        "/img/수록_version3_serach.png",
       ],
       review:
         "오늘 정말로 완성하며 느낀 코딩에 있어서 중요한 것은 집중력 뿐만 아니라 코드를 계속 볼 수 있는 인내심이라는 것을 알게 되었다.",
@@ -41,7 +45,14 @@ export const projectData = {
         "사용자가 선택한 메뉴에 따라 변경되는 이벤트 및 랜덤 이벤트에 따라 변동되는 값에 따른 엔딩 포인트 분기점을 제공하는 간단한 게임 형식의 웹사이트",
       details:
         "초기에는 설계 없이 코드를 작성하여 코드의 유지보수성과 확장성의 중요성을 절실히 깨달았다. 이를 해결하기 위해 코드 리뷰 페이퍼를 제작하여 구조를 정리하고, 이후 구체적인 설계를 바탕으로 코드를 리팩토링하는 과정을 거쳤다.",
-      data: [],
+      data: [
+        "/img/급식왕_version1_arkit.png",
+        "/img/급식왕_version1_main.png",
+        "/img/급식왕_version1_menu.png",
+        "/img/급식왕_version2_arkit.png",
+        "/img/급식왕_version2_cafe.png",
+        "/img/급식왕_version2_end.png",
+      ],
       review:
         "CSS의 추가 수정과, 로직 부분에 있어 완성을 진행했다. 설계가 매우 중요하다는 것을 깨닫게 되었다.",
       githubLink: [
@@ -59,7 +70,11 @@ export const projectData = {
         "입력한 값에 따라 변경되는 위젯, 위젯 위치 변경 기능 (드래그 앤 드롭), 위젯 숫자 조정 기능",
       details:
         "드래그 앤 드롭 기능은 기존 라이브러리를 사용하지 않고 필요한 기능들을 직접 정의하여 로직을 구현했다.",
-      data: [],
+      data: [
+        "/img/customwidgets_main.png",
+        "/img/customwidgets_custom.png",
+        "/img/customwidgets_base.png",
+      ],
       review:
         "custom widgets 프로젝트를 완성하였으며, 짧은 기간 동안 집중력을 발휘해 만족스러운 결과를 낼 수 있었다.",
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
