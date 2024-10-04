@@ -25,7 +25,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.scrollbar-hidden {
+  @apply scrollbar-hide; /* Tailwind CSS에서 스크롤바 숨기기 */
+}
 /* Global font 설정 */
 body {
   font-family: "RIDIBatang", -apple-system, BlinkMacSystemFont, "Segoe UI",
