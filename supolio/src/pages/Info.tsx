@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import Modal from "../components/Modal.tsx";
 import { stackData } from "../data/stackData.ts";
 import TechStack from "../components/TeckStack.tsx";
+import StudyModal from "../components/StudyModal.tsx";
 
 const Info: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [animateText, setAnimateText] = useState(true);
+  const [showStudyModal, setShowStudyModal] = useState(false);
 
   const handleEmailClick = () => {
     navigator.clipboard.writeText("dalramjwi@gmail.com");
-    // 이메일 클릭 시 모달 띄우기
     setShowEmailModal(true);
   };
 
   const handleAboutStudyClick = () => {
-    setShowModal(true);
-    // 모달 클릭하면 애니메이션 제거
+    setShowStudyModal(true);
     setAnimateText(false);
   };
 
@@ -109,10 +108,9 @@ const Info: React.FC = () => {
       />
 
       {/* Study Modal */}
-      <Modal
-        show={showModal}
-        close={() => setShowModal(false)}
-        content={<p>Study Details</p>}
+      <StudyModal
+        show={showStudyModal}
+        close={() => setShowStudyModal(false)}
       />
     </div>
   );
