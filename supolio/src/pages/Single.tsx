@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal.tsx";
 import { projectData } from "../data/project.ts";
+import { stackColors } from "../data/stackCss.ts";
 
 const Single: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null); // 선택된 프로젝트 저장
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -25,18 +26,18 @@ const Single: React.FC = () => {
           <div
             key={project.title}
             className="w-52 h-72 bg-gray-200 rounded-lg shadow-lg p-4 flex flex-col justify-between cursor-pointer"
-            onClick={() => openModal(project)} // 프로젝트 클릭 시 모달 열기
+            onClick={() => openModal(project)}
           >
             <div className="flex justify-between items-center">
               <div className="text-sm font-bold">{project.title}</div>
               <div className="flex items-center gap-1">
-                {/* !추가 로직 구현 필요 */}
                 {project.stack &&
                   Array.isArray(project.stack) &&
                   project.stack.map((tech, index) => (
                     <span
                       key={index}
-                      className="w-2.5 h-2.5 bg-black rounded-full"
+                      className="w-2.5 h-2.5 rounded-full"
+                      style={{ backgroundColor: stackColors[tech] || "#000" }} // 스택 색상 적용
                     ></span>
                   ))}
               </div>
@@ -54,7 +55,7 @@ const Single: React.FC = () => {
       {/* ProjectModal 사용: 선택된 프로젝트를 모달로 전달 */}
       {selectedProject && (
         <ProjectModal
-          project={selectedProject} // 선택된 프로젝트 데이터 전달
+          project={selectedProject}
           show={isModalOpen}
           onClose={closeModal}
         />
