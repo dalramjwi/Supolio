@@ -34,7 +34,7 @@ const Team: React.FC = () => {
               >
                 <div className="flex flex-col p-4 h-full justify-between">
                   <div className="flex justify-between items-center mb-2">
-                    <div className="text-xl font-bold">{project.title}</div>
+                    <div className="text-2xl font-bold">{project.title}</div>
                     <div className="flex items-center gap-1">
                       {project.stack &&
                         Array.isArray(project.stack) &&
