@@ -21,11 +21,11 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
   };
 
   const content = (
-    <div className="flex">
-      <div className="p-4 w-1/2">
+    <div className="flex flex-col md:flex-row">
+      <div className="p-4 w-full md:w-1/2">
         {/* 왼쪽 글 부분 */}
         <div className="flex flex-col min-h-full">
-          <div className="flex flex-col flex-grow bg-white rounded-lg shadow-lg p-6 border border-gray-300">
+          <div className="flex flex-col flex-grow bg-white rounded-lg shadow-lg p-6 border border-gray-300 overflow-y-scroll scrollbar-hidden max-h-[76vh]">
             <h2 className="text-2xl font-bold">
               {contentData[currentIndex].title}
             </h2>
@@ -52,7 +52,7 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
                 ▶
               </button>
             </div>
-            <p className="text-gray-700 whitespace-pre-line mb-4">
+            <p className="text-gray-700 whitespace-pre-line mb-4 text-xl">
               {contentData[currentIndex].description}
             </p>
           </div>
@@ -61,7 +61,7 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
       <img
         src={contentData[currentIndex].imageUrl}
         alt={contentData[currentIndex].title}
-        className="w-1/2 h-auto max-h-[80vh] object-contain" // 오른쪽에 배치된 이미지
+        className="w-full md:w-1/2 h-auto max-h-[80vh] object-contain"
       />
     </div>
   );
@@ -71,7 +71,7 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
       show={show}
       close={close}
       content={
-        <div className="w-[80vw] h-[80vh] min-w-[80vw] max-w-[80vw] min-h-[80vh] max-h-[80vh] overflow-y-auto">
+        <div className="w-[80vw] h-[80vh] min-w-[80vw] max-w-[80vw] min-h-[80vh] max-h-[80vh] overflow-y-scroll scrollbar-hidden">
           {content}
         </div>
       }
