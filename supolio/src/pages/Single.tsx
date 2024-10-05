@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal.tsx";
 import { projectData } from "../data/project.ts";
 import { stackColors } from "../data/stackCss.ts";
+import { projectColors } from "../data/overviewCss.ts";
 
 const Single: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
-  const projects = projectData.single; // single 객체만 가져옴
+  const projects = projectData.single;
 
   const openModal = (project: any) => {
     setSelectedProject(project);
@@ -21,7 +22,7 @@ const Single: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
-      <div className="flex flex-col justify-center items-center flex-grow  bg-white rounded-lg shadow-lg p-4 border border-gray-300">
+      <div className="flex flex-col justify-center items-center flex-grow bg-white rounded-lg shadow-lg p-4 border border-gray-300">
         <div className="grid gap-x-16 gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {/* 최대 3개 열로 설정 */}
           {/* 프로젝트 데이터를 반복하여 카드 생성 */}
@@ -30,7 +31,7 @@ const Single: React.FC = () => {
             return (
               <div
                 key={project.title}
-                className="h-[55vh] w-full max-w-sm bg-gray-200 rounded-lg shadow-lg flex flex-col justify-between cursor-pointer transition-all hover:shadow-xl overflow-hidden"
+                className={`h-[55vh] w-full max-w-sm ${projectColors[projectKey]} rounded-lg shadow-lg flex flex-col justify-between cursor-pointer transition-all hover:shadow-xl overflow-hidden`}
                 onClick={() => openModal(project)}
               >
                 <div className="flex flex-col p-4 h-full justify-between">
