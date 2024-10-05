@@ -53,7 +53,7 @@ const Overview: React.FC = () => {
 
         <div className="flex flex-row gap-10">
           {/* 프로젝트 리스트 */}
-          <div className="fixed left-80 z-10">
+          <div className="left-80 z-10">
             <ProjectList handleProjectClick={handleProjectClick} />
           </div>
 
