@@ -59,10 +59,10 @@ const Team: React.FC = () => {
                       />
                     )}
                   </div>
-                  <div className="w-full bg-gray-600 text-white font-bold py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2">
-                    {/* 높이 증가 */}
-                    {project.description}
-                  </div>
+                  <div
+                    className="w-full bg-gray-600 text-white py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2"
+                    dangerouslySetInnerHTML={{ __html: project.description }} // HTML 렌더링
+                  />
                 </div>
               </div>
             );

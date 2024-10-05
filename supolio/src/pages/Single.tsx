@@ -36,7 +36,7 @@ const Single: React.FC = () => {
               >
                 <div className="flex flex-col p-4 h-full justify-between">
                   <div className="flex justify-between items-center mb-2">
-                    <div className="text-xl font-bold">{project.title}</div>
+                    <div className="text-2xl font-bold">{project.title}</div>
                     <div className="flex items-center gap-1">
                       {project.stack &&
                         Array.isArray(project.stack) &&
@@ -62,7 +62,7 @@ const Single: React.FC = () => {
                     )}
                   </div>
                   <div
-                    className="w-full bg-gray-600 text-white font-bold py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2"
+                    className="w-full bg-gray-600 text-white  py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2"
                     dangerouslySetInnerHTML={{ __html: project.description }} // HTML 렌더링
                   />
                 </div>
