@@ -125,7 +125,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         )}
         {/* 이미지 스와이프 영역 */}
         {project.data && project.data.length > 0 && (
-          <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
+          <div className="w-full h-[55vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
             <button
               className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full hover:bg-gray-400 transition text-white"
               onClick={handlePrevImage}
