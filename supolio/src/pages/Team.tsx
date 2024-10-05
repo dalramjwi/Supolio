@@ -41,7 +41,7 @@ const Team: React.FC = () => {
                         project.stack.map((tech, index) => (
                           <span
                             key={index}
-                            className="w-3 h-3 rounded-full"
+                            className="w-3 h-3 rounded-full border border-black" // 동그라미에 검은색 테두리 추가
                             style={{
                               backgroundColor: stackColors[tech] || "#000",
                             }} // 스택 색상 적용
@@ -55,7 +55,7 @@ const Team: React.FC = () => {
                       <img
                         src={project.thumbnail}
                         alt={`${project.title} thumbnail`}
-                        className="object-contain w-full h-full rounded-md" // contain 사용
+                        className="w-full h-full rounded-md"
                       />
                     )}
                   </div>
