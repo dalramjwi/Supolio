@@ -61,11 +61,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   // 모달 내부 콘텐츠 정의
   const content = (
     <div className="max-h-full overflow-y-scroll scrollbar-hidden">
-      <div className="text-base text-center font-medium mb-2">
+      <div className="text-base text-center font-medium mb-3">
         {project.period}
       </div>
       {/* 제목을 가운데 정렬 + 링크를 우측에 배치 */}
-      <div className="flex justify-center items-center mb-2 relative">
+      <div className="flex justify-center items-center mb-3 relative">
         <div className="text-3xl font-bold text-center">{project.title}</div>
         {/* GitHub 및 Notion 링크를 우측 상단에 배치 */}
         <div className="absolute right-0 top-0 flex gap-2">
@@ -105,59 +105,58 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
       )}
       <div>
-        <div className="font-bold">기능</div>
+        <div className="font-bold text-2xl mb-3">주요 기능 및 설명</div>
         <div
-          className="text-sm mt-2"
+          className="text-lg mt-2 mb-4"
           dangerouslySetInnerHTML={{ __html: project.content }}
         ></div>
       </div>
-      {/* 이미지 스와이프 영역 */}
-      {project.data && project.data.length > 0 && (
-        <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
-          <button
-            className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
-            onClick={handlePrevImage}
-          >
-            ◀
-          </button>
-          <img
-            src={project.data[currentImageIndex]}
-            alt="Project content"
-            className="w-full h-full object-contain rounded-md" // object-contain 사용하여 이미지 비율 유지
-          />
-          <button
-            className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
-            onClick={handleNextImage}
-          >
-            ▶
-          </button>
-        </div>
-      )}
-
-      {/* 이미지 설명 영역 */}
-      {project.imgnavigate && project.imgnavigate[currentImageIndex] && (
-        <div className="text-sm text-center italic mb-4">
-          {project.imgnavigate[currentImageIndex]}
-        </div>
-      )}
 
       {/* 상세기능, 후기 섹션 */}
       <div className="flex flex-col gap-4">
         {project.details && (
           <div>
-            <div className="font-bold">상세기능</div>
+            <div className="font-bold text-2xl mb-3">제작 과정</div>
             <div
-              className="text-sm mt-2"
+              className="text-lg mt-2 mb-2"
               dangerouslySetInnerHTML={{ __html: project.details }} // HTML로 설정
             ></div>
           </div>
         )}
+        {/* 이미지 스와이프 영역 */}
+        {project.data && project.data.length > 0 && (
+          <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
+            <button
+              className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
+              onClick={handlePrevImage}
+            >
+              ◀
+            </button>
+            <img
+              src={project.data[currentImageIndex]}
+              alt="Project content"
+              className="w-full h-full object-contain rounded-md" // object-contain 사용하여 이미지 비율 유지
+            />
+            <button
+              className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
+              onClick={handleNextImage}
+            >
+              ▶
+            </button>
+          </div>
+        )}
 
+        {/* 이미지 설명 영역 */}
+        {project.imgnavigate && project.imgnavigate[currentImageIndex] && (
+          <div className="text-base text-center mb-4">
+            {project.imgnavigate[currentImageIndex]}
+          </div>
+        )}
         {project.review && (
           <div>
-            <div className="font-bold">후기</div>
+            <div className="font-bold text-2xl mb-3">회고</div>
             <div
-              className="text-sm mt-2"
+              className="text-lg mt-2"
               dangerouslySetInnerHTML={{ __html: project.review }} // HTML로 설정
             ></div>
           </div>
