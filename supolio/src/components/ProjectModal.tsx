@@ -60,7 +60,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   // 모달 내부 콘텐츠 정의
   const content = (
-    <div className="max-h-full overflow-y-auto">
+    <div className="max-h-full overflow-y-scroll scrollbar-hidden">
       <div className="text-base text-center font-medium mb-2">
         {project.period}
       </div>
