@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal.tsx";
 import { projectData } from "../data/project.ts";
 import { stackColors } from "../data/stackCss.ts";
+import { projectColors } from "../data/overviewCss.ts"; // projectColors import
 
 const Team: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +29,7 @@ const Team: React.FC = () => {
             return (
               <div
                 key={project.title}
-                className="h-[55vh] w-full max-w-sm bg-gray-200 rounded-lg shadow-lg flex flex-col justify-between cursor-pointer transition-all hover:shadow-xl overflow-hidden"
+                className={`h-[55vh] w-full max-w-sm ${projectColors[projectKey]} rounded-lg shadow-lg flex flex-col justify-between cursor-pointer transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-opacity-80 overflow-hidden`}
                 onClick={() => openModal(project)}
               >
                 <div className="flex flex-col p-4 h-full justify-between">
