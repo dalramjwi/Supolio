@@ -4,7 +4,7 @@ export const projectData = {
       title: "수록",
       description:
         "소프트웨어 기획 및 설계 과제로 개인 기록 사이트(블로그)를 제작하였다. JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 제작하며, 프로젝트는 세 차례의 리팩토링을 거쳐 발전해왔다.",
-      stack: ["html5", "css3", "javascript", "node.js"],
+      stack: ["HTML5", "CSS3", "JavaScript", "Node.js"],
       period: "2024.05-24 ~ 2024.06-12",
       subPeriods: {
         "1차": "2024.05-24 ~ 2024.05-29",
@@ -43,7 +43,7 @@ export const projectData = {
       title: "내 꿈은 급식왕",
       description:
         "Node.js를 배우면서 서버에서 여러 페이지를 처리하는 방식을 익혔다. 특히, SSR(Server-Side Rendering) 방식을 통해 웹페이지 요청에 따라 HTML을 동적으로 조합해 다양한 이벤트 페이지를 보여주는 아이디어가 흥미로웠다.",
-      stack: ["html5", "css3", "javascript", "node.js", "sqlite3"],
+      stack: ["HTML5", "CSS3", "JavaScript", "Node.js", "Sqlite3"],
       period: "2024.05-08 ~ 2024.09-11",
       subPeriods: {
         "1차": "2024.05-08 ~ 2024.05-21",
@@ -81,7 +81,7 @@ export const projectData = {
       title: "Custom Widgets",
       description:
         "React를 배우게 되면서, React를 활용한 프로젝트를 만들어보고 싶었다. 이에 리액트 상태 관리 개념을 적극적으로 활용할 수 있는 위젯을 만들어보자는 생각이 떠올랐다.",
-      stack: ["typescript", "react", "tailwindcss"],
+      stack: ["TypeScript", "React", "TailwindCSS"],
       period: "2024.07-17 ~ 2024.09-18",
       content:
         "입력한 값에 따라 변경되는 위젯, 위젯 위치 변경 기능 (드래그 앤 드롭), 위젯 숫자 조정 기능",
@@ -102,24 +102,24 @@ export const projectData = {
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
       notionLink: "https://notion.so/sample3",
     },
-    도타임: {
-      title: "도타임",
-      description:
-        "독서를 좋아하는 만큼 다양한 종류의 독서에 관심이 있었다. 웹소설과 같은 전자책을 쉽게 제작하고 조회할 수 있는 플랫폼을 제작하려는 프로젝트를 시작하였다.",
-      stack: ["미정"],
-      period: "2024.09-19 ~ 진행중",
-      content: "전자책 제작 기능 및 조회 기능 제공",
-      data: [],
-      imgnavigate: {},
-      review: "",
-      githubLink: [],
-      notionLink: "https://notion.so/sample4",
-    },
+    // 도타임: {
+    //   title: "도타임",
+    //   description:
+    //     "독서를 좋아하는 만큼 다양한 종류의 독서에 관심이 있었다. 웹소설과 같은 전자책을 쉽게 제작하고 조회할 수 있는 플랫폼을 제작하려는 프로젝트를 시작하였다.",
+    //   stack: ["미정"],
+    //   period: "2024.09-19 ~ 진행중",
+    //   content: "전자책 제작 기능 및 조회 기능 제공",
+    //   data: [],
+    //   imgnavigate: {},
+    //   review: "",
+    //   githubLink: [],
+    //   notionLink: "https://notion.so/sample4",
+    // },
     수폴리오: {
       title: "수폴리오",
       description:
         "이력서를 작성하고 취업 준비를 하면서, 개인 포트폴리오를 사이트로 배포하는 것이 AWS 연습과 나를 소개하는 데 큰 도움이 될 것 같았다.",
-      stack: ["react"],
+      stack: ["React"],
       period: "2024.09-20 ~ 현재",
       content: [
         "개인 프로젝트 및 팀 프로젝트 소개",
@@ -138,7 +138,7 @@ export const projectData = {
       title: "수상한 자판기",
       description:
         "교육 과정 수료 중 데이터베이스 기능 모델을 포함한 자판기 웹 어플리케이션을 구현해야 했다. 도메인과 관련해 “비현실적인” 물건을 판매하는 자판기 프로젝트.",
-      stack: ["html", "css", "javascript", "sqlite3"],
+      stack: ["HTML5", "CSS3", "JavaScript", "Sqlite3"],
       period: "2024.06-20 ~ 2024.07-15",
       content: [
         "관리자 페이지와 사용자 페이지 구분",
@@ -176,8 +176,8 @@ export const projectData = {
         "Vanilla Extract",
         "MongoDB",
         "PostgreSQL",
-        "Nest",
-        "Next",
+        "Nest.js",
+        "Next.js",
       ],
       period: "2024.07-16 ~ 2024.08-14",
       content: [
@@ -195,7 +195,7 @@ export const projectData = {
       title: "갈라테이아",
       description:
         "생성형 프롬프트와 관련된 프로젝트로, 개인이 학습시킬 수 있는 AI 템플릿을 제작하여 제공하는 플랫폼을 목표로 하고 있다.",
-      stack: ["Django", "Next", "PostgreSQL", "WebSocket"],
+      stack: ["Next.js", "PostgreSQL", "Python"],
       period: "2024.07-24 ~ 진행중",
       content: ["회원가입, 로그인, 캐릭터 생성 및 공유, 카카오톡 챗봇 연동"],
       data: [
@@ -216,7 +216,7 @@ export const projectData = {
       title: "호랑이",
       description:
         "머신 러닝을 활용한 프로젝트로, 데이터 분석 및 예측 모델을 개발하는 데 중점을 두고 있다.",
-      stack: ["Python", "TensorFlow", "scikit-learn", "Pandas", "NumPy"],
+      stack: ["Python"],
       period: "기간 기입 필요",
       content: [
         "데이터 전처리",
