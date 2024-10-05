@@ -10,8 +10,8 @@ interface Project {
   data: string[];
   imgnavigate?: { [key: number]: string };
   content: string;
-  details?: string;
-  review?: string;
+  details?: string; // HTML 문자열로 변경
+  review?: string; // HTML 문자열로 변경
   githubLink?: string[]; // 여러 개의 GitHub 링크 처리
   notionLink?: string; // notion 링크 추가
 }
@@ -106,7 +106,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       )}
       <div>
         <div className="font-bold">기능</div>
-        <div className="text-sm mt-2">{project.content}</div>
+        <div
+          className="text-sm mt-2"
+          dangerouslySetInnerHTML={{ __html: project.content }}
+        ></div>
       </div>
       {/* 이미지 스와이프 영역 */}
       {project.data && project.data.length > 0 && (
@@ -143,14 +146,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         {project.details && (
           <div>
             <div className="font-bold">상세기능</div>
-            <div className="text-sm mt-2">{project.details}</div>
+            <div
+              className="text-sm mt-2"
+              dangerouslySetInnerHTML={{ __html: project.details }} // HTML로 설정
+            ></div>
           </div>
         )}
 
         {project.review && (
           <div>
             <div className="font-bold">후기</div>
-            <div className="text-sm mt-2">{project.review}</div>
+            <div
+              className="text-sm mt-2"
+              dangerouslySetInnerHTML={{ __html: project.review }} // HTML로 설정
+            ></div>
           </div>
         )}
       </div>
