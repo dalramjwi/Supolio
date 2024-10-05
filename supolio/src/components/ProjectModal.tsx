@@ -72,7 +72,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           {project.githubLink && (
             <button
               onClick={handleGithubClick}
-              className="bg-gray-400 text-white px-3 py-1 rounded-full"
+              className="bg-gray-400 text-white px-3 py-1 rounded-full hover:bg-gray-500 transition"
             >
               GitHub
             </button>
@@ -82,7 +82,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               href={project.notionLink} // Notion 링크로 이동
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-400 text-white px-3 py-1 rounded-full"
+              className="bg-gray-400 text-white px-3 py-1 rounded-full hover:bg-gray-500 transition"
             >
               Notion
             </a>
@@ -127,7 +127,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         {project.data && project.data.length > 0 && (
           <div className="w-full h-[50vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
             <button
-              className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full"
+              className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full hover:bg-gray-400 transition text-white"
               onClick={handlePrevImage}
             >
               ◀
@@ -138,7 +138,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               className="w-full h-full object-contain rounded-md" // object-contain 사용하여 이미지 비율 유지
             />
             <button
-              className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full"
+              className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full hover:bg-gray-400 transition text-white"
               onClick={handleNextImage}
             >
               ▶
