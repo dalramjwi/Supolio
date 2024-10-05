@@ -3,7 +3,7 @@ export const projectData = {
     수록: {
       title: "수록",
       description:
-        "소프트웨어 기획 및 설계 과제로 개인 기록 사이트(블로그)를 제작하였다. JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 제작했다. <br/> 프로젝트는 세 차례의 리팩토링을 거쳐 발전해왔다.",
+        "소프트웨어 기획 및 설계 과제로 개인 기록 사이트를 제작하였다. <br />JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 목표했다.",
       stack: ["HTML5", "CSS3", "JavaScript", "Node.js"],
       period: "2024.05-24 ~ 2024.06-12",
       subPeriods: {
@@ -43,7 +43,7 @@ export const projectData = {
     내꿈은급식왕: {
       title: "내 꿈은 급식왕",
       description:
-        "Node.js를 배우면서 서버에서 여러 페이지를 처리하는 방식을 익혔다. 특히, SSR(Server-Side Rendering) 방식을 통해 웹페이지 요청에 따라 HTML을 동적으로 조합해 다양한 이벤트 페이지를 보여주는 아이디어가 흥미로웠다.",
+        "Node.js를 배우면서 서버에서 여러 페이지를 처리하는 방식을 익혔다. <br />특히, SSR 방식으로 서버에서 HTML을 조합해 제공해준다는 점이 재미있었다. <br />이에 영감을 얻어, 다양한 요청에 따른 이벤트 페이지를 제공해주는 페이지를 제작하게 되었다.",
       stack: ["HTML5", "CSS3", "JavaScript", "Node.js", "Sqlite3"],
       period: "2024.05-08 ~ 2024.09-11",
       subPeriods: {
@@ -82,7 +82,7 @@ export const projectData = {
     CustomWidgets: {
       title: "Custom Widgets",
       description:
-        "React를 배우게 되면서, React를 활용한 프로젝트를 만들어보고 싶었다. 이에 리액트 상태 관리 개념을 적극적으로 활용할 수 있는 위젯을 만들어보자는 생각이 떠올랐다.",
+        "React를 배우게 되면서, React의 상태 개념을 활용한 프로젝트를 만들어보고 싶었다. <br />이에 리액트 상태 관리 개념을 적극적으로 활용할 수 있는 나만의 위젯을 구성하는 페이지를 만들어보자는 생각이 떠올랐다.",
       stack: ["TypeScript", "React", "TailwindCSS"],
       period: "2024.07-17 ~ 2024.09-18",
       content:
@@ -122,7 +122,7 @@ export const projectData = {
     수폴리오: {
       title: "수폴리오",
       description:
-        "이력서를 작성하고 취업 준비를 하면서, 개인 포트폴리오를 사이트로 배포하는 것이 AWS 연습과 나를 소개하는 데 큰 도움이 될 것 같았다.",
+        "이력서를 작성하고 취업 준비를 하면서, 개인 포트폴리오를 사이트로 배포하는 것이 포트폴리오를 조회하는데 접근성이 좋고 나를 효과적으로 표현하는데 도움이 된다고 생각했다.",
       stack: ["React", "TailwindCSS"],
       period: "2024.09-20 ~ 현재",
       content: [
@@ -142,7 +142,7 @@ export const projectData = {
     수상한자판기: {
       title: "수상한 자판기",
       description:
-        "교육 과정 수료 중 데이터베이스 기능 모델을 포함한 자판기 웹 어플리케이션을 구현해야 했다. 도메인과 관련해 “비현실적인” 물건을 판매하는 자판기 프로젝트.",
+        "KDT 교육 과정 수료 중 데이터베이스 기능을 포함한 자판기 웹 어플리케이션을 구현해야 했다. <br/>도메인과 관련해 “비현실적인” 물건을 판매하는 자판기를 제작했다.",
       stack: ["HTML5", "CSS3", "JavaScript", "Sqlite3"],
       period: "2024.06-20 ~ 2024.07-15",
       content: [
@@ -176,7 +176,7 @@ export const projectData = {
     DelaN: {
       title: "DelaN",
       description:
-        "ERP 시스템을 주제로 하여 인적 자원 관리와 관련된 프로젝트를 진행했다.",
+        "ERP 시스템을 주제로 하여 인적 자원 관리 프로그램을 제작하는 프로젝트를 진행했다. <br/> 개발자를 지망하는 만큼, 개발자를 관리하는, 그리고 개발자가 자신을 관리하는 툴을 구상했다.",
       stack: [
         "TypeScript",
         "Nest.js",
@@ -185,7 +185,7 @@ export const projectData = {
         "MongoDB",
         "PostgreSQL",
       ],
-      period: "2024.07-16 ~ 2024.08-14",
+      period: "2024.07-16 ~ 2024.10-11",
       content: [
         "관리자: 업무 할당, 근태 확인, 회원가입 승인, 권한 및 월급 설정",
         "사용자: 프로필 관리, 프로젝트 칸반 보드, 캘린더",
@@ -201,7 +201,7 @@ export const projectData = {
     갈라테이아: {
       title: "갈라테이아",
       description:
-        "생성형 프롬프트와 관련된 프로젝트로, 개인이 학습시킬 수 있는 AI 템플릿을 제작하여 제공하는 플랫폼을 목표로 하고 있다.",
+        "개인이 학습시킬 수 있는 AI 템플릿을 제작하여 제공하는 플랫폼을 목표하고 있다. <br/> 사용자가 자신만의 생성형 AI와 상호작용 하고, 사용자 간의 생성형 AI를 공유할 수 있는 커뮤니티를 조성하고자 한다.",
       stack: ["Python"],
       period: "2024.07-24 ~ 진행중",
       content: ["회원가입, 로그인, 캐릭터 생성 및 공유, 카카오톡 챗봇 연동"],
@@ -223,9 +223,9 @@ export const projectData = {
     호랑이: {
       title: "호랑이",
       description:
-        "머신 러닝을 활용한 프로젝트로, 데이터 분석 및 예측 모델을 개발하는 데 중점을 두고 있다.",
+        "머신 러닝을 활용한 프로젝트로, 이미지 데이터 분석 및 이미지를 분석한 데이터를 토대로 시뮬레이션 예측 모델을 개발하는 데 중점을 두고 있다.",
       stack: ["Python"],
-      period: "기간 기입 필요",
+      period: "2024.09-12 ~ 진행중",
       content: [
         "데이터 전처리",
         "모델 학습 및 평가",
