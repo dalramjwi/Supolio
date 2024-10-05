@@ -218,7 +218,7 @@ export const projectData = {
       review: "",
       githubLink: [],
       notionLink: "https://notion.so/sample8",
-      thumbnail: "/img/thumbnail_갈라테이아.png", // 추가된 썸네일
+      thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     },
     호랑이: {
       title: "호랑이",
@@ -248,7 +248,7 @@ export const projectData = {
       review: "",
       githubLink: [],
       notionLink: "https://notion.so/sample9",
-      thumbnail: "/img/thumbnail_호랑이.png", // 추가된 썸네일
+      thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     },
   },
 };
