@@ -52,7 +52,6 @@ const Single: React.FC = () => {
                     </div>
                   </div>
                   <div className="w-full h-64 bg-white rounded-md flex items-center justify-center mb-2">
-                    {/* 이미지와 설명 간 간격 조정 */}
                     {/* 이미지 표시 부분 */}
                     {project.thumbnail && (
                       <img
@@ -62,10 +61,10 @@ const Single: React.FC = () => {
                       />
                     )}
                   </div>
-                  <div className="w-full bg-gray-600 text-white font-bold py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2">
-                    {/* 높이 증가 */}
-                    {project.description}
-                  </div>
+                  <div
+                    className="w-full bg-gray-600 text-white font-bold py-2 rounded min-h-44 flex items-center justify-center pl-2 pr-2"
+                    dangerouslySetInnerHTML={{ __html: project.description }} // HTML 렌더링
+                  />
                 </div>
               </div>
             );

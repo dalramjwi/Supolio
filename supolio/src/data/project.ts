@@ -3,7 +3,7 @@ export const projectData = {
     수록: {
       title: "수록",
       description:
-        "소프트웨어 기획 및 설계 과제로 개인 기록 사이트(블로그)를 제작하였다. JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 제작하며, 프로젝트는 세 차례의 리팩토링을 거쳐 발전해왔다.",
+        "소프트웨어 기획 및 설계 과제로 개인 기록 사이트(블로그)를 제작하였다. JavaScript의 기초 학습을 확인하기 위해 CRUD 기능을 중심으로 한 사이트를 제작했다. <br/> 프로젝트는 세 차례의 리팩토링을 거쳐 발전해왔다.",
       stack: ["HTML5", "CSS3", "JavaScript", "Node.js"],
       period: "2024.05-24 ~ 2024.06-12",
       subPeriods: {
@@ -123,7 +123,7 @@ export const projectData = {
       title: "수폴리오",
       description:
         "이력서를 작성하고 취업 준비를 하면서, 개인 포트폴리오를 사이트로 배포하는 것이 AWS 연습과 나를 소개하는 데 큰 도움이 될 것 같았다.",
-      stack: ["React"],
+      stack: ["React", "TailwindCSS"],
       period: "2024.09-20 ~ 현재",
       content: [
         "개인 프로젝트 및 팀 프로젝트 소개",
@@ -179,11 +179,11 @@ export const projectData = {
         "ERP 시스템을 주제로 하여 인적 자원 관리와 관련된 프로젝트를 진행했다.",
       stack: [
         "TypeScript",
+        "Nest.js",
+        "Next.js",
         "Vanilla Extract",
         "MongoDB",
         "PostgreSQL",
-        "Nest.js",
-        "Next.js",
       ],
       period: "2024.07-16 ~ 2024.08-14",
       content: [
@@ -202,7 +202,7 @@ export const projectData = {
       title: "갈라테이아",
       description:
         "생성형 프롬프트와 관련된 프로젝트로, 개인이 학습시킬 수 있는 AI 템플릿을 제작하여 제공하는 플랫폼을 목표로 하고 있다.",
-      stack: ["Next.js", "PostgreSQL", "Python"],
+      stack: ["Python"],
       period: "2024.07-24 ~ 진행중",
       content: ["회원가입, 로그인, 캐릭터 생성 및 공유, 카카오톡 챗봇 연동"],
       data: [
