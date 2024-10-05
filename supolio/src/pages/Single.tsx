@@ -52,7 +52,13 @@ const Single: React.FC = () => {
                   </div>
                   <div className="w-full h-40 bg-white rounded-md flex items-center justify-center">
                     {/* 이미지 표시 부분 */}
-                    이미지
+                    {project.thumbnail && (
+                      <img
+                        src={project.thumbnail}
+                        alt={`${project.title} thumbnail`}
+                        className="object-cover w-full h-full rounded-md"
+                      />
+                    )}
                   </div>
                   {/* 설명 부분의 고정 높이 증가 */}
                   <div className="w-full text-center bg-gray-600 text-white font-bold py-2 rounded h-20 flex items-center justify-center">

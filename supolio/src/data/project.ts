@@ -38,6 +38,7 @@ export const projectData = {
         "https://github.com/dalramjwi/RECORD-trans",
       ],
       notionLink: "https://notion.so/sample1",
+      thumbnail: "/img/thumbnail_수록.png", // 추가된 썸네일
     },
     내꿈은급식왕: {
       title: "내 꿈은 급식왕",
@@ -76,6 +77,7 @@ export const projectData = {
         "https://github.com/dalramjwi/NEW-schoolMealKING",
       ],
       notionLink: "https://notion.so/sample2",
+      thumbnail: "/img/thumbnail_급식왕.png", // 추가된 썸네일
     },
     CustomWidgets: {
       title: "Custom Widgets",
@@ -101,6 +103,7 @@ export const projectData = {
         "custom widgets 프로젝트를 완성하였으며, 짧은 기간 동안 집중력을 발휘해 만족스러운 결과를 낼 수 있었다.",
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
       notionLink: "https://notion.so/sample3",
+      thumbnail: "/img/thumbnail_CustomWidgets.png", // 추가된 썸네일
     },
     // 도타임: {
     //   title: "도타임",
@@ -114,6 +117,7 @@ export const projectData = {
     //   review: "",
     //   githubLink: [],
     //   notionLink: "https://notion.so/sample4",
+    //   thumbnail: "/img/thumbnail_도타임.png", // 추가된 썸네일
     // },
     수폴리오: {
       title: "수폴리오",
@@ -131,6 +135,7 @@ export const projectData = {
       review: "",
       githubLink: ["https://github.com/dalramjwi/Supolio"],
       notionLink: "https://notion.so/sample5",
+      thumbnail: "/img/thumbnail_수폴리오.png", // 추가된 썸네일
     },
   },
   team: {
@@ -166,6 +171,7 @@ export const projectData = {
         "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectA-3team",
       ],
       notionLink: "https://notion.so/sample6",
+      thumbnail: "/img/thumbnail_수상한자판기.png", // 추가된 썸네일
     },
     DelaN: {
       title: "DelaN",
@@ -190,6 +196,7 @@ export const projectData = {
       review: "",
       githubLink: [],
       notionLink: "https://notion.so/sample7",
+      thumbnail: "/img/thumbnail_DelaN.png", // 추가된 썸네일
     },
     갈라테이아: {
       title: "갈라테이아",
@@ -211,6 +218,7 @@ export const projectData = {
       review: "",
       githubLink: [],
       notionLink: "https://notion.so/sample8",
+      thumbnail: "/img/thumbnail_갈라테이아.png", // 추가된 썸네일
     },
     호랑이: {
       title: "호랑이",
@@ -240,6 +248,7 @@ export const projectData = {
       review: "",
       githubLink: [],
       notionLink: "https://notion.so/sample9",
+      thumbnail: "/img/thumbnail_호랑이.png", // 추가된 썸네일
     },
   },
 };
