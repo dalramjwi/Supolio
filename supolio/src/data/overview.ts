@@ -5,7 +5,7 @@ export const workPeriod = {
     내꿈은급식왕: { start: "5.8", end: "9.11" },
     CustomWidgets: { start: "7.17", end: "9.18" },
     도타임: { start: "9.17", end: "NaN" },
-    수폴리오: { start: "9.20", end: "10.3" },
+    수폴리오: { start: "9.20", end: "10.7" },
   },
   team: {
     수상한자판기: { start: "6.20", end: "7.15" },
