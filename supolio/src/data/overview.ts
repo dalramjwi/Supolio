@@ -10,7 +10,8 @@ export const workPeriod = {
   team: {
     수상한자판기: { start: "6.20", end: "7.15" },
     DelaN: { start: "7.16", end: "10.11" },
-    갈라테이아: { start: "7.24", end: "NaN" },
+    // 갈라테이아: { start: "7.24", end: "NaN" },
+    이드: { start: "8.3", end: "NaN" },
     호랑이: { start: "9.12", end: "10.10" },
   },
 };

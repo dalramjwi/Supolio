@@ -9,6 +9,7 @@ export const projectColors = {
 
   수상한자판기: "bg-[#E9E4D4]", // Warm Light Brown
   DelaN: "bg-[#D2C9B4]", // Soft Beige
-  갈라테이아: "bg-[#D3D8E4]", // Light Peach
+  // 갈라테이아: "bg-[#D3D8E4]", // Light Peach
+  이드: "bg-[#D3D8E4]", // Light Peach
   호랑이: "bg-[#F1E0E3]", // Light Tan
 };
