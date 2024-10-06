@@ -84,8 +84,8 @@ export const projectData = {
         6: "버전 2.0 이벤트",
         7: "버전 2.0 랜덤 이벤트",
         8: "버전 2.0 엔딩",
-        9: "버전 2.0 서버 - 프론트엔드 아키텍처.",
-        10: "버전 2.0 서버 - 백엔드 아키텍처.",
+        9: "버전 2.0 프론트엔드 파일 아키텍처",
+        10: "버전 2.0 백엔드 서버 아키텍처",
       },
       review:
         "굉장히 오랜 기간동안 제작한 프로젝트였다. <br/>개인 프로젝트를 진행하다 팀 프로젝트를 병행하게 되며 개인 프로젝트가 잠시 중단되었고, 한참 동안 보지 않았던 코드를 다시 이해하며 프로젝트를 완성하는 경험을 했다. <br/> 이 프로젝트는 팀 프로젝트와 개인 프로젝트를 병행하는 방법을 깨닫게 해주었고, 이전에 작성한 코드를 다시 해석하고 이어서 작업하는 귀중한 경험을 제공한 재미있는 프로젝트였다. <br/> 급식왕 프로젝트를 제작하며 가장 크게 느낀 점은 설계의 중요성이었다. <br/> 프로젝트 중 발생한 여러 문제들은 설계 단계에서 더 철저히 구상했더라면 충분히 예방할 수 있었던 오류들이었다. <br/> 하지만 이러한 시행착오 또한 값진 경험이었으며, 이를 통해 문제가 발생했을 때 어떻게 대응할 것인지에 대해 깊이 학습하게 되었다. <br/>이 프로젝트는 단순히 결과물만이 아닌, 진행 과정에서의 성장을 이끌어준 중요한 경험이었다.",
@@ -111,12 +111,14 @@ export const projectData = {
         "/img/customwidgets_base.png",
         "/img/customwidgets_setting.png",
         "/img/customwidgets_custom.png",
+        "/img/customwidgets_arkit.png",
       ],
       imgnavigate: {
         0: "메인 화면",
         1: "커스텀 위젯 기본 화면",
         2: "커스텀 위젯 설정 화면",
         3: "커스텀 위젯 적용 화면",
+        4: "파일 아키텍처",
       },
       review:
         "Custom Widgets 프로젝트의 실질적인 기간은 약 2주로 비교적 짧은 시간 내에 완성되었다. <br/>이러한 짧은 기간 동안 프로젝트에 몰입해 집중적으로 작업을 마무리한 경험은 큰 성취감을 얻게 되었다. <br/>각 페이지의 요소를 설계하고, 특히 로직적인 면 또한 미리 설계한 대로 구현하며 React와 TailwindCSS의 활용 경험을 키웠다.<br/> 이 프로젝트에서 가장 보람을 느꼈던 부분은 프로젝트 마감 기한을 명확히 설정하고 목표를 구체적으로 세워 나가는 과정이었다.<br/> 일 별로 계획을 세우고 이를 조정해 실천해나가며 점진적으로 완성해나가는 경험은 뜻깊었다.<br/> Custom Widgets를 통해서 React의 상태 관리와 TailwindCSS 활용법에 대해 이해할 수 있었고 단기간에 집중적으로 작업하는 방법 또한 익히게 되었다.",
@@ -144,14 +146,30 @@ export const projectData = {
         "이력서를 작성하고 취업을 준비하면서, 개인 포트폴리오를 사이트로 배포하는 것이 포트폴리오의 접근성을 높이고, 나를 효과적으로 표현하는 데 도움이 될 것이라 생각했다",
       stack: ["React", "TailwindCSS"],
       period: "2024.09-20 ~ 2024.10.7",
-      content: [
-        "개인 프로젝트 및 팀 프로젝트 소개",
-        "기술 스택 및 경험 상세화",
-        "연락처 및 소셜 미디어 링크 제공",
+      content:
+        "포트폴리오의 목적성은 나에 대한 정보 소개와 진행한 프로젝트의 설명이라 생각했다. <br/>그렇기에 프로젝트를 어떠한 이유로 제작했고 어떻게 제작했는지를 이미지와 함께 표현했다.",
+      details:
+        "수폴리오는 취업을 위한 포트폴리오 사이트 제작을 목표로 진행한 프로젝트이다. <br/>포트폴리오에서는  <strong>내가 어떤 프로젝트를 제작했는지, 그 이유와 과정에서 발생한 일들을 효과적으로 전달</strong>할 필요가 있다고 판단했다. <br/><br/>이를 위해, 사용자가 사이트를 방문했을 때  <strong>프로젝트에 대한 흥미와 정보 전달이 잘 이루어지도록 하는 것이 중요</strong>하다고 생각했다. <br/> 그래서 프로젝트를 카드 형태로 구성하여 시각적으로 재미있고 흥미를 끌 수 있도록 하였으며, 카드를 클릭하면 모달 창이 열리며 프로젝트 설명을 제공해 정보 전달을 극대화했다.<br/><br/> 이러한 구성을 구현하기 위해 React를 사용했는데, React는 상태 변화에 따라 반응형 UI를 구현하는 데 적합하기 때문에 사용자 경험을 향상시키는 데 알맞다고 판단했다.<br/> CSS는 TailwindCSS를 선택했는데 이전에 사용했던 Vanilla Extract에서 미리 스타일을 객체로 지정해두고 사용하는 방식과 비슷한 테마 기능이 TailwindCSS에 있다는 점에 흥미를 느껴, 그 차이를 체험해보고자 했다.<br/><br/> 사이트 제작 과정에서 가장 어려웠던 부분은 내용을 구성하고 전달하는 작문적인 측면이었다.<br/> 내용 전달력이 가장 중요하다고 생각했기 때문에, 이 점을 염두에 두고 사이트 구조를 설계하고 프로젝트 설명을 작성하는 데 집중했다.<br/>  <strong>프로젝트의 제작 과정과 느낀 점을 중심으로 전달력을 강화하는 방향</strong>으로 사이트를 구성하고 내용을 정리했다.",
+      data: [
+        "/img/supolio_main.png",
+        "/img/supolio_info.png",
+        "/img/supolio_info_modal.png",
+        "/img/supolio_overview.png",
+        "/img/supolio_single.png",
+        "/img/supolio_single_modal.png",
+        "/img/supolio_arkit.png",
       ],
-      data: [],
-      imgnavigate: {},
-      review: "",
+      imgnavigate: {
+        0: "메인 화면",
+        1: "정보 화면",
+        2: "정보 - 모달 화면",
+        3: "프로젝트 기간 조회 화면",
+        4: "개인 프로젝트 화면",
+        5: "개인 프로젝트 - 모달 화면",
+        6: "파일 아키텍처",
+      },
+      review:
+        "수폴리오 프로젝트를 진행하며 내가 했던 다양한 프로젝트를 돌아보며 그 과정에서 얼마나 열심히 노력했는지를 돌아보게 되었다. <br/>프로젝트를 정리하고 하나씩 다시 살펴보는 과정에서 나 자신의 발전을 실감했고 성취감을 느꼈다.<br/>이 프로젝트는 기술적인 성장 보다는 나를 어떻게 표현할 것인가에 대한 깊은 고민이 있었다. <br/>또한 앞으로도 다양한 프로젝트를 제작해 나를 표현하고 싶다는 생각이 들었다.",
       githubLink: ["https://github.com/dalramjwi/Supolio"],
       notionLink: "https://notion.so/sample5",
       thumbnail: "/img/thumbnail_수폴리오.png", // 추가된 썸네일
@@ -164,16 +182,10 @@ export const projectData = {
         "KDT 교육 과정 수료 중 데이터베이스 기능을 포함한 자판기 웹 어플리케이션을 구현해야 했다. <br/>도메인과 관련해 “비현실적인” 물건을 판매하는 자판기를 제작했다.",
       stack: ["HTML5", "CSS3", "JavaScript", "Sqlite3"],
       period: "2024.06-20 ~ 2024.07-15",
-      content: [
-        "관리자 페이지와 사용자 페이지 구분",
-        "제품 정보 조회",
-        "제품 구매, 재화 획득",
-      ],
-      details: [
-        "DB 동기 처리 문제 해결",
-        "DB 외래키 문제 해결",
-        "회원가입 관련 기능 구현",
-      ],
+      content:
+        "자판기를 모티브로 한 물품 조회와 물품 구매의 기능을 중점으로 제작했다. <br/> 로그인, 재화 획득, 관리자의 사용자 조회 기능을 포함하고 있다.",
+      details:
+        "수상한 자판기는 첫 번째 팀 프로젝트로, 팀원들과 함께 비현실적인 물건 판매라는 테마를 기획했다. <br/>각자의 아이디어를 통합해 5개의 테마를 가진 물건을 판매하는 방식으로 구성했고 각 테마마다 다른 배경을 설정해 시각적인 차별화를 주어 프로젝트를 더 흥미롭게 만들었다.<br/><br/>프로젝트에서는  <strong>Sqlite3을 사용해 데이터베이스를 관리</strong>했으며,  <strong>Vanilla Node.js를 이용해 필요한 기능만 최소화해 서버를 구현</strong>했다. <br/>이 과정에서 비동기 처리 개념을 배우고 이를 활용해 데이터베이스 연동을 효과적으로 처리했다.<br/><br/>내가 맡은 작업은 <strong>DB 생성 및 관리와 서버 구현</strong>이었다. <br/>또한 <strong>cookie 개념을 학습하여 로그인 기능을 구현</strong>했고 간단한 프론트 로직을 사용해 로그인 페이지를 제작했다.<br/><br/>프론트엔드 디자인에도 적극적으로 참여하며 프론트엔드 담당 팀원과 소통해 테마 배경과 로직 구성에 대해 논의하고 조율했다.",
       data: [
         "/img/자판기_version1_main.png",
         "/img/자판기_version2_main.png",
@@ -187,7 +199,7 @@ export const projectData = {
       review:
         "팀 프로젝트를 진행하면서 설계적 측면에서의 협업의 중요성을 깨달았다.",
       githubLink: [
-        "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectA-3team",
+        "https://github.com/KDT-IaaS-Class-Two-Group/subject-7-exam-database-3",
       ],
       notionLink: "https://notion.so/sample6",
       thumbnail: "/img/thumbnail_수상한자판기.png", // 추가된 썸네일
@@ -213,7 +225,9 @@ export const projectData = {
       data: [],
       imgnavigate: {},
       review: "",
-      githubLink: [],
+      githubLink: [
+        "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectA-3team",
+      ],
       notionLink: "https://notion.so/sample7",
       thumbnail: "/img/thumbnail_DelaN.png", // 추가된 썸네일
     },
@@ -265,7 +279,9 @@ export const projectData = {
         2: "예측 결과 시각화 화면입니다.",
       },
       review: "",
-      githubLink: [],
+      githubLink: [
+        "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectB-2team",
+      ],
       notionLink: "https://notion.so/sample9",
       thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     },
