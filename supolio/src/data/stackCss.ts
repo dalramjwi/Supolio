@@ -13,4 +13,6 @@ export const stackColors: { [key: string]: string } = {
   Python: "#3776AB",
   "Vanilla Extract": "#f5a9d6",
   "Nest.js": "#D50032",
+  FastAPI: "#0d9c8f",
+  BeautifulSoup4: "#1c4e63CC",
 };
