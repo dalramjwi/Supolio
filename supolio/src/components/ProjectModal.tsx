@@ -10,6 +10,7 @@ interface Project {
   data: string[];
   imgnavigate?: { [key: number]: string };
   content: string;
+  contribute?: string;
   details?: string; // HTML 문자열로 변경
   review?: string; // HTML 문자열로 변경
   githubLink?: string[]; // 여러 개의 GitHub 링크 처리
@@ -120,6 +121,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             <div
               className="text-lg mt-2 mb-2"
               dangerouslySetInnerHTML={{ __html: project.details }} // HTML로 설정
+            ></div>
+          </div>
+        )}
+        {project.contribute && (
+          <div>
+            <div className="font-bold text-2xl mb-3">담당한 기능</div>
+            <div
+              className="text-lg mt-2 mb-2"
+              dangerouslySetInnerHTML={{ __html: project.contribute }} // HTML로 설정
             ></div>
           </div>
         )}
