@@ -15,4 +15,5 @@ export const stackColors: { [key: string]: string } = {
   "Nest.js": "#D50032",
   FastAPI: "#0d9c8f",
   BeautifulSoup4: "#1c4e63CC",
+  TensorFlow: "#F28C28",
 };

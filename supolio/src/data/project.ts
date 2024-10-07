@@ -332,7 +332,14 @@ export const projectData = {
       title: "호랑이",
       description:
         "머신 러닝을 활용해 예측 모델을 제작하는 방향으로 결정되었다.<br/> 이를 통해 사람 이미지 데이터를 분석하여 가상 아바타의 스테이터스를 추출하고 시뮬레이션 모델에서 해당 아바타가 수행한 활동을 사용자에게 제공하는 웹페이지를 제작했다.",
-      stack: ["Python", "FastAPI", "BeautifulSoup4", "TypeScript", "Next.js"],
+      stack: [
+        "Python",
+        "FastAPI",
+        "TensorFlow",
+        "BeautifulSoup4",
+        "TypeScript",
+        "Next.js",
+      ],
       period: "2024.09-12 ~ 진행중",
       contribute:
         "FastAPI를 사용한 백엔드 서버 구축 및 제작된 모델을 토대로 핸들링을 진행했다.",
