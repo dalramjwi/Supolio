@@ -35,7 +35,7 @@ const Info: React.FC = () => {
             </h3>
             <p
               onClick={handleEmailClick}
-              className="cursor-pointer text-blue-500 underline text-xl"
+              className="cursor-pointer text-blue-700 underline text-xl"
             >
               dalramjwi@gmail.com
             </p>
@@ -46,7 +46,7 @@ const Info: React.FC = () => {
             </h3>
             <a
               href="https://github.com/dalramjwi"
-              className="text-blue-500 underline text-xl"
+              className="text-blue-700 underline text-xl"
             >
               CONNECT TO GITHUB PAGE
             </a>
@@ -81,18 +81,11 @@ const Info: React.FC = () => {
                 onClick={handleAboutStudyClick}
               >
                 <span
-                  className={`text-2xl cursor-pointer font-bold ${
+                  className={`text-2xl cursor-pointer text-decoration-line: underline text-blue-700 font-bold ${
                     animateText ? "animate-pulse" : ""
                   }`}
                 >
                   ABOUT STUDYING
-                </span>
-                <span
-                  className={`ml-1 text-2xl ${
-                    animateText ? "animate-pulse" : ""
-                  }`}
-                >
-                  ...
                 </span>
               </li>
             </ul>
