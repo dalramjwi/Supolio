@@ -124,7 +124,7 @@ export const projectData = {
         "Custom Widgets 프로젝트의 실질적인 기간은 약 2주로 비교적 짧은 시간 내에 완성되었다. <br/>이러한 짧은 기간 동안 프로젝트에 몰입해 집중적으로 작업을 마무리한 경험은 큰 성취감을 얻게 되었다. <br/>각 페이지의 요소를 설계하고, 특히 로직적인 면 또한 미리 설계한 대로 구현하며 React와 TailwindCSS의 활용 경험을 키웠다.<br/> 이 프로젝트에서 가장 보람을 느꼈던 부분은 프로젝트 마감 기한을 명확히 설정하고 목표를 구체적으로 세워 나가는 과정이었다.<br/> 일 별로 계획을 세우고 이를 조정해 실천해나가며 점진적으로 완성해나가는 경험은 뜻깊었다.<br/> Custom Widgets를 통해서 React의 상태 관리와 TailwindCSS 활용법에 대해 이해할 수 있었고 단기간에 집중적으로 작업하는 방법 또한 익히게 되었다.",
       githubLink: ["https://github.com/dalramjwi/CustomWidgets"],
       notionLink: "https://notion.so/sample3",
-      thumbnail: "/img/thumbnail_CustomWidgets.png", // 추가된 썸네일
+      thumbnail: "/img/thumbnail_customwidgets.png", // 추가된 썸네일
     },
     // 도타임: {
     //   title: "도타임",
