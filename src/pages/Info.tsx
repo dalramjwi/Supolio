@@ -27,18 +27,28 @@ const Info: React.FC = () => {
             <h3 className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
               PHONE NUMBER
             </h3>
-            <p className="text-xl">010 - 9823 - 3662</p>
+            <img
+              src="/img/dalramjwi_personal2.png"
+              alt=""
+              className="h-[15vh] top-12"
+            />
+            {/* <p className="text-xl">010 - 9823 - 3662</p> */}
           </div>
           <div className="pb-4 mb-4 w-full">
             <h3 className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
               E - MAIL
             </h3>
-            <p
+            {/* <p
               onClick={handleEmailClick}
               className="cursor-pointer text-blue-700 underline text-xl"
             >
               dalramjwi@gmail.com
-            </p>
+            </p> */}
+            <img
+              src="/img/dalramjwi_personal.png"
+              alt=""
+              className="h-[13vh] top-12"
+            />
           </div>
           <div className="pb-4 mb-4 w-full">
             <h3 className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
