@@ -1,17 +1,17 @@
 import React from "react";
-import { NavLink as ReactNavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const NavLink: React.FC<NavLinkProps> = ({
+const CustomNavLink: React.FC<React.ComponentProps<typeof NavLink>> = ({
   to,
   className,
   children,
   ...rest
 }) => {
   return (
-    <ReactNavLink to={to} className={className} {...rest}>
+    <NavLink to={to} className={className} {...rest}>
       {children}
-    </ReactNavLink>
+    </NavLink>
   );
 };
 
-export default NavLink;
+export default CustomNavLink;
