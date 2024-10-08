@@ -1,5 +1,5 @@
 import React from "react";
-import { AnchorProps } from "../interface/molecules/Anchor.interface";
+import { AnchorProps } from "../interfaces/molecules/Anchor.interface";
 
 const Anchor: React.FC<AnchorProps> = ({ href, className, children }) => {
   return (
