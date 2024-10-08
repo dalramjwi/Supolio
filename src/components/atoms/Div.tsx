@@ -1,11 +1,7 @@
 import React from "react";
+import { DivProps } from "../interface/atoms/Div.interface";
 
-interface DivProps {
-  className?: string;
-  children?: string;
-}
-
-const Div: React.FC<DivProps> = ({ className, children }) => {
+const Div: React.FC<DivProps> = ({ children, className }) => {
   return <div className={className}>{children}</div>;
 };
 
