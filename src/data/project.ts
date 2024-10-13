@@ -144,7 +144,7 @@ export const projectData = {
       title: "수폴리오",
       description:
         "이력서를 작성하고 취업을 준비하면서, 개인 포트폴리오를 사이트로 배포하는 것이 포트폴리오의 접근성을 높이고, 나를 효과적으로 표현하는 데 도움이 될 것이라 생각했다",
-      stack: ["React", "TailwindCSS"],
+      stack: ["TypeScript", "React", "TailwindCSS"],
       period: "2024.09-20 ~ 2024.10.7",
       content:
         "포트폴리오의 목적성은 나에 대한 정보 소개와 진행한 프로젝트의 설명이라 생각했다. <br/>그렇기에 프로젝트를 어떠한 이유로 제작했고 어떻게 제작했는지를 이미지와 함께 표현했다.",
