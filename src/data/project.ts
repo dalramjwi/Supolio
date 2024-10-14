@@ -44,7 +44,8 @@ export const projectData = {
         "https://github.com/dalramjwi/record-subject_5_trans",
         "https://github.com/dalramjwi/RECORD-trans",
       ],
-      notionLink: "https://notion.so/sample1",
+      notionLink:
+        "https://tall-flavor-333.notion.site/11f7b2f6b32680b5b3c8ee88ef93cd05?pvs=4",
       thumbnail: "/img/thumbnail_수록.png", // 추가된 썸네일
     },
     내꿈은급식왕: {
