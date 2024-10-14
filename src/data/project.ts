@@ -94,7 +94,8 @@ export const projectData = {
         "https://github.com/dalramjwi/SchoolMealKing",
         "https://github.com/dalramjwi/NEW-schoolMealKING",
       ],
-      notionLink: "https://notion.so/sample2",
+      notionLink:
+        "https://tall-flavor-333.notion.site/11f7b2f6b32680c38357dc38e457f468?pvs=4",
       thumbnail: "/img/thumbnail_급식왕.png", // 추가된 썸네일
     },
     CustomWidgets: {
