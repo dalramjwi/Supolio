@@ -304,8 +304,9 @@ export const projectData = {
         2: "이드 모델",
       },
       review: "",
-      githubLink: [],
-      notionLink: "https://notion.so/sample8",
+      githubLink: ["https://github.com/dalramjwi/ID"],
+      notionLink:
+        "https://tall-flavor-333.notion.site/1207b2f6b3268065a6c7f2147139906c?pvs=4",
       thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     },
     // 갈라테이아: {
@@ -335,7 +336,7 @@ export const projectData = {
     //   thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     // },
     호랑이: {
-      title: "호랑이",
+      title: "좀 이상하다고 생각은 했지만 비상사태가 발생했습니다",
       description:
         "머신 러닝을 활용해 예측 모델을 제작하는 방향으로 결정되었다.<br/> 이를 통해 사람 이미지 데이터를 분석하여 가상 아바타의 스테이터스를 추출하고 시뮬레이션 모델에서 해당 아바타가 수행한 활동을 사용자에게 제공하는 웹페이지를 제작했다.",
       stack: [
