@@ -368,7 +368,8 @@ export const projectData = {
       githubLink: [
         "https://github.com/KDT-IaaS-Class-Two-Group/KDT-IaaS-2-ProjectB-2team",
       ],
-      notionLink: "https://notion.so/sample9",
+      notionLink:
+        "https://tall-flavor-333.notion.site/1207b2f6b326806788e2c40e58cfdcca?pvs=4",
       thumbnail: "/img/thumbnail_alter.png", // 추가된 썸네일
     },
   },
