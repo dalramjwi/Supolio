@@ -223,7 +223,8 @@ export const projectData = {
       githubLink: [
         "https://github.com/KDT-IaaS-Class-Two-Group/subject-7-exam-database-3",
       ],
-      notionLink: "https://notion.so/sample6",
+      notionLink:
+        "https://tall-flavor-333.notion.site/1207b2f6b326805581b3c37757de16d4?pvs=4",
       thumbnail: "/img/thumbnail_수상한자판기.png", // 추가된 썸네일
     },
     DelaN: {
