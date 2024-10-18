@@ -1,12 +1,11 @@
 import React from "react";
+import NameSection from "./../components/organisms/NameSection.tsx";
 
 const Main: React.FC = () => {
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-6 border border-gray-300 relative z-10">
-        <h1 className="text-6xl font-extrabold text-gray-800 mb-8 relative z-10">
-          김수현
-        </h1>
+        <NameSection />
         <h2 className="text-2xl font-bold text-gray-800 mt-6 mb-2 relative z-10">
           About Me
         </h2>
