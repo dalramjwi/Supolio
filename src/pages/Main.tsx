@@ -1,11 +1,12 @@
 import React from "react";
 import NameSection from "./../components/organisms/NameSection.tsx";
+import { MainInstance } from "./../data/instance/MainInstance";
 
 const Main: React.FC = () => {
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-6 border border-gray-300 relative z-10">
-        <NameSection />
+        <div>MainInstance.name</div>
         <h2 className="text-2xl font-bold text-gray-800 mt-6 mb-2 relative z-10">
           About Me
         </h2>
