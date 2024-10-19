@@ -1,5 +1,5 @@
 import { MainData } from "../class/MainData.ts";
-
+//todo 데이터 json으로 빼기
 export const MainInstance = new MainData(
   "김수현",
   "About Me",
