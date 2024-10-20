@@ -1,5 +1,5 @@
 import React from "react";
-import AboutMeSection from "../organisms/main/AboutMeSection.tsx";
+import AboutMeSection from "../organisms/main/ParagraphSection.tsx";
 
 const MainTemplate: React.FC = () => {
   return (
