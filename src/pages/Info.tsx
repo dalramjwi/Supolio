@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../components/Modal.tsx";
-import { stackData } from "../data/stackData.ts";
+import { stackData } from "../dataStructure/stackData.ts";
 import TechStack from "../components/TeckStack.tsx";
 import StudyModal from "../components/StudyModal.tsx";
 
