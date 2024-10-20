@@ -1,14 +1,13 @@
 import React from "react";
 import NameSection from "../components/organisms/main/NameSection.tsx";
+import ParagraphSection from "../components/organisms/main/ParagraphSection.tsx";
 
 const Main: React.FC = () => {
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-6 border border-gray-300 relative z-10">
         <NameSection />
-        <h2 className="text-2xl font-bold text-gray-800 mt-6 mb-2 relative z-10">
-          About Me
-        </h2>
+        <ParagraphSection />
 
         <p className="text-xl text-gray-600 mb-4 mt-3 relative z-10">
           인간이 서로 연결될 때 기술은 단순한 도구를 넘어 더욱 의미 있는 역할을
