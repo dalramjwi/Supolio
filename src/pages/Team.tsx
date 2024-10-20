@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal.tsx";
-import { projectData } from "../data/project.ts";
-import { stackColors } from "../data/stackCss.ts";
-import { projectColors } from "../data/overviewCss.ts"; // projectColors import
+import { projectData } from "../dataStructure/project.ts";
+import { stackColors } from "../dataStructure/stackCss.ts";
+import { projectColors } from "../dataStructure/overviewCss.ts"; // projectColors import
 
 const Team: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

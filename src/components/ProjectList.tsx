@@ -1,5 +1,5 @@
 import React from "react";
-import { projectColors } from "../data/overviewCss.ts";
+import { projectColors } from "../dataStructure/overviewCss.ts";
 
 interface Props {
   handleProjectClick: (project: string) => void;
