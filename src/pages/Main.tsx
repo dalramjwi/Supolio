@@ -2,6 +2,7 @@ import React from "react";
 import NameSection from "../components/organisms/main/NameSection.tsx";
 import ParagraphSection from "../components/organisms/main/ParagraphSection.tsx";
 import DescriptionSection from "../components/organisms/main/Description.tsx";
+//todo css 객체와, mainTenplate의 리터럴 html 리턴과 매핑 필요
 const Main: React.FC = () => {
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
