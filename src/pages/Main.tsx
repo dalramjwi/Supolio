@@ -1,5 +1,5 @@
 import React from "react";
-import NameSection from "./../components/organisms/NameSection.tsx";
+import NameSection from "../components/organisms/main/NameSection.tsx";
 
 const Main: React.FC = () => {
   return (
