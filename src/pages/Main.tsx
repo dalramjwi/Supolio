@@ -1,15 +1,15 @@
 import React from "react";
 import NameSection from "../components/organisms/main/NameSection.tsx";
 import ParagraphSection from "../components/organisms/main/ParagraphSection.tsx";
-
+import DescriptionSection from "../components/organisms/main/Description.tsx";
 const Main: React.FC = () => {
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-6 border border-gray-300 relative z-10">
         <NameSection />
         <ParagraphSection />
-
-        <p className="text-xl text-gray-600 mb-4 mt-3 relative z-10">
+        <DescriptionSection />
+        {/* <p className="text-xl text-gray-600 mb-4 mt-3 relative z-10">
           인간이 서로 연결될 때 기술은 단순한 도구를 넘어 더욱 의미 있는 역할을
           하게 됩니다.
           <br />
@@ -22,7 +22,7 @@ const Main: React.FC = () => {
           <br />
           기술을 통해 사람들의 경험을 풍부하게 하고 커뮤니티를 형성하며 서로의
           이해를 증진시키는 데 기여하고자 합니다.
-        </p>
+        </p> */}
         <div>
           {/* 배경 웨이브 그라디언트 */}
           <div className="absolute inset-0 overflow-hidden z-0">
