@@ -1,6 +1,6 @@
 import React from "react";
 import Div from "../atoms/Div.tsx";
-import { MainInstance } from "../../dataStructure/main/instance/MainInstance.ts";
+import { MainInstance } from "../../dataStructure/main/instance/instance.ts";
 //todo css 빼기
 const NameSection: React.FC = () => {
   return (
