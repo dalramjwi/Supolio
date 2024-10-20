@@ -1,3 +1,7 @@
 {
-  "main": ["김수현", "About Me", "인간이 서로.."]
+  "main": {
+    "name": "김수현",
+    "paragraph": "About Me",
+    "description": "인간이"
+  }
 }
