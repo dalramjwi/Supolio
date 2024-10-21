@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "./Modal.tsx";
 import { stackColors } from "../dataStructure/stackCss.ts";
+import Modal from "./molecules/Modal.tsx";
 
 // 프로젝트의 구조에 맞는 타입 정의
 interface Project {
