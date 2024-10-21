@@ -1,21 +1,23 @@
 import { InfoData, InfoJson } from "../interface/interface";
 
 export class InfoDataStructure {
-  public phoneNumber: string;
-  public email: string;
-  public github: string;
+  public phoneNumber: { data: string; method: string };
+  public email: { data: string; method: string };
+  public github: { data: string; method: string };
   public stack: {
-    language: string[];
-    framework: string[];
-    makeup: string[];
-    database: string[];
-    tool: string[];
-    devops: string[];
+    data: {
+      language: string[];
+      framework: string[];
+      makeup: string[];
+      database: string[];
+      tool: string[];
+      devops: string[];
+    };
+    method: string;
   };
   public study: {
-    title: string[];
-    description: string[];
-    imgurl: string[];
+    data: { title: string[]; description: string[]; imgurl: string[] };
+    method: string;
   };
 
   private constructor(data: InfoData) {
