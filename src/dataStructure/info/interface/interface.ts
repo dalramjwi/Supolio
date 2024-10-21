@@ -16,7 +16,7 @@ export interface InfoData {
     imgurl: string[];
   };
 }
-export interface InfoJSon {
+export interface InfoJson {
   info: {
     phoneNumber: string;
     email: string;

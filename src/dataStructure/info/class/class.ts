@@ -1,4 +1,4 @@
-import { InfoData, InfoJSon } from "../interface/interface";
+import { InfoData, InfoJson } from "../interface/interface";
 
 export class InfoDataStructure {
   public phoneNumber: string;
@@ -25,7 +25,7 @@ export class InfoDataStructure {
     this.stack = data.stack;
     this.study = data.study;
   }
-  public static fromJson(json: InfoJSon): InfoDataStructure {
+  public static fromJson(json: InfoJson): InfoDataStructure {
     const data: InfoData = {
       phoneNumber: json.info.phoneNumber,
       email: json.info.email,
