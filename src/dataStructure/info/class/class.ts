@@ -1,3 +1,5 @@
+import { InfoData } from "../interface/interface";
+
 export class InfoDataStructure {
   public phoneNumber: string;
   public email: string;
@@ -16,7 +18,7 @@ export class InfoDataStructure {
     imgurl: string[];
   };
 
-  private constructor(data: Record<string, any>) {
+  private constructor(data: InfoData) {
     this.phoneNumber = data.phoneNumber;
     this.email = data.email;
     this.github = data.github;
