@@ -3,7 +3,8 @@ import Modal from "../components/Modal.tsx";
 import { stackData } from "../dataStructure/stackData.ts";
 import TechStack from "../components/TeckStack.tsx";
 import StudyModal from "../components/StudyModal.tsx";
-
+import data from "../data/data.json";
+import Div from "./../components/atoms/Div.tsx";
 const Info: React.FC = () => {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [animateText, setAnimateText] = useState(true);
@@ -18,11 +19,16 @@ const Info: React.FC = () => {
     setShowStudyModal(true);
     setAnimateText(false);
   };
-
+  const infoData = data.info;
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6 ">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-10 border border-gray-300">
         <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
+          <div>
+            {Object.keys(infoData).map((key) => (
+              <Div key={key}>{key}</Div>
+            ))}
+          </div>
           <div className="pb-4 mb-4 w-full">
             <h3 className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
               PHONE NUMBER
