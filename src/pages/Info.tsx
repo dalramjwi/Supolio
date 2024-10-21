@@ -30,7 +30,7 @@ const Info: React.FC = () => {
             <img
               src="/img/dalramjwi_personal2.png"
               alt=""
-              className="h-[15vh] top-12"
+              className="h-[13vh] top-12 ml-40"
             />
             {/* <p className="text-xl">010 - 9823 - 3662</p> */}
           </div>
@@ -47,7 +47,7 @@ const Info: React.FC = () => {
             <img
               src="/img/dalramjwi_personal.png"
               alt=""
-              className="h-[13vh] top-12"
+              className="h-[13vh] top-12 ml-40"
             />
           </div>
           <div className="pb-4 mb-4 w-full">
