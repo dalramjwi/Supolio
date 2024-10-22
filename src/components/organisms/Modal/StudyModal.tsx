@@ -51,7 +51,7 @@ const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
               </button>
             </div>
             <HtmlElementDiv
-              className="text-gray-700 whitespace-pre-line mb-4 text-xl"
+              className="text-gray-700 whitespace-pre-line mb-4 text-xl text-left"
               htmlContent={studyData.description[currentIndex]}
             />
           </div>
