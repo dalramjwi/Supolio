@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "./molecules/Modal.tsx";
-import { contentData } from "../dataStructure/study.ts";
+import Modal from "../../molecules/Modal.tsx";
+import { contentData } from "../../../dataStructure/study.ts";
 
 interface StudyModalProps {
   show: boolean;
