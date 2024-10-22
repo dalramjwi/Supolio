@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
 import Anchor from "../../atoms/Anchor.tsx";
@@ -9,11 +9,14 @@ interface InfoListProps {
   };
   onStudyClick: () => void;
 }
-//todo style 분리 필요
+
 const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
+  // Object.keys() 메모이제이션 처리, 의존성 배열을 빈 배열로 설정하여 최초 렌더링 시 한 번만 실행
+  const memoizedKeys = useMemo(() => Object.keys(infoData), []);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
-      {Object.keys(infoData).map((key) => {
+      {memoizedKeys.map((key) => {
         const { data, method, paragraph } = infoData[key];
         return (
           <Div key={key} className="pb-4 mb-4 w-full">
