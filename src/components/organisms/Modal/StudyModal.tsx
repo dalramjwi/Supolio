@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../../molecules/Modal.tsx";
 import { contentData } from "../../../dataStructure/study.ts";
-import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
+import { useHandleModal } from "./hook/useHandleModal.tsx";
 
 interface StudyModalProps {
   show: boolean;
