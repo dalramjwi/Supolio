@@ -1,22 +1,14 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
 import Anchor from "../../atoms/Anchor.tsx";
 import { InfoListProps } from "../../interfaces/data/InfoListProps.ts";
 import StudyModal from "./StudyModal.tsx";
+import { useModal } from "../Modal/hook/useModal.tsx";
 
 //todo css 처리 필요
 const InfoList: React.FC<InfoListProps> = ({ infoData }) => {
-  // 모달 상태 관리
-  const [showStudyModal, setShowStudyModal] = useState(false);
-
-  const handleModalOpen = () => {
-    setShowStudyModal(true);
-  };
-
-  const handleModalClose = () => {
-    setShowStudyModal(false);
-  };
+  const { isModalOpen, openModal, closeModal } = useModal();
 
   // infoData만 메모이제이션 처리
   const memoizedInfoData = useMemo(() => infoData, []);
@@ -67,7 +59,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData }) => {
                   case "modal":
                     return (
                       <Div
-                        onClick={handleModalOpen}
+                        onClick={openModal}
                         className="cursor-pointer text-blue-700 underline text-xl"
                       >
                         {paragraph}
@@ -82,7 +74,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData }) => {
         );
       })}
 
-      <StudyModal show={showStudyModal} close={handleModalClose} />
+      <StudyModal show={isModalOpen} close={closeModal} />
     </div>
   );
 };
