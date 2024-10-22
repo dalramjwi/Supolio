@@ -75,8 +75,11 @@ const InfoList: React.FC<InfoListProps> = ({ infoData }) => {
           </Div>
         );
       })}
-
-      <StudyModal show={isModalOpen} close={closeModal} />
+      <StudyModal
+        show={isModalOpen}
+        close={closeModal}
+        studyData={memoizedInfoData["study"].data}
+      />
     </div>
   );
 };
