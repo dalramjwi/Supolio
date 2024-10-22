@@ -3,8 +3,8 @@ import Modal from "../../molecules/Modal.tsx";
 import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
-import Button from "./../../atoms/Button.tsx";
 import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
+import ModalButtonGroup from "./ModalButtonGroup.tsx";
 
 interface StudyModalProps {
   studyData: {
@@ -31,27 +31,14 @@ const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
             <Div className="text-2xl font-bold">
               {studyData.title[currentIndex]}
             </Div>
-            <Div className="flex justify-end pb-4 gap-x-2">
-              <Button
-                onClick={handlePrev}
-                disabled={currentIndex === 0}
-                className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
-                  currentIndex === 0 ? "" : "hover:bg-gray-500"
-                }`}
-              >
-                ◀
-              </Button>
-              <Button
-                onClick={handleNext}
-                disabled={currentIndex === studyData.title.length - 1}
-                className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
-                  currentIndex === studyData.title.length - 1
-                    ? ""
-                    : "hover:bg-gray-500"
-                }`}
-              >
-                ▶
-              </Button>
+            <Div className="flex justify-end pb-4">
+              {/* ModalButtonGroup을 사용하여 버튼 쌍을 출력 */}
+              <ModalButtonGroup
+                onPrev={handlePrev}
+                onNext={handleNext}
+                disablePrev={currentIndex === 0}
+                disableNext={currentIndex === studyData.title.length - 1}
+              />
             </Div>
             <HtmlElementDiv
               className="text-gray-700 whitespace-pre-line mb-4 text-xl text-left"
