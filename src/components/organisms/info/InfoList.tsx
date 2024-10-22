@@ -20,7 +20,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
             <Div className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
               {key.toUpperCase()}
             </Div>
-            <Div className="content">
+            <Div>
               {(() => {
                 switch (method) {
                   case "img":
@@ -37,15 +37,30 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                       </Anchor>
                     );
                   case "text":
-                    return <p>{JSON.stringify(data)}</p>;
+                    return (
+                      <div className="text-left">
+                        {Object.keys(data).map((subKey) => (
+                          <div key={subKey} className="mb-2">
+                            <p className="font-bold">{subKey.toUpperCase()}</p>
+                            <ul className="list-disc pl-5">
+                              {data[subKey].map(
+                                (item: string, index: number) => (
+                                  <li key={index}>{item}</li>
+                                )
+                              )}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    );
                   case "modal":
                     return (
-                      <p
+                      <Div
                         onClick={onStudyClick}
                         className="cursor-pointer text-blue-700 underline text-xl"
                       >
                         {paragraph}
-                      </p>
+                      </Div>
                     );
                   default:
                     return null;
