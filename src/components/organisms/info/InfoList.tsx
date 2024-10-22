@@ -4,15 +4,17 @@ import Img from "../../atoms/Img.tsx";
 import Anchor from "../../atoms/Anchor.tsx";
 
 interface InfoListProps {
-  infoData: { [key: string]: { data: string; method: string } };
+  infoData: {
+    [key: string]: { data: string; method: string; paragraph: string };
+  };
   onStudyClick: () => void;
 }
-
+//todo style 분리 필요
 const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
       {Object.keys(infoData).map((key) => {
-        const { data, method } = infoData[key];
+        const { data, method, paragraph } = infoData[key];
         return (
           <Div key={key} className="pb-4 mb-4 w-full">
             <Div className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
@@ -31,7 +33,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                         href={data}
                         className="text-blue-700 underline text-xl"
                       >
-                        {key}
+                        {paragraph}
                       </Anchor>
                     );
                   case "text":
@@ -42,7 +44,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                         onClick={onStudyClick}
                         className="cursor-pointer text-blue-700 underline text-xl"
                       >
-                        ABOUT {key.toUpperCase()}
+                        {paragraph}
                       </p>
                     );
                   default:
