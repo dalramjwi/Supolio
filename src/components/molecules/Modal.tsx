@@ -1,7 +1,7 @@
 import React from "react";
 import Div from "../atoms/Div.tsx";
 import { ModalProps } from "../interfaces/molecules/Modal.interface.ts";
-//todo css 빼기 및 css 전달 필요, 모달 외부를 눌렀을 때 닫히지 않는 문제 해결 : div => Div atomic 사용
+//todo css 빼기 및 css 전달 필요
 const Modal: React.FC<ModalProps> = ({ show, close, content }) => {
   if (!show) return null;
 
