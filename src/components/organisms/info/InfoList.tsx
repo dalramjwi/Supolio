@@ -1,4 +1,5 @@
 import React from "react";
+import { processObjectKeys } from "./utils.ts";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
 import Anchor from "../../atoms/Anchor.tsx";
@@ -9,12 +10,12 @@ interface InfoListProps {
   };
   onStudyClick: () => void;
 }
-//todo style 분리 필요
+
 const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
-      {Object.keys(infoData).map((key) => {
-        const { data, method, paragraph } = infoData[key];
+      {processObjectKeys(infoData, (key, value) => {
+        const { data, method, paragraph } = value; // key에 대한 value 처리
         return (
           <Div key={key} className="pb-4 mb-4 w-full">
             <Div className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
@@ -39,15 +40,13 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                   case "text":
                     return (
                       <div className="text-left">
-                        {Object.keys(data).map((subKey) => (
+                        {processObjectKeys(data, (subKey, subValue) => (
                           <div key={subKey} className="mb-2">
                             <p className="font-bold">{subKey.toUpperCase()}</p>
                             <ul className="list-disc pl-5">
-                              {data[subKey].map(
-                                (item: string, index: number) => (
-                                  <li key={index}>{item}</li>
-                                )
-                              )}
+                              {subValue.map((item: string, index: number) => (
+                                <li key={index}>{item}</li>
+                              ))}
                             </ul>
                           </div>
                         ))}
