@@ -16,9 +16,6 @@ const Info: React.FC = () => {
     commitTime: number
   ) {
     console.log(`${id} [${phase}] - 실제 걸린 시간: ${actualDuration}ms`);
-    console.log(
-      `기준 시간: ${baseDuration}ms, 시작 시간: ${startTime}, 변경 사항이 사용자에게 화면상에 나타나는 데 걸린 시간: ${commitTime}`
-    );
   }
 
   // 두 컴포넌트에 대해 Profiler 적용
