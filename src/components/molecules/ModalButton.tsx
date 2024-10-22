@@ -1,10 +1,5 @@
 import React from "react";
-
-interface ModalButtonProps {
-  direction: "prev" | "next"; // 이전 또는 다음 버튼 방향
-  onClick: () => void;
-  disabled?: boolean;
-}
+import { ModalButtonProps } from "../interfaces/organisms/ModalButton.interface";
 
 const ModalButton: React.FC<ModalButtonProps> = ({
   direction,
