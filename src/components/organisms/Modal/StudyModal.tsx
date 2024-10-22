@@ -32,7 +32,6 @@ const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
               {studyData.title[currentIndex]}
             </Div>
             <Div className="flex justify-end pb-4">
-              {/* ModalButtonGroup을 사용하여 버튼 쌍을 출력 */}
               <ModalButtonGroup
                 onPrev={handlePrev}
                 onNext={handleNext}
