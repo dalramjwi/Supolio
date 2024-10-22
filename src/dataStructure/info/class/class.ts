@@ -3,12 +3,12 @@ import { InfoData, InfoJson } from "../interface/interface";
 export class InfoDataStructure {
   public phoneNumber: { data: string; method: string };
   public email: { data: string; method: string };
-  public github: { data: string; method: string };
+  public github: { data: string; method: string; paragraph: string };
   public stack: {
     data: {
       language: string[];
       framework: string[];
-      makeup: string[];
+      markup: string[];
       database: string[];
       tool: string[];
       devops: string[];
@@ -18,6 +18,7 @@ export class InfoDataStructure {
   public study: {
     data: { title: string[]; description: string[]; imgurl: string[] };
     method: string;
+    paragraph: string;
   };
 
   private constructor(data: InfoData) {
