@@ -2,9 +2,10 @@ import React, { useMemo } from "react";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
 import Anchor from "../../atoms/Anchor.tsx";
-import { InfoListProps } from "../../interfaces/data/InfoListProps.ts";
+
 import StudyModal from "../Modal/StudyModal.tsx";
 import { useModal } from "../Modal/hook/useModal.tsx";
+import { InfoListProps } from "../../interfaces/organisms/InfoList.interface.ts";
 
 //todo css 처리 필요
 const InfoList: React.FC<InfoListProps> = ({ infoData }) => {

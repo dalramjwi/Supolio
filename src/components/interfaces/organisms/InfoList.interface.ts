@@ -1,3 +1,5 @@
+import { StudyProps } from "../atoms/Study.interface";
+
 export interface InfoListProps {
   infoData: {
     "phone Number": { data: string; method: string };
@@ -15,11 +17,7 @@ export interface InfoListProps {
       method: string;
     };
     study: {
-      data: {
-        title: string[];
-        description: string[];
-        imgurl: string[];
-      };
+      data: StudyProps;
       method: string;
       paragraph: string;
     };
