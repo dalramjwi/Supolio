@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "../../molecules/Modal.tsx";
 import { contentData } from "../../../dataStructure/study.ts";
+import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
 
 interface StudyModalProps {
   show: boolean;
@@ -8,31 +9,23 @@ interface StudyModalProps {
 }
 
 const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const { currentIndex, handleNext, handlePrev } = useHandleModal(
+    contentData.length
+  );
 
   if (!show) return null;
-
-  const handleSwipe = (direction: string) => {
-    if (direction === "next" && currentIndex < contentData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else if (direction === "prev" && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
 
   const content = (
     <div className="flex flex-col md:flex-row">
       <div className="p-4 w-full md:w-1/2">
-        {/* 왼쪽 글 부분 */}
         <div className="flex flex-col min-h-full">
           <div className="flex flex-col flex-grow bg-white rounded-lg shadow-lg p-6 border border-gray-300 overflow-y-scroll scrollbar-hidden max-h-[76vh]">
             <h2 className="text-2xl font-bold">
               {contentData[currentIndex].title}
             </h2>
-            {/* 이동 버튼 */}
             <div className="flex justify-end pb-4 gap-x-2">
               <button
-                onClick={() => handleSwipe("prev")}
+                onClick={handlePrev}
                 disabled={currentIndex === 0}
                 className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
                   currentIndex === 0 ? "" : "hover:bg-gray-500"
@@ -41,7 +34,7 @@ const StudyModal: React.FC<StudyModalProps> = ({ show, close }) => {
                 ◀
               </button>
               <button
-                onClick={() => handleSwipe("next")}
+                onClick={handleNext}
                 disabled={currentIndex === contentData.length - 1}
                 className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 ${
                   currentIndex === contentData.length - 1
