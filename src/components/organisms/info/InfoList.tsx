@@ -9,7 +9,7 @@ interface InfoListProps {
   };
   onStudyClick: () => void;
 }
-
+//todo css 처리 필요
 const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
   // infoData만 메모이제이션 처리
   const memoizedInfoData = useMemo(() => infoData, []);
