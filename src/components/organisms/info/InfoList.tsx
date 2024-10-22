@@ -18,6 +18,15 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
     <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
       {memoizedKeys.map((key) => {
         const { data, method, paragraph } = infoData[key];
+
+        // text case의 data 객체의 키도 메모이제이션
+        const memoizedSubKeys = useMemo(() => {
+          if (method === "text") {
+            return Object.keys(data);
+          }
+          return [];
+        }, [data, method]);
+
         return (
           <Div key={key} className="pb-4 mb-4 w-full">
             <Div className="text-2xl font-bold mb-2 border-b-2 border-gray-400 pb-2">
@@ -42,7 +51,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                   case "text":
                     return (
                       <div className="text-left">
-                        {Object.keys(data).map((subKey) => (
+                        {memoizedSubKeys.map((subKey) => (
                           <div key={subKey} className="mb-2">
                             <p className="font-bold">{subKey.toUpperCase()}</p>
                             <ul className="list-disc pl-5">
