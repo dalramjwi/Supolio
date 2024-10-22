@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "../../molecules/Modal.tsx";
 import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
+import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
 
 interface StudyModalProps {
   studyData: {
@@ -49,9 +50,10 @@ const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
                 ▶
               </button>
             </div>
-            <p className="text-gray-700 whitespace-pre-line mb-4 text-xl">
-              {studyData.description[currentIndex]}
-            </p>
+            <HtmlElementDiv
+              className="text-gray-700 whitespace-pre-line mb-4 text-xl"
+              htmlContent={studyData.description[currentIndex]}
+            />
           </div>
         </div>
       </div>
