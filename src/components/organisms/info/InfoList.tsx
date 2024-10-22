@@ -41,20 +41,22 @@ const InfoList: React.FC<InfoListProps> = ({ infoData }) => {
                     );
                   case "text":
                     return (
-                      <div className="text-left">
+                      <Div className="text-left">
                         {Object.keys(data).map((subKey) => (
-                          <div key={subKey} className="mb-2">
-                            <p className="font-bold">{subKey.toUpperCase()}</p>
-                            <ul className="list-disc pl-5">
+                          <Div key={subKey} className="mb-2">
+                            <Div className="font-bold">
+                              {subKey.toUpperCase()}
+                            </Div>
+                            <Div className="list-disc pl-5">
                               {data[subKey].map(
                                 (item: string, index: number) => (
-                                  <li key={index}>{item}</li>
+                                  <Div key={index}>{item}</Div>
                                 )
                               )}
-                            </ul>
-                          </div>
+                            </Div>
+                          </Div>
                         ))}
-                      </div>
+                      </Div>
                     );
                   case "modal":
                     return (
