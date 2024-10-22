@@ -7,7 +7,6 @@ import Anchor from "../components/atoms/Anchor.tsx";
 import StudyModal from "../components/StudyModal.tsx";
 
 const Info: React.FC = () => {
-  const [showEmailModal, setShowEmailModal] = useState(false);
   const [showStudyModal, setShowStudyModal] = useState(false);
 
   const handleAboutStudyClick = () => {
