@@ -14,18 +14,22 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
   // Object.keys() 메모이제이션 처리, 의존성 배열을 빈 배열로 설정하여 최초 렌더링 시 한 번만 실행
   const memoizedKeys = useMemo(() => Object.keys(infoData), []);
 
+  // method가 "text"인 항목들의 데이터를 메모이제이션
+  const memoizedTextData = useMemo(() => {
+    const result: { [key: string]: string[] } = {};
+    memoizedKeys.forEach((key) => {
+      const { data, method } = infoData[key];
+      if (method === "text") {
+        result[key] = Object.keys(data); // 각 key에 대해 Object.keys(data)를 저장
+      }
+    });
+    return result;
+  }, [infoData, memoizedKeys]);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-4 w-full">
       {memoizedKeys.map((key) => {
         const { data, method, paragraph } = infoData[key];
-
-        // text case의 data 객체의 키도 메모이제이션
-        const memoizedSubKeys = useMemo(() => {
-          if (method === "text") {
-            return Object.keys(data);
-          }
-          return [];
-        }, [data, method]);
 
         return (
           <Div key={key} className="pb-4 mb-4 w-full">
@@ -51,7 +55,7 @@ const InfoList: React.FC<InfoListProps> = ({ infoData, onStudyClick }) => {
                   case "text":
                     return (
                       <div className="text-left">
-                        {memoizedSubKeys.map((subKey) => (
+                        {memoizedTextData[key]?.map((subKey) => (
                           <div key={subKey} className="mb-2">
                             <p className="font-bold">{subKey.toUpperCase()}</p>
                             <ul className="list-disc pl-5">
