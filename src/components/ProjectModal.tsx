@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { stackColors } from "../dataStructure/stackCss.ts";
 import Modal from "./molecules/Modal.tsx";
-import ModalButtonGroup from "./organisms/Modal/ModalButtonGroup.tsx";
+import ModalButtonGroup from "./molecules/ModalButtonGroup.tsx";
 
 interface Project {
   title: string;
@@ -67,7 +67,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
       {project.data && project.data.length > 0 && (
         <div className="w-full h-[55vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
-          {/* ModalButtonGroup을 사용하여 이전/다음 버튼 쌍 출력 */}
           <ModalButtonGroup
             onPrev={handlePrevImage}
             onNext={handleNextImage}

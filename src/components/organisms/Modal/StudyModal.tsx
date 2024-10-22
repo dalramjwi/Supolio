@@ -4,7 +4,7 @@ import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
 import Div from "../../atoms/Div.tsx";
 import Img from "../../atoms/Img.tsx";
 import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
-import ModalButtonGroup from "./ModalButtonGroup.tsx";
+import ModalButtonGroup from "../../molecules/ModalButtonGroup.tsx";
 import { StudyModalProps } from "../../interfaces/molecules/StudyModal.interface.ts";
 
 const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {

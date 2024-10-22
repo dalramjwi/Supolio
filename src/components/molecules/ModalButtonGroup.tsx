@@ -1,6 +1,6 @@
 import React from "react";
-import ModalButton from "../../molecules/ModalButton.tsx";
-import { ModalButtonGroupProps } from "../../interfaces/organisms/ModalButtonGroup.interface.ts";
+import ModalButton from "./ModalButton.tsx";
+import { ModalButtonGroupProps } from "../interfaces/organisms/ModalButtonGroup.interface.ts";
 
 const ModalButtonGroup: React.FC<ModalButtonGroupProps> = ({
   onPrev,
