@@ -2,8 +2,8 @@ import { StudyProps } from "../atoms/Study.interface";
 
 export interface InfoListProps {
   infoData: {
-    "phone Number": { data: string; method: string };
-    "e mail": { data: string; method: string };
+    phoneNumber: { data: string; method: string };
+    email: { data: string; method: string };
     github: { data: string; method: string; paragraph: string };
     stack: {
       data: {
