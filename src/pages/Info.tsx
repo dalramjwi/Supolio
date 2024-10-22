@@ -4,17 +4,11 @@ import data from "../data/data.json"; // 데이터 불러오기
 import Div from "../components/atoms/Div.tsx";
 import Img from "../components/atoms/Img.tsx";
 import Anchor from "../components/atoms/Anchor.tsx";
-import Modal from "../components/molecules/Modal.tsx";
 import StudyModal from "../components/StudyModal.tsx";
 
 const Info: React.FC = () => {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [showStudyModal, setShowStudyModal] = useState(false);
-
-  const handleEmailClick = () => {
-    navigator.clipboard.writeText("dalramjwi@gmail.com");
-    setShowEmailModal(true);
-  };
 
   const handleAboutStudyClick = () => {
     setShowStudyModal(true);
@@ -74,14 +68,6 @@ const Info: React.FC = () => {
           })}
         </div>
       </div>
-
-      {/* Email Modal */}
-      <Modal
-        show={showEmailModal}
-        close={() => setShowEmailModal(false)}
-        content={<p>E-mail이 클립보드에 복사되었습니다!</p>}
-        className="modal-custom-class"
-      />
 
       {/* Study Modal */}
       <StudyModal
