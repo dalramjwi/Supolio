@@ -1,5 +1,5 @@
 import React from "react";
-import ModalButton from "./ModalButton.tsx";
+import ModalButton from "../../molecules/ModalButton.tsx";
 
 interface ModalButtonGroupProps {
   onPrev: () => void;
@@ -15,7 +15,7 @@ const ModalButtonGroup: React.FC<ModalButtonGroupProps> = ({
   disableNext = false,
 }) => {
   return (
-    <div className="flex justify-between items-center w-full">
+    <div className="flex items-center w-full">
       <ModalButton direction="prev" onClick={onPrev} disabled={disablePrev} />
       <ModalButton direction="next" onClick={onNext} disabled={disableNext} />
     </div>
