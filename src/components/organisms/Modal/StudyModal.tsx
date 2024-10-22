@@ -6,6 +6,7 @@ import Img from "../../atoms/Img.tsx";
 import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
 import ModalButtonGroup from "../../molecules/ModalButtonGroup.tsx";
 import { StudyModalProps } from "../../interfaces/molecules/StudyModal.interface.ts";
+//todo css 처리 필요
 
 const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
   const { currentIndex, handleNext, handlePrev } = useHandleModal(

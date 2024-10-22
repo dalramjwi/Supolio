@@ -1,6 +1,6 @@
 import React from "react";
 import { ModalButtonProps } from "../interfaces/organisms/ModalButton.interface";
-
+//todo css 처리 필요
 const ModalButton: React.FC<ModalButtonProps> = ({
   direction,
   onClick,
