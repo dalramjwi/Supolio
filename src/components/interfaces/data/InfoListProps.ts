@@ -24,5 +24,4 @@ export interface InfoListProps {
       paragraph: string;
     };
   };
-  onStudyClick: () => void;
 }
