@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "../data/data.json"; // 데이터 불러오기
+import data from "../data/data.json";
 import StudyModal from "../components/StudyModal.tsx";
 import InfoList from "../components/organisms/info/InfoList.tsx";
 
@@ -11,7 +11,7 @@ const Info: React.FC = () => {
   };
 
   const infoData = data.info;
-
+  //todo css 변경 필요
   return (
     <div className="flex flex-col min-h-full bg-gray-100 p-6">
       <div className="flex flex-col justify-center items-center flex-grow text-center bg-white rounded-lg shadow-lg p-10 border border-gray-300">
