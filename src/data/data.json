@@ -5,9 +5,13 @@
     "description": "인간이 서로 연결될 때 기술은 단순한 도구를 넘어 더욱 의미 있는 역할을 하게 됩니다.<br />예를 들어, 기술은 사람들 간의 의사소통을 원활하게 하고 다양한 문화와 배경을 가진 이들이 서로 이해하고 협력할 수 있는 플랫폼을 제공합니다. 저는 사람들 간의 관계를 기술로 이어주는 가교와 같은 개발자가 되고 싶습니다. <br /> 기술을 통해 사람들의 경험을 풍부하게 하고 커뮤니티를 형성하며 서로의 이해를 증진시키는 데 기여하고자 합니다."
   },
   "info": {
-    "phoneNumber": { "data": "/img/dalramjwi_personal2.png", "method": "img" },
-    "email": { "data": "/img/dalramjwi_personal.png", "method": "img" },
-    "github": { "data": "https://github.com/dalramjwi", "method": "a" },
+    "phone Number": { "data": "/img/dalramjwi_personal2.png", "method": "img" },
+    "e mail": { "data": "/img/dalramjwi_personal.png", "method": "img" },
+    "github": {
+      "data": "https://github.com/dalramjwi",
+      "method": "a",
+      "paragraph": "CONNECT TO MY GITHUB"
+    },
     "stack": {
       "data": {
         "language": ["JavaScript", "TypeScript", "Python"],
@@ -52,7 +56,8 @@
           "/img/study_matter.jpg"
         ]
       },
-      "method": "modal"
+      "method": "modal",
+      "paragraph": "ABOUT STUDY"
     }
   }
 }
