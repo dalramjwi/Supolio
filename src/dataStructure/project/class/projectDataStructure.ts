@@ -1,6 +1,8 @@
 import { fromJsonByKey } from "../../json/fromJsonByKey.ts";
+import { ProjectContentJson } from "../interface/projectContentJson.ts";
 import { ProjectData } from "../interface/projectData.ts";
 import { ProjectJson } from "../interface/projectJson.ts";
+import { TeamProjectData } from "../interface/teamProjectData.ts";
 import { TeamProjectDataStructure } from "./teamProjectDataStructure.ts";
 
 // project 데이터를 담을 수 있는 ProjectContent 클래스

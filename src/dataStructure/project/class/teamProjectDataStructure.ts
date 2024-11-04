@@ -1,4 +1,4 @@
-import { TeamProjectData } from "../interface/projectData.ts";
+import { TeamProjectData } from "../interface/teamProjectData.ts";
 import { ProjectDataStructure } from "./projectDataStructure.ts";
 
 export class TeamProjectDataStructure extends ProjectDataStructure {
