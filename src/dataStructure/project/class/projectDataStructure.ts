@@ -1,6 +1,18 @@
-import { ProjectData } from "../interface/projectData.ts";
-import { ProjectJson } from "../interface/projectJson.ts";
+import { fromJsonByKey } from "../../json/fromJsonByKey.ts";
+import { ProjectData, TeamProjectData } from "../interface/projectData.ts";
+import { ProjectContentJson, ProjectJson } from "../interface/projectJson.ts";
 import { TeamProjectDataStructure } from "./teamProjectDataStructure.ts";
+
+// project 데이터를 담을 수 있는 ProjectContent 클래스
+class ProjectContent {
+  public single: ProjectData[];
+  public team: TeamProjectData[];
+
+  constructor(data: ProjectContentJson) {
+    this.single = data.single;
+    this.team = data.team;
+  }
+}
 
 // 기본 ProjectDataStructure 클래스
 export class ProjectDataStructure {
@@ -15,7 +27,7 @@ export class ProjectDataStructure {
   public link: (string | string[])[];
   public thumbnail: string;
 
-  constructor(data: ProjectData) {
+  public constructor(data: ProjectData) {
     this.name = data.name;
     this.description = data.description;
     this.introduce = data.introduce;
@@ -29,18 +41,17 @@ export class ProjectDataStructure {
   }
 
   public static fromJson(json: ProjectJson): ProjectDataStructure[] {
-    const projectDataStructures: ProjectDataStructure[] = [];
+    // 'project' 키의 데이터를 추출하여 ProjectContent 타입을 사용
+    const projectData = fromJsonByKey(json, "project", ProjectContent);
 
-    // Single Project 데이터 추가
-    json.project.single.forEach((singleData) => {
-      projectDataStructures.push(new ProjectDataStructure(singleData));
-    });
+    const singleProjects = projectData.single.map(
+      (singleData) => new ProjectDataStructure(singleData)
+    );
 
-    // Team Project 데이터 추가
-    json.project.team.forEach((teamData) => {
-      projectDataStructures.push(new TeamProjectDataStructure(teamData));
-    });
+    const teamProjects = projectData.team.map(
+      (teamData) => new TeamProjectDataStructure(teamData)
+    );
 
-    return projectDataStructures;
+    return [...singleProjects, ...teamProjects];
   }
 }
