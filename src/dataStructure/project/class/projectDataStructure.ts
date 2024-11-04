@@ -1,5 +1,5 @@
-import { ProjectData } from "../interface/projectData";
-import { ProjectJson } from "../interface/projectJson";
+import { ProjectData } from "../interface/projectData.ts";
+import { ProjectJson } from "../interface/projectJson.ts";
 
 export class ProjectDataStructure {
     public name: string;

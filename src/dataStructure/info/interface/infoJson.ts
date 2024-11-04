@@ -9,7 +9,7 @@ export interface InfoJson {
                 framework: string[];
                 markup: string[];
                 database: string[];
-                tool: string[];
+                tool: string[];``
                 devops: string[];
             };
             method: string;

@@ -1,5 +1,5 @@
-import { MainData } from "../interface/mainData";
-import { MainJson } from "../interface/mainJson";
+import { MainData } from "../interface/mainData.ts";
+import { MainJson } from "../interface/mainJson.ts";
 
 export class MainDataStructure {
     // public 필드들은 외부에서 접근 가능

@@ -1,5 +1,5 @@
-import { InfoData } from "../interface/infoData";
-import { InfoJson } from "../interface/infoJson";
+import { InfoData } from "../interface/infoData.ts";
+import { InfoJson } from "../interface/infoJson.ts";
 
 export class InfoDataStructure {
     public phoneNumber: { data: string; method: string };

@@ -1,4 +1,4 @@
-import { ProjectData } from "./projectData";
+import { ProjectData } from "./projectData.ts";
 
 export interface ProjectJson {
     project: {
