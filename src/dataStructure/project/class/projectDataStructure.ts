@@ -1,4 +1,5 @@
-import { ProjectData, ProjectJson } from "../interface/interface";
+import { ProjectData } from "../interface/projectData";
+import { ProjectJson } from "../interface/projectJson";
 
 export class ProjectDataStructure {
     public name: string;
@@ -6,11 +7,11 @@ export class ProjectDataStructure {
     public introduce: string;
     public detail: string;
     public contribute?: string;
-    public img: Record<string, string>;
+    public img: { description: string; imgurl: string }[];
     public review: string;
-    public period: [string, string, ...string[]];
+    public period: string[];
     public stack: string[];
-    public link: [string | string[], string];
+    public link: (string | string[])[];
     public thumbnail: string;
 
     private constructor(data: ProjectData) {
