@@ -1,10 +1,10 @@
-import { ProjectData } from "../interface/projectData";
-import { ProjectDataStructure } from "./projectDataStructure";
+import { TeamProjectData } from "../interface/projectData.ts";
+import { ProjectDataStructure } from "./projectDataStructure.ts";
 
 export class TeamProjectDataStructure extends ProjectDataStructure {
   public contribute: string;
 
-  constructor(data: ProjectData) {
+  public constructor(data: TeamProjectData) {
     super(data);
     this.contribute = data.contribute!;
   }
