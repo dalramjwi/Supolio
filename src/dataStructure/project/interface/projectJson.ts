@@ -6,7 +6,3 @@ export interface ProjectJson {
     team: TeamProjectData[];
   };
 }
-export interface ProjectContentJson {
-  single: ProjectData[];
-  team: TeamProjectData[];
-}
