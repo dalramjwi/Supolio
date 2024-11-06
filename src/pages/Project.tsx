@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { ProjectInstance } from "../dataStructure/project/instance/projectInstance.ts";
 import { ProjectDataStructure } from "../dataStructure/project/class/projectDataStructure.ts";
-import ProjectDetail from "../components/organisms/project/detail.tsx";
-import ProjectList from "../components/organisms/project/list.tsx";
+import ProjectDetail from "../components/organisms/project/ProjectDetail.tsx";
+import ProjectList from "../components/organisms/project/ProjectList.tsx";
 import GitHubModal from "../components/organisms/Modal/GithubModal.tsx";
 
 const Project: React.FC = () => {
