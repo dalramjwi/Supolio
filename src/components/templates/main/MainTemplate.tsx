@@ -1,7 +1,7 @@
 import React from "react";
-import NameSection from "../organisms/main/NameSection";
-import ParagraphSection from "../organisms/main/ParagraphSection";
-import DescriptionSection from "../organisms/main/Description";
+import NameSection from "../../organisms/main/NameSection";
+import ParagraphSection from "../../organisms/main/ParagraphSection";
+import DescriptionSection from "../../organisms/main/Description";
 
 const MainTemplate: React.FC = () => {
   return (
