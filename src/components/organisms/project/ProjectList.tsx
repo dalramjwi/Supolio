@@ -7,7 +7,7 @@ interface ProjectListProps {
   projects: ProjectDataStructure[];
   onProjectSelect: (project: ProjectDataStructure) => void;
 }
-
+//todo interface 분리 및 style 속성 추가
 const ProjectList: React.FC<ProjectListProps> = ({
   projects,
   onProjectSelect,
