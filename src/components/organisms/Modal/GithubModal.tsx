@@ -2,24 +2,18 @@ import React from "react";
 import Modal from "../../molecules/Modal.tsx";
 import Div from "../../atoms/Div.tsx";
 import Button from "../../atoms/Button.tsx";
-
-interface GitHubModalProps {
-  show: boolean;
-  links: string[];
-  onClose: () => void;
-  onLinkClick: (link: string) => void;
-}
+import { GitHubModalProps } from "../../interfaces/organisms/GithubModal.interface.ts";
 
 const GitHubModal: React.FC<GitHubModalProps> = ({
   show,
   links,
-  onClose,
+  close,
   onLinkClick,
 }) => {
   return (
     <Modal
       show={show}
-      close={onClose}
+      close={close}
       content={
         <Div className="flex flex-col gap-2">
           {links.map((link, index) => (
