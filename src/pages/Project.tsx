@@ -6,6 +6,8 @@ import Modal from "../components/molecules/Modal.tsx";
 import Button from "../components/atoms/Button.tsx";
 import Div from "../components/atoms/Div.tsx";
 import Img from "../components/atoms/Img.tsx";
+import ModalButtonGroup from "../components/molecules/ModalButtonGroup.tsx";
+import HtmlElementDiv from "../components/molecules/HtmlElementDiv.tsx";
 
 const Project: React.FC = () => {
   const [selectedProject, setSelectedProject] =
@@ -102,37 +104,42 @@ const Project: React.FC = () => {
 
             <Div>
               <Div className="font-bold text-2xl mb-3">주요 기능 및 설명</Div>
-              <Div className="text-lg mt-2 mb-4">
-                {selectedProject.introduce}
-              </Div>
+              <HtmlElementDiv
+                className="text-lg mt-2 mb-4"
+                htmlContent={selectedProject.introduce}
+              ></HtmlElementDiv>
             </Div>
 
             <Div className="flex flex-col gap-4">
               {selectedProject.detail && (
                 <Div>
                   <Div className="font-bold text-2xl mb-3">제작 과정</Div>
-                  <Div className="text-lg mt-2 mb-2">
-                    {selectedProject.detail}
-                  </Div>
+                  <HtmlElementDiv
+                    className="text-lg mt-2 mb-2"
+                    htmlContent={selectedProject.detail}
+                  ></HtmlElementDiv>
                 </Div>
               )}
               {selectedProject.contribute && (
                 <Div>
                   <Div className="font-bold text-2xl mb-3">담당한 기능</Div>
-                  <Div className="text-lg mt-2 mb-2">
-                    {selectedProject.contribute}
-                  </Div>
+                  <HtmlElementDiv
+                    className="text-lg mt-2 mb-2"
+                    htmlContent={selectedProject.contribute}
+                  ></HtmlElementDiv>
                 </Div>
               )}
 
               {selectedProject.img && selectedProject.img.length > 0 && (
                 <Div className="w-full h-[55vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
-                  <Button
-                    className="absolute left-2 bg-gray-300 px-2 py-1 rounded-full hover:bg-gray-400 transition text-white"
-                    onClick={handlePrevImage}
-                  >
-                    ◀
-                  </Button>
+                  <ModalButtonGroup
+                    onPrev={handlePrevImage}
+                    onNext={handleNextImage}
+                    disablePrev={currentImageIndex === 0}
+                    disableNext={
+                      currentImageIndex === selectedProject.img.length - 1
+                    }
+                  />
                   <Img
                     src={selectedProject.img[currentImageIndex].imgurl}
                     alt={
@@ -141,12 +148,6 @@ const Project: React.FC = () => {
                     }
                     className="w-full h-full object-contain rounded-md"
                   />
-                  <Button
-                    className="absolute right-2 bg-gray-300 px-2 py-1 rounded-full hover:bg-gray-400 transition text-white"
-                    onClick={handleNextImage}
-                  >
-                    ▶
-                  </Button>
                 </Div>
               )}
 
@@ -159,13 +160,18 @@ const Project: React.FC = () => {
               {selectedProject.review && (
                 <Div>
                   <Div className="font-bold text-2xl mb-3">회고</Div>
-                  <Div className="text-lg mt-2">{selectedProject.review}</Div>
+                  <HtmlElementDiv
+                    className="text-lg mt-2"
+                    htmlContent={selectedProject.review}
+                  ></HtmlElementDiv>
                 </Div>
               )}
             </Div>
           </Div>
         ) : (
-          <p className="text-center text-gray-500">프로젝트를 선택해주세요</p>
+          <Div className="text-center text-gray-500">
+            프로젝트를 선택해주세요
+          </Div>
         )}
       </Div>
 
@@ -177,8 +183,16 @@ const Project: React.FC = () => {
             className="mb-4 cursor-pointer"
             onClick={() => handleProjectClick(project)}
           >
-            <h2 className="text-lg font-semibold">{project.name}</h2>
-            <p className="text-sm">{project.description}</p>
+            <HtmlElementDiv
+              className="text-lg font-semibold"
+              htmlContent={project.name}
+            >
+              {project.name}
+            </HtmlElementDiv>
+            <HtmlElementDiv
+              className="text-sm"
+              htmlContent={project.description}
+            ></HtmlElementDiv>
           </Div>
         ))}
       </Div>
