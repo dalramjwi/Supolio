@@ -8,7 +8,8 @@ import Main from "./pages/Main.tsx";
 import Info from "./pages/Info.tsx";
 import Header from "./components/Header.tsx";
 // import Overview from "./pages/Overview.tsx";
-import Single from "./pages/Single.tsx";
+// import Single from "./pages/Single.tsx";
+import Face from "./pages/Face.tsx";
 import Team from "./pages/Team.tsx";
 import Project from "./pages/Project.tsx";
 
@@ -23,7 +24,7 @@ const App = () => {
             <Route path="/main" element={<Main />} />
             <Route path="/info" element={<Info />} />
             <Route path="/overview" element={<Project />} />
-            <Route path="/single" element={<Single />} />
+            <Route path="/single" element={<Face />} />
             <Route path="/team" element={<Team />} />
           </Routes>
         </div>
