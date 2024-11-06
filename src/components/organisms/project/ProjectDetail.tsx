@@ -50,7 +50,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
           )}
         </Div>
       </Div>
-
       <Div className="flex justify-center gap-2 flex-wrap mb-4">
         {project.stack.map((tech) => (
           <Div
@@ -62,7 +61,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
           </Div>
         ))}
       </Div>
-
       <Div>
         <Div className="font-bold text-2xl mb-3">주요 기능 및 설명</Div>
         <HtmlElementDiv
@@ -70,7 +68,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
           htmlContent={project.introduce}
         />
       </Div>
-
       <Div className="flex flex-col gap-4">
         {project.detail && (
           <Div>
@@ -90,7 +87,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             />
           </Div>
         )}
-
         {project.img.length > 0 && (
           <Div className="w-full h-[55vh] bg-white rounded-md flex items-center justify-center border relative mb-4">
             <ModalButtonGroup
@@ -108,7 +104,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             />
           </Div>
         )}
-
         {project.img[currentImageIndex]?.description && (
           <Div className="text-base text-center mb-4">
             {project.img[currentImageIndex].description}

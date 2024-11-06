@@ -1,4 +1,3 @@
-// src/components/organisms/modal/GitHubModal.tsx
 import React from "react";
 import Modal from "../../molecules/Modal.tsx";
 import Div from "../../atoms/Div.tsx";
@@ -11,7 +10,7 @@ interface GitHubModalProps {
   onLinkClick: (link: string) => void;
 }
 
-export const GitHubModal: React.FC<GitHubModalProps> = ({
+const GitHubModal: React.FC<GitHubModalProps> = ({
   show,
   links,
   onClose,
