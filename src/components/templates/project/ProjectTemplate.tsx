@@ -41,7 +41,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ projectData }) => {
         <GitHubModal
           show={showGithubModal}
           links={selectedProject.link[0]}
-          onClose={handleCloseModal}
+          close={handleCloseModal}
           onLinkClick={handleGithubVersionClick}
         />
       )}
