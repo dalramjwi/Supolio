@@ -3,5 +3,5 @@ import { CssProps } from "../atoms/CssProps.interface";
 export interface ModalProps extends CssProps {
   show: boolean;
   close: () => void;
-  content: React.ReactNode;
+  content?: React.ReactNode;
 }
