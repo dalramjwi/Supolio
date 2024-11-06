@@ -14,7 +14,7 @@ interface ProjectDetailProps {
   onNextImage: () => void;
   onGitHubClick: () => void;
 }
-
+//todo interface 분리, css 속성 전달
 const ProjectDetail: React.FC<ProjectDetailProps> = ({
   project,
   currentImageIndex,
