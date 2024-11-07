@@ -1,5 +1,6 @@
 import React from "react";
 import { ModalButtonProps } from "../interfaces/organisms/ModalButton.interface";
+import Button from "../atoms/Button";
 //todo css 처리 필요
 const ModalButton: React.FC<ModalButtonProps> = ({
   direction,
@@ -7,7 +8,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
   disabled = false,
 }) => {
   return (
-    <button
+    <Button
       onClick={onClick}
       disabled={disabled}
       className={`bg-gray-400 text-white w-10 h-10 rounded-full disabled:opacity-50 mx-2 ${
@@ -15,7 +16,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
       }`}
     >
       {direction === "prev" ? "◀" : "▶"}
-    </button>
+    </Button>
   );
 };
 
