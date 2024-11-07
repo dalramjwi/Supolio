@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import HomeNavLink from "../components/molecules/HomeNavLink.tsx";
 
 const Home: React.FC = () => {
   return (
     <>
-      <Link to="/main">Read ME</Link>
-      <Link to="/info">Info</Link>
-      <Link to="/project">Projects</Link>
+      <HomeNavLink />
     </>
   );
 };
