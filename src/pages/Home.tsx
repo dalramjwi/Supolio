@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Home: React.FC = () => {
   return (
     <>
-      <Link to="/main">asd</Link>
-      <Link to="/info">asd</Link>
-      <Link to="/project"> asd</Link>
+      <Link to="/main">Read ME</Link>
+      <Link to="/info">Info</Link>
+      <Link to="/project">Projects</Link>
     </>
   );
 };
