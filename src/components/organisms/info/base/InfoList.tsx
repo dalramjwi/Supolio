@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-import Div from "../../atoms/Div.tsx";
-import Img from "../../atoms/Img.tsx";
-import Anchor from "../../atoms/Anchor.tsx";
+import Div from "../../../atoms/base/Div.tsx";
+import Img from "../../../atoms/base/Img.tsx";
+import Anchor from "../../../atoms/base/Anchor.tsx";
 import StudyModal from "../../Modal/StudyModal.tsx";
 import { useModal } from "../../Modal/hook/useModal.tsx";
 import { InfoListProps } from "../../../interfaces/organisms/InfoList.interface.ts";
