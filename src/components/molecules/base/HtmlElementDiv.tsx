@@ -1,5 +1,5 @@
 import React from "react";
-import { HtmlElementDivProps } from "../interfaces/organisms/HtmlElementDiv.interface";
+import { HtmlElementDivProps } from "../../interfaces/organisms/HtmlElementDiv.interface";
 
 const HtmlElementDiv: React.FC<HtmlElementDivProps> = ({
   htmlContent,
