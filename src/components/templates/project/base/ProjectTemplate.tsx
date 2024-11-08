@@ -1,11 +1,11 @@
 import React from "react";
-import { ProjectDataStructure } from "../../../dataStructure/project/class/projectDataStructure.ts";
-import useSelectedProject from "./hook/useSelectedProject.ts";
-import useImageNavigation from "./hook/useImageNavigation.ts";
-import useGitHubModal from "../../organisms/Modal/hook/useGithubModal.tsx";
-import GitHubModal from "../../organisms/Modal/GithubModal.tsx";
-import ProjectList from "../../organisms/project/ProjectList.tsx";
-import ProjectDetail from "../../organisms/project/ProjectDetail.tsx";
+import { ProjectDataStructure } from "../../../../dataStructure/project/class/projectDataStructure.ts";
+import useSelectedProject from "../hook/useSelectedProject.ts";
+import useImageNavigation from "../hook/useImageNavigation.ts";
+import useGitHubModal from "../../../organisms/Modal/hook/useGithubModal.tsx";
+import GitHubModal from "../../../organisms/Modal/base/GithubModal.tsx";
+import ProjectList from "../../../organisms/project/base/ProjectList.tsx";
+import ProjectDetail from "../../../organisms/project/base/ProjectDetail.tsx";
 
 interface ProjectTemplateProps {
   projectData: ProjectDataStructure[];
