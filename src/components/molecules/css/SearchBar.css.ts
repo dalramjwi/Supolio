@@ -20,7 +20,7 @@ export const searchContainer = style({
 
   // 가운데 정렬 (기본 화면 크기에서)
   position: "absolute",
-  top: "12.5%",
+  top: "19.5%",
   left: "50%",
   transform: "translate(-50%, -50%)",
 
@@ -30,7 +30,7 @@ export const searchContainer = style({
       // 태블릿 화면
       width: "80%",
       position: "fixed",
-      top: "10vh",
+      // top: "10vh",
       left: "50%",
       transform: "translateX(-50%)",
     },
@@ -38,7 +38,7 @@ export const searchContainer = style({
       // 모바일 화면
       width: "90%",
       position: "fixed",
-      top: "12.5vh",
+      // top: "16.5vh",
       left: "50%",
       transform: "translateX(-50%)",
     },
