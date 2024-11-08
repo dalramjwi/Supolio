@@ -1,6 +1,6 @@
 import React from "react";
-import Div from "../atoms/Div.tsx";
 import { ModalProps } from "../../interfaces/molecules/Modal.interface.ts";
+import Div from "../../atoms/base/Div.tsx";
 //todo css 빼기 및 css 전달 필요
 const Modal: React.FC<ModalProps> = ({ show, close, content }) => {
   if (!show) return null;
