@@ -1,5 +1,5 @@
 import React from "react";
-import { DivProps } from "../interfaces/molecules/Div.interface";
+import { DivProps } from "../../interfaces/molecules/Div.interface";
 
 const Div: React.FC<DivProps> = ({ children, className, ...rest }) => {
   return (
