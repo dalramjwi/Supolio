@@ -1,7 +1,7 @@
 import React from "react";
-import NameSection from "../components/organisms/main/NameSection.tsx";
-import ParagraphSection from "../components/organisms/main/ParagraphSection.tsx";
-import DescriptionSection from "../components/organisms/main/Description.tsx";
+import NameSection from "../components/organisms/main/base/NameSection.tsx";
+import ParagraphSection from "../components/organisms/main/base/ParagraphSection.tsx";
+import DescriptionSection from "../components/organisms/main/base/Description.tsx";
 //todo css 객체와, mainTenplate의 리터럴 html 리턴과 매핑 필요
 const Main: React.FC = () => {
   return (

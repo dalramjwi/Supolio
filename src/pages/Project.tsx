@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectInstance } from "../dataStructure/project/instance/projectInstance.ts";
-import ProjectTemplate from "../components/templates/project/ProjectTemplate.tsx";
+import ProjectTemplate from "../components/templates/project/base/ProjectTemplate.tsx";
 
 const Project: React.FC = () => {
   return (
