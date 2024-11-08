@@ -1,10 +1,10 @@
 import React from "react";
-import HomeNavLink from "../components/molecules/base/HomeNavLink.tsx";
+import SHomeNavLink from "../components/molecules/styled/SHomeNavLink.tsx";
 
 const Home: React.FC = () => {
   return (
     <>
-      <HomeNavLink />
+      <SHomeNavLink />
     </>
   );
 };
