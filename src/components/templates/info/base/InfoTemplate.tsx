@@ -1,6 +1,6 @@
 import React from "react";
-import InfoList from "../../organisms/info/InfoList";
-import data from "../../../data/data.json";
+import InfoList from "../../../organisms/info/base/InfoList.tsx";
+import data from "../../../../data/data.json";
 
 const InfoTemplate: React.FC = () => {
   const infoData = data.info;
