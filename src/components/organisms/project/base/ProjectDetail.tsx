@@ -1,6 +1,6 @@
 import React from "react";
-import { ProjectDataStructure } from "../../../dataStructure/project/class/projectDataStructure.ts";
-import Div from "../../atoms/Div.tsx";
+import { ProjectDataStructure } from "../../../../dataStructure/project/class/projectDataStructure.ts";
+import Div from "../../../atoms/base/Div.tsx";
 import ProjectDetailSections from "./ProjectDetailSections.tsx";
 
 interface ProjectDetailProps {

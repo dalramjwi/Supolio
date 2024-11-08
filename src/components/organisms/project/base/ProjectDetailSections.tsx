@@ -1,11 +1,11 @@
 import React from "react";
-import { ProjectDataStructure } from "../../../dataStructure/project/class/projectDataStructure.ts";
-import Div from "../../atoms/Div.tsx";
-import Button from "../../atoms/Button.tsx";
-import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
-import ModalButtonGroup from "../../molecules/ModalButtonGroup.tsx";
-import Img from "../../atoms/Img.tsx";
-import { stackColors } from "../../../dataStructure/stackCss.ts";
+import { ProjectDataStructure } from "../../../../dataStructure/project/class/projectDataStructure.ts";
+import Div from "../../../atoms/base/Div.tsx";
+import Button from "../../../atoms/base/Button.tsx";
+import HtmlElementDiv from "../../../molecules/base/HtmlElementDiv.tsx";
+import ModalButtonGroup from "../../../molecules/base/ModalButtonGroup.tsx";
+import Img from "../../../atoms/base/Img.tsx";
+import { stackColors } from "../../../../dataStructure/stackCss.ts";
 
 interface ProjectDetailSectionsProps {
   project: ProjectDataStructure;

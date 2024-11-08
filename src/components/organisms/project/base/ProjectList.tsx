@@ -1,7 +1,7 @@
 import React from "react";
-import { ProjectDataStructure } from "../../../dataStructure/project/class/projectDataStructure.ts";
-import Div from "../../atoms/Div.tsx";
-import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
+import { ProjectDataStructure } from "../../../../dataStructure/project/class/projectDataStructure.ts";
+import Div from "../../../atoms/base/Div.tsx";
+import HtmlElementDiv from "../../../molecules/base/HtmlElementDiv.tsx";
 
 interface ProjectListProps {
   projects: ProjectDataStructure[];
