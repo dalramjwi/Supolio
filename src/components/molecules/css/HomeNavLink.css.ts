@@ -17,13 +17,14 @@ export const linkContainer = style({
   display: "flex",
   flexDirection: "column",
   gap: "2vh", // 링크 간 간격을 상대 단위로
+  marginTop: "5vh",
   alignItems: "flex-end", // 각 링크 우측 정렬
 });
 
 // 링크 스타일 및 Hover 효과
 export const linkStyle = style({
   color: "rgba(0, 0, 0, 0.5)", // 기본적으로 흐린 투명도
-  fontSize: "4vw",
+  fontSize: "5.5vw",
   fontWeight: "bold",
   transition: "color 0.3s",
   textDecoration: "none",
@@ -35,11 +36,11 @@ export const linkStyle = style({
   "@media": {
     "(max-width: 768px)": {
       // 태블릿 및 작은 화면용
-      fontSize: "6vw",
+      fontSize: "9.5vw",
     },
     "(max-width: 480px)": {
       // 모바일 화면용
-      fontSize: "8vw",
+      fontSize: "11.5vw",
       paddingRight: "3vw", // 모바일에서는 우측 패딩도 축소
     },
   },
