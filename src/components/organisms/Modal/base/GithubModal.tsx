@@ -1,8 +1,8 @@
 import React from "react";
-import Modal from "../../molecules/Modal.tsx";
-import Div from "../../atoms/Div.tsx";
-import Button from "../../atoms/Button.tsx";
-import { GitHubModalProps } from "../../interfaces/organisms/GithubModal.interface.ts";
+import Modal from "../../../molecules/base/Modal.tsx";
+import Div from "../../../atoms/base/Div.tsx";
+import Button from "../../../atoms/base/Button.tsx";
+import { GitHubModalProps } from "../../../interfaces/organisms/GithubModal.interface.ts";
 
 const GitHubModal: React.FC<GitHubModalProps> = ({
   show,

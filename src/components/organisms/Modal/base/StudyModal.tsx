@@ -1,11 +1,11 @@
 import React from "react";
-import Modal from "../../molecules/Modal.tsx";
-import { useHandleModal } from "../Modal/hook/useHandleModal.tsx";
-import Div from "../../atoms/Div.tsx";
-import Img from "../../atoms/Img.tsx";
-import HtmlElementDiv from "../../molecules/HtmlElementDiv.tsx";
-import ModalButtonGroup from "../../molecules/ModalButtonGroup.tsx";
-import { StudyModalProps } from "../../interfaces/molecules/StudyModal.interface.ts";
+import Modal from "../../../molecules/base/Modal.tsx";
+import { useHandleModal } from "../hook/useHandleModal.tsx";
+import Div from "../../../atoms/base/Div.tsx";
+import Img from "../../../atoms/base/Img.tsx";
+import HtmlElementDiv from "../../../molecules/base/HtmlElementDiv.tsx";
+import ModalButtonGroup from "../../../molecules/base/ModalButtonGroup.tsx";
+import { StudyModalProps } from "../../../interfaces/molecules/StudyModal.interface.ts";
 //todo css 처리 필요
 
 const StudyModal: React.FC<StudyModalProps> = ({ studyData, show, close }) => {
