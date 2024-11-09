@@ -26,22 +26,22 @@ export const linkStyle = style({
   color: "rgba(0, 0, 0, 0.5)", // 기본적으로 흐린 투명도
   fontSize: "5.5vw",
   fontWeight: "bold",
-  transition: "color 0.3s",
   textDecoration: "none",
+  transition: "transform 0.1s ease, color 0.2s ease, text-shadow 0.2s ease", // 빠른 효과 전환
   ":hover": {
-    color: "black", // Hover 시 검정색으로 변경
+    color: "#000", // Hover 시 진한 검정색으로 변경
+    transform: "translateY(3px) scale(0.98)", // 살짝 아래로 눌리는 효과
+    textShadow: "0px 2px 5px rgba(0, 0, 0, 0.4)", // Hover 시 텍스트 자체에 그림자 추가
   },
 
   // 반응형 조정: 작은 화면에서는 글씨 크기와 패딩 조정
   "@media": {
     "(max-width: 768px)": {
-      // 태블릿 및 작은 화면용
       fontSize: "9.5vw",
     },
     "(max-width: 480px)": {
-      // 모바일 화면용
       fontSize: "11.5vw",
-      paddingRight: "3vw", // 모바일에서는 우측 패딩도 축소
+      paddingRight: "3vw",
     },
   },
 });
