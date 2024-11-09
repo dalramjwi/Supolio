@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./dog.css.ts";
+import * as styles from "../css/dog.css.ts";
 
 const Dog: React.FC = () => {
   return (

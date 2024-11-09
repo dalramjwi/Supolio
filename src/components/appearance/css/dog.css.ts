@@ -1,4 +1,3 @@
-// src/styles/dogStyles.css.ts
 import { style, keyframes } from "@vanilla-extract/css";
 
 // 색상 변수 설정
