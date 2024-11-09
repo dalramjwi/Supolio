@@ -7,7 +7,7 @@ import {
 import Main from "./pages/Main.tsx";
 import Info from "./pages/Info.tsx";
 import Project from "./pages/Project.tsx";
-import Home from "./pages/Home.tsx";
+import Home from "./components/templates/home/Home.tsx";
 
 const App = () => {
   return (
