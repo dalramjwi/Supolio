@@ -1,29 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import NameSection from "../../../molecules/main/base/NameSection.tsx";
 import ParagraphSection from "../../../molecules/main/base/ParagraphSection.tsx";
 import DescriptionSection from "../../../molecules/main/base/Description.tsx";
 import Div from "../../../atoms/base/Div.tsx";
 import * as styles from "../css/MainContent.css.ts";
 import Desk from "../../../appearance/views/Desk.tsx";
+import classNames from "classnames";
 
 const SMainContent: React.FC = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleCardClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setIsClicked(!isClicked);
+  };
+
   return (
     <Desk>
-      {/* <Div className={styles.pageContainer}>
-        <Div className={styles.card} tabIndex={0}>
-          <Div className="row clearfix">
-            <Div className="left big">
-              <NameSection />
+      <Div className={styles.pageContainer}>
+        <Div
+          className={classNames(styles.card, {
+            [styles.clickedCard]: isClicked,
+            [styles.notClickedCard]: !isClicked,
+          })}
+          onClick={handleCardClick}
+        >
+          {isClicked ? (
+            <Div>
+              <DescriptionSection />
             </Div>
-            <Div className="right">
+          ) : (
+            <Div>
+              <NameSection />
               <ParagraphSection />
             </Div>
-          </Div>
-          <Div className="row">
-            <DescriptionSection />
-          </Div>
+          )}
         </Div>
-      </Div> */}
+      </Div>
     </Desk>
   );
 };
