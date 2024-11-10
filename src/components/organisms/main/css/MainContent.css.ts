@@ -22,7 +22,7 @@ export const pageContainer = style({
       right: "20vw",
     },
     "screen and (max-width: 559px)": {
-      right: "10vw",
+      right: "14vw",
       top: "15vw",
     },
   },
