@@ -70,7 +70,7 @@ export const notebook = style({
   width: "457px",
   position: "absolute",
   bottom: "184px",
-  left: "587px",
+  left: "1216px",
 });
 
 // 디스플레이 스타일
