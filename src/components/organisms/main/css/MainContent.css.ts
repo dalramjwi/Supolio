@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css";
 // 전체 페이지 스타일
 export const pageContainer = style({
   position: "absolute",
-  right: "900px",
+  right: "45vw",
   bottom: "160px",
   letterSpacing: "1px",
   color: "#191919",
