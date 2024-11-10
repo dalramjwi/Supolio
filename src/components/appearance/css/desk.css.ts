@@ -11,8 +11,7 @@ const colors = {
   displayBackgroundStart: "#333333",
   displayBackgroundEnd: "#3b3b3b",
   arrowColor: "#cccccc",
-  cursorGradientStart: "#4d4d4d",
-  cursorGradientEnd: "#545454",
+  cursor: "#0000007d",
   keyboardBackground: "#d7e2e6",
   keyBackground: "#515555",
   trackpadBackground: "#c2cdcf",
@@ -35,12 +34,13 @@ export const deskContainer = style({
   justifyContent: "center",
   alignItems: "flex-end",
   backgroundColor: colors.tableBackground,
+  overflow: "hidden",
 });
 
 // 테이블 스타일
 export const table = style({
   position: "relative",
-  height: "377px",
+  height: "477px",
   width: "100%",
   display: "flex",
   backgroundColor: colors.table,
@@ -56,8 +56,8 @@ export const notepad = style({
   background: `linear-gradient(to bottom, ${colors.notepadBackground} 0px, ${colors.notepadBackground} 34px, #ffffff 34px, #ffffff 62px, #cee8ef 62px, #cee8ef 66px, #fffefe 66px, #ffffff 90px, #cee8ef 90px, #cee8ef 94px, #ffffff 94px, #ffffff 118px, #cee8ef 118px, #cee8ef 122px, #ffffff 122px, #ffffff 146px, #cee8ef 146px, #cee8ef 150px, #ffffff 150px, #ffffff 176px, #cee8ef 176px, #cee8ef 193px)`,
   boxShadow: "-10px 0 0 0 rgba(172, 91, 20, 0.2)",
   position: "absolute",
-  bottom: "43px",
-  left: "76px",
+  bottom: "93px",
+  left: "116px",
   overflow: "hidden",
   fontFamily: "'Patrick Hand SC', Arial, sans-serif",
   fontWeight: "bold",
@@ -69,8 +69,8 @@ export const notebook = style({
   height: "522px",
   width: "457px",
   position: "absolute",
-  bottom: "84px",
-  left: "262px",
+  bottom: "184px",
+  left: "587px",
 });
 
 // 디스플레이 스타일
@@ -89,9 +89,8 @@ export const arrow = style({
   position: "absolute",
   height: "12px",
   width: "36px",
-  backgroundColor: colors.arrowColor,
   borderRadius: "6px",
-  top: "20px",
+  top: "28px",
   left: "20px",
 });
 
@@ -123,13 +122,13 @@ export const arrowAfter = style({
 
 // 커서 스타일 (cursor)
 export const cursor = style({
-  height: "62px",
+  height: "13px",
   width: "50px",
   borderRadius: "6px",
-  background: `linear-gradient(30deg, ${colors.cursorGradientStart} 0%, ${colors.cursorGradientStart} 50%, ${colors.cursorGradientEnd} 50%, ${colors.cursorGradientEnd} 100%)`,
+  background: `${colors.cursor}`,
   position: "relative",
-  top: "15px",
-  left: "77px",
+  top: "58px",
+  left: "67px",
   backgroundPosition: "0px -3px",
   backgroundSize: "220%",
   animation: `${blink} 2s step-end infinite`,
@@ -242,4 +241,9 @@ export const handle = style({
   top: "60px",
   left: "-31px",
   zIndex: "-1",
+});
+export const cupLocation = style({
+  position: "absolute",
+  top: "440px",
+  left: "255px",
 });

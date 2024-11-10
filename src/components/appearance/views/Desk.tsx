@@ -42,12 +42,14 @@ const Desk: React.FC<DeskProps> = ({ children }) => {
           </div>
         </div>
         {/* 컵 및 그림자 */}
-        <div className={styles.cupShadow}></div>
-        <div className={styles.cup}>
-          <div className={styles.cupTop}></div>
-          <div className={styles.handle}></div>
+        <div className={styles.cupLocation}>
+          <div className={styles.cupShadow}></div>
+          <div className={styles.cup}>
+            <div className={styles.cupTop}></div>
+            <div className={styles.handle}></div>
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     </div>
   );
