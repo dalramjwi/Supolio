@@ -61,6 +61,21 @@ export const notepad = style({
   overflow: "hidden",
   fontWeight: "bold",
   lineHeight: "1.9em",
+  "@media": {
+    "screen and (max-width: 1350px)": {
+      // tablet
+    },
+    "screen and (max-width: 980px)": {
+      // smartphone
+      display: "none",
+    },
+    "screen and (max-width: 679px)": {
+      display: "none",
+    },
+    "screen and (max-width: 559px)": {
+      display: "none",
+    },
+  },
 });
 
 // 노트북 스타일
@@ -70,6 +85,18 @@ export const notebook = style({
   position: "absolute",
   bottom: "22.5vh",
   left: "65vw",
+  "@media": {
+    "screen and (max-width: 1350px)": {
+      // tablet
+    },
+    "screen and (max-width: 980px)": {
+      // smartphone
+    },
+    "screen and (max-width: 679px)": { display: "none" },
+    "screen and (max-width: 500px)": {
+      display: "none",
+    },
+  },
 });
 
 // 디스플레이 스타일
@@ -243,6 +270,22 @@ export const handle = style({
 });
 export const cupLocation = style({
   position: "absolute",
-  top: "440px",
-  left: "255px",
+  top: "49vh",
+  left: "12.5vw",
+  "@media": {
+    "screen and (max-width: 1350px)": {
+      // tablet
+      display: "none",
+    },
+    "screen and (max-width: 780px)": {
+      // smartphone
+      display: "none",
+    },
+    "screen and (max-width: 679px)": {
+      display: "none",
+    },
+    "screen and (max-width: 559px)": {
+      display: "none",
+    },
+  },
 });

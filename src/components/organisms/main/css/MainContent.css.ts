@@ -9,6 +9,23 @@ export const pageContainer = style({
   color: "#191919",
   textShadow:
     "0 0 2px rgba(0, 0, 0, .5), -1px -1px 1px rgba(179, 179, 179, .5), 1px 1px 0 rgba(255, 255, 255, 0.55), 0 1px 3px white",
+  "@media": {
+    "screen and (max-width: 1199px)": {
+      // tablet
+      right: "40vw",
+    },
+    "screen and (max-width: 780px)": {
+      // smartphone
+      right: "30vw",
+    },
+    "screen and (max-width: 679px)": {
+      right: "20vw",
+    },
+    "screen and (max-width: 559px)": {
+      right: "10vw",
+      top: "15vw",
+    },
+  },
 });
 
 // 카드 스타일 (명함)
@@ -30,6 +47,26 @@ export const card = style({
   ":hover": {
     transform: "rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(10px)",
     boxShadow: "20px 20px 20px rgba(0, 0, 0, .4)",
+  },
+  "@media": {
+    "screen and (max-width: 1199px)": {
+      // tablet
+      width: "350px",
+      height: "200px",
+    },
+    "screen and (max-width: 780px)": {
+      // smartphone
+      width: "350px",
+      height: "200px",
+    },
+    "screen and (max-width: 679px)": {
+      width: "350px",
+      height: "200px",
+    },
+    "screen and (max-width: 559px)": {
+      width: "275px",
+      height: "200px",
+    },
   },
 });
 
