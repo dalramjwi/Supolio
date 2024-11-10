@@ -75,6 +75,7 @@ export const modalContent = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "1rem",
+  fontSize: "1.155rem",
   textAlign: "center",
+  lineHeight: "28.5px",
 });
