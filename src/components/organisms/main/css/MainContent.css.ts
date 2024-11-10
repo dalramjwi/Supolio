@@ -102,8 +102,8 @@ export const contactInfo = style({
 
 // 모달 콘텐츠 스타일 (명함 크기와 동일하게 설정)
 export const modalContent = style({
-  width: "700px",
-  height: "350px",
+  width: "45.5vw",
+  height: "45vh",
   padding: "20px",
   borderRadius: "10px",
   boxShadow: "0 0 5px rgba(0, 0, 0, .3)",
@@ -114,5 +114,37 @@ export const modalContent = style({
   justifyContent: "center",
   fontSize: "1.155rem",
   textAlign: "center",
-  lineHeight: "28.5px",
+  lineHeight: "1.5",
+  overflow: "hidden", // 내부에서 텍스트가 튀어나오지 않도록 설정
+  "@media": {
+    "screen and (max-width: 1600px)": {
+      width: "60vw",
+      height: "40vh",
+      padding: "15px",
+      fontSize: "1.1rem",
+      lineHeight: "1.4",
+    },
+    "screen and (max-width: 780px)": {
+      width: "80vw",
+      height: "40vh",
+      padding: "15px",
+      fontSize: "1rem",
+      lineHeight: "1.3",
+    },
+    "screen and (max-width: 679px)": {
+      width: "80vw",
+      height: "40vh",
+      padding: "15px",
+      fontSize: "0.95rem",
+      lineHeight: "1.3",
+    },
+    "screen and (max-width: 559px)": {
+      width: "85vw",
+      height: "35vh",
+      padding: "15px",
+      fontSize: "0.9rem",
+      lineHeight: "1.2",
+      overflowY: "auto", // 세로 스크롤이 생길 수 있도록 설정하여 텍스트 넘침 방지
+    },
+  },
 });
