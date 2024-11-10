@@ -1,7 +1,7 @@
 import React from "react";
 import CustomNavLink from "../../../atoms/base/NavLink.tsx";
 import * as styles from "../css/HomeNavLink.css.ts";
-import Dog from "../../../appearance/views/dog.tsx";
+import Dog from "../../../appearance/views/DDog.tsx";
 import Div from "../../../atoms/base/Div.tsx";
 import SearchBar from "../../../appearance/views/SearchBar.tsx";
 //! 추후에 로직 변경 고려
