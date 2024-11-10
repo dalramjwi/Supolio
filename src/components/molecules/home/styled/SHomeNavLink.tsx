@@ -12,7 +12,7 @@ const SHomeNavLink: React.FC = () => {
       <SearchBar />
       <Div className={styles.linkContainer}>
         <CustomNavLink to="/main" className={styles.linkStyle}>
-          Read ME
+          About ME
         </CustomNavLink>
         <CustomNavLink to="/info" className={styles.linkStyle}>
           Info
