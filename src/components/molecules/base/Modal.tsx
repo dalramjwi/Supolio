@@ -11,7 +11,6 @@ const Modal: React.FC<ModalProps> = ({ show, close, content }) => {
       onClick={close} // 모달 외부를 클릭하면 닫힘
     >
       <Div
-        className="bg-white text-black p-6 rounded-lg shadow-lg"
         onClick={(e) => e.stopPropagation()} // 모달 내부를 클릭해도 닫히지 않게 처리
       >
         {content}
