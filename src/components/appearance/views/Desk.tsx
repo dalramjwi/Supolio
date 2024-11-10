@@ -48,8 +48,8 @@ const Desk: React.FC<DeskProps> = ({ children }) => {
             <div className={styles.cupTop}></div>
             <div className={styles.handle}></div>
           </div>
-          {children}
         </div>
+        {children}
       </div>
     </div>
   );
