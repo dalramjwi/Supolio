@@ -40,7 +40,7 @@ export const deskContainer = style({
 // 테이블 스타일
 export const table = style({
   position: "relative",
-  height: "477px",
+  height: "50vh",
   width: "100%",
   display: "flex",
   backgroundColor: colors.table,
@@ -56,10 +56,9 @@ export const notepad = style({
   background: `linear-gradient(to bottom, ${colors.notepadBackground} 0px, ${colors.notepadBackground} 34px, #ffffff 34px, #ffffff 62px, #cee8ef 62px, #cee8ef 66px, #fffefe 66px, #ffffff 90px, #cee8ef 90px, #cee8ef 94px, #ffffff 94px, #ffffff 118px, #cee8ef 118px, #cee8ef 122px, #ffffff 122px, #ffffff 146px, #cee8ef 146px, #cee8ef 150px, #ffffff 150px, #ffffff 176px, #cee8ef 176px, #cee8ef 193px)`,
   boxShadow: "-10px 0 0 0 rgba(172, 91, 20, 0.2)",
   position: "absolute",
-  bottom: "93px",
-  left: "116px",
+  bottom: "7vh",
+  left: "6vw",
   overflow: "hidden",
-  fontFamily: "'Patrick Hand SC', Arial, sans-serif",
   fontWeight: "bold",
   lineHeight: "1.9em",
 });
@@ -69,8 +68,8 @@ export const notebook = style({
   height: "522px",
   width: "457px",
   position: "absolute",
-  bottom: "184px",
-  left: "1216px",
+  bottom: "22.5vh",
+  left: "65vw",
 });
 
 // 디스플레이 스타일
