@@ -194,8 +194,8 @@ export const bush = style({
 // 달력 스타일
 export const calendar = style({
   position: "absolute",
-  top: "40vh",
-  right: "20px",
+  top: "45vh",
+  right: "25vw",
   backgroundColor: colors.calendarBackground,
   color: colors.calendarText,
   width: "12vh",
@@ -231,11 +231,10 @@ export const calendarDashedLine = style({
 
 // 겹쳐진 종이 효과
 export const calendarShadowPaper = style({
-  position: "absolute",
-  top: "42vh",
-  right: "20px",
+  position: "relative",
+  top: "2vh",
   width: "12vh",
-  height: "16vh",
+  height: "0.5vh",
   backgroundColor: colors.calendarShadow,
   borderRadius: "2px",
   zIndex: 0,

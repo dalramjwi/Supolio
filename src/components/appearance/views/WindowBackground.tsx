@@ -12,12 +12,12 @@ const WindowBackground: React.FC = () => {
         <div className={styles.bush}></div>
       </div>
       <div className={styles.windowSill}></div>
-      <div className={styles.calendarShadowPaper}></div>
       <div className={styles.calendar}>
         <div className={styles.calendarDot}></div>
         <div className={styles.calendarDashedLine}></div>
         <div className={styles.calendarHeader}>New Moon</div>
         <div className={styles.calendarBottomLine}></div>
+        <div className={styles.calendarShadowPaper}></div>
       </div>
     </div>
   );
