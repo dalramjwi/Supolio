@@ -53,23 +53,23 @@ const dogRead = keyframes({
 // 스타일 정의
 export const dogContainer = style({
   position: "fixed", // 고정 위치
-  bottom: "5vh", // 화면의 하단에서 약간 띄움 (vh 단위 사용)
+  bottom: "20vh", // 화면의 하단에서 약간 띄움 (vh 단위 사용)
   left: "6.5vw", // 화면의 왼쪽에서 약간 띄움 (vw 단위 사용)
-  height: "18vh", // 화면 높이에 비례한 크기 설정
+  height: "44vh", // 화면 높이에 비례한 크기 설정
   zIndex: 1, // 레이어를 최상단에 위치시킴
 
   "@media": {
     "(max-width: 480px)": {
-      height: "14vh",
+      height: "44vh",
       left: "10vw",
       bottom: "20vh",
     },
     "(min-width: 481px) and (max-width: 768px)": {
-      height: "16vh",
+      height: "44vh",
       bottom: "20vh",
     },
     "(min-width: 769px)": {
-      height: "18vh",
+      height: "44vh",
       bottom: "20vh",
     },
   },
