@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "../css/desk.css.ts";
+import * as styles from "../css/Desk.css.ts";
 
 interface DeskProps {
   children: JSX.Element | JSX.Element[];
