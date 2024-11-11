@@ -1,31 +1,50 @@
 import { style } from "@vanilla-extract/css";
 
-// 전체 링크 컨테이너 스타일
 export const linkContainer = style({
   position: "fixed",
-  bottom: "20px",
-  right: "20px",
+  bottom: "20px", // 화면 하단에서 20px 위로 고정
+  right: "20px", // 화면 우측에서 20px 왼쪽으로 고정
+  zIndex: 100,
+  display: "flex",
+  flexDirection: "column-reverse", // 버튼을 맨 아래에 배치
+  alignItems: "center",
+});
+
+export const menuButton = style({
+  width: "50px",
+  height: "50px",
+  position: "absolute",
+  borderRadius: "50%",
+  backgroundColor: "#333",
+  cursor: "pointer",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  ":hover": {
+    transform: "scale(1.1)",
+  },
+});
+
+export const navLinksContainer = style({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  gap: "12px",
-  zIndex: 100,
+  gap: "10px", // 링크들 간의 간격 조정
+  marginTop: "10px",
 });
-
-// 각 링크 스타일
 export const linkStyle = style({
-  background: "#596778",
-  color: "#FFFFFF",
-  fontSize: "1.2rem",
-  textDecoration: "none",
-  textAlign: "center",
+  marginBottom: "10px",
   padding: "10px 20px",
   borderRadius: "20px",
-  transition: "background 0.3s, transform 0.3s",
-  width: "120px",
+  backgroundColor: "#333",
+  color: "#fff",
+  textDecoration: "none",
+  opacity: 0,
+  bottom: "60px", // 메뉴 버튼 위에 위치
+  transition: "opacity 0.3s ease",
+});
 
-  ":hover": {
-    background: "#70CC72", // Hover 시 색상 변경
-    transform: "scale(1.1)", // 살짝 확대 효과
-  },
+export const linkStyleOpen = style({
+  opacity: 1,
+  display: "block",
 });
