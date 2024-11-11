@@ -210,6 +210,18 @@ export const calendar = style({
   textAlign: "center",
   padding: "1vh 0",
   zIndex: 1,
+  "@media": {
+    "screen and (max-width: 1350px)": {
+      // tablet
+    },
+    "screen and (max-width: 780px)": {
+      // smartphone
+    },
+    "screen and (max-width: 679px)": {},
+    "screen and (max-width: 559px)": {
+      display: "none",
+    },
+  },
 });
 
 // 상단의 원형 점
