@@ -47,6 +47,7 @@ export const table = style({
   borderTopLeftRadius: "7px",
   borderTopRightRadius: "7px",
   boxShadow: "inset 0 -16px 0 0 rgba(114, 72, 34, 0.4)",
+  zIndex: "2",
 });
 
 // 노트패드 스타일
