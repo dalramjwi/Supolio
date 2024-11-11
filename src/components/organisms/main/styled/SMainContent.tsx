@@ -6,6 +6,7 @@ import * as styles from "../css/MainContent.css.ts";
 import Desk from "../../../appearance/views/Desk.tsx";
 import Modal from "../../../molecules/base/Modal.tsx";
 import MainDog from "../../../appearance/views/MainDog.tsx";
+import WindowBackground from "../../../appearance/views/WindowBackground.tsx";
 
 const SMainContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,10 +21,10 @@ const SMainContent: React.FC = () => {
 
   return (
     <>
-      <MainDog />
+      <WindowBackground />
+      {/* <MainDog />
       <Desk>
         <Div className={styles.pageContainer}>
-          {/* 클릭 가능한 명함 */}
           <Div className={styles.card} onClick={handleCardClick}>
             <Div className={styles.company}>
               <p className={styles.contactTitle}>
@@ -34,8 +35,6 @@ const SMainContent: React.FC = () => {
               <p className={styles.contactInfo}>dalramjwi@gmail.com</p>
             </Div>
           </Div>
-
-          {/* 모달 창 - 명함의 자세한 내용을 표시 */}
           <Modal
             show={isModalOpen}
             close={closeModal}
@@ -46,7 +45,7 @@ const SMainContent: React.FC = () => {
             }
           />
         </Div>
-      </Desk>
+      </Desk> */}
     </>
   );
 };
