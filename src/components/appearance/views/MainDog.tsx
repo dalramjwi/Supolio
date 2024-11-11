@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "../css/Dog.css.ts";
+import * as styles from "../css/MainDog.css.ts";
 
 const Dog: React.FC = () => {
   return (
@@ -15,15 +15,8 @@ const Dog: React.FC = () => {
           <div className={styles.nose2Before}></div>
         </div>
       </div>
-      <div className={styles.body2}>
-        <div className={styles.leftPaw2}></div>
-        <div className={styles.rightPaw2}></div>
-      </div>
+      <div className={styles.body2}></div>
       <div className={styles.tail2}></div>
-      <div className={styles.ORlaptop}>
-        <div className={styles.ORscreen}></div>
-        <div className={styles.ORkeyboard}></div>
-      </div>
     </div>
   );
 };

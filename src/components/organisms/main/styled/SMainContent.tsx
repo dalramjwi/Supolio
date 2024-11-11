@@ -5,7 +5,7 @@ import Div from "../../../atoms/base/Div.tsx";
 import * as styles from "../css/MainContent.css.ts";
 import Desk from "../../../appearance/views/Desk.tsx";
 import Modal from "../../../molecules/base/Modal.tsx";
-import Dog from "../../../appearance/views/Dog.tsx";
+import MainDog from "../../../appearance/views/MainDog.tsx";
 
 const SMainContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,7 +20,7 @@ const SMainContent: React.FC = () => {
 
   return (
     <>
-      <Dog />
+      <MainDog />
       <Desk>
         <Div className={styles.pageContainer}>
           {/* 클릭 가능한 명함 */}
