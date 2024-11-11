@@ -7,6 +7,7 @@ import Desk from "../../../appearance/views/Desk.tsx";
 import Modal from "../../../molecules/base/Modal.tsx";
 import MainDog from "../../../appearance/views/MainDog.tsx";
 import WindowBackground from "../../../appearance/views/WindowBackground.tsx";
+import SSideNavLink from "../../../molecules/home/styled/SSideNavLink.tsx";
 
 const SMainContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,6 +47,7 @@ const SMainContent: React.FC = () => {
           />
         </Div>
       </Desk>
+      <SSideNavLink />
     </>
   );
 };
