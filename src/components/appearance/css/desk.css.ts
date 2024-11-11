@@ -232,7 +232,6 @@ export const cup = style({
   borderTopRightRadius: "50% 34%",
   borderBottomLeftRadius: "45% 67%",
   borderBottomRightRadius: "45% 67%",
-  zIndex: "2",
 });
 
 export const cupShadow = style({
@@ -243,7 +242,6 @@ export const cupShadow = style({
   position: "absolute",
   bottom: "265px",
   left: "52px",
-  zIndex: 1,
 });
 
 export const cupTop = style({
