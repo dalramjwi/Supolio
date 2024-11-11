@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import * as styles from "../css/WindowBackground.css.ts";
 
 const WindowBackground: React.FC = () => {
+  const [headerText, setHeaderText] = useState("Why");
+
+  const toggleHeaderText = () => {
+    setHeaderText((prevText) => (prevText === "Why" ? "How" : "Why"));
+  };
+
   return (
     <div className={styles.room}>
       <div className={styles.outsideBackground}></div>
@@ -12,10 +18,10 @@ const WindowBackground: React.FC = () => {
         <div className={styles.bush}></div>
       </div>
       <div className={styles.windowSill}></div>
-      <div className={styles.calendar}>
+      <div className={styles.calendar} onClick={toggleHeaderText}>
         <div className={styles.calendarDot}></div>
         <div className={styles.calendarDashedLine}></div>
-        <div className={styles.calendarHeader}>New Moon</div>
+        <div className={styles.calendarHeader}>{headerText}</div>
         <div className={styles.calendarBottomLine}></div>
         <div className={styles.calendarShadowPaper}></div>
       </div>
