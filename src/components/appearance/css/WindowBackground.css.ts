@@ -37,12 +37,10 @@ export const room = style({
   height: "100vh",
   overflow: "hidden",
   backgroundColor: colors.wall,
-  backgroundImage:
-    "repeating-linear-gradient(to right, #aaa, #aaa 3vh, #bbb 3vh, #bbb 6vh)",
-  backgroundBlendMode: "multiply",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  zIndex: 1,
 });
 
 // 창문 밖 배경 스타일
@@ -58,13 +56,15 @@ export const outsideBackground = style({
 
 // 창문 스타일
 export const window = style({
-  height: "70vh",
-  width: "58vh",
+  height: "42vh", // 원래의 70vh에서 40% 축소
+  width: "34.8vh", // 원래의 58vh에서 40% 축소
   backgroundColor: colors.sky,
   borderRadius: "50% 50% 0 0 / 40% 40% 0 0",
   overflow: "hidden",
-  position: "relative",
+  position: "absolute",
   zIndex: 1,
+  top: "2vw",
+  left: "7vw",
 });
 
 globalStyle(`${window}::before`, {
@@ -73,33 +73,33 @@ globalStyle(`${window}::before`, {
   width: "100%",
   height: "100%",
   borderRadius: "inherit",
-  border: "3vh solid",
+  border: "1.8vh solid", // 원래의 3vh에서 축소
   borderColor: colors.frame,
-  boxShadow: `inset 0 0 0 1vh ${colors.frameShadow}`,
+  boxShadow: `inset 0 0 0 0.6vh ${colors.frameShadow}`, // 원래의 1vh에서 축소
 });
 
 globalStyle(`${window}::after`, {
   content: "",
   position: "absolute",
-  width: "calc(100% - 6vh)",
-  height: "3vh",
+  width: "calc(100% - 3.4vh)",
+  height: "2.5vh",
   borderBottom: "2vh solid",
   borderColor: colors.frame,
   boxShadow: `inset 0 0 0 1vh ${colors.frameShadow}`,
   top: "55%",
-  left: "3vh",
+  left: "1.7vh",
   zIndex: 5,
 });
 
 // 창문 아래 받침대 스타일
 export const windowSill = style({
   position: "absolute",
-  top: "85vh",
-  width: "66vh",
-  height: "4vh",
-  borderBottom: "3vh solid",
+  top: "71vh",
+  width: "39.6vh",
+  height: "2.4vh",
+  borderBottom: "1.8vh solid",
   borderColor: colors.frame,
-  boxShadow: `inset 5vh 0 0 0 ${colors.frameShadow}, inset -5vh 0 0 0 ${colors.frameShadow}, inset 0 0 0 1vh ${colors.frameShadow}`,
+  boxShadow: `inset 3vh 0 0 0 ${colors.frameShadow}, inset -3vh 0 0 0 ${colors.frameShadow}, inset 0 0 0 1vh ${colors.frameShadow}`,
   zIndex: 1,
 });
 
@@ -109,12 +109,12 @@ export const cloud = style({
   height: "2vh",
   background: colors.cloud,
   color: colors.cloud,
-  top: "23vh",
-  left: "20vh",
+  top: "14vh",
+  left: "18vh",
   borderRadius: "0.5vh",
   boxShadow:
     "-4vh -1.5vh 0 currentColor, 0 -1.5vh 0 currentColor, 2vh -1.5vh 0 currentColor, -10vh 1.5vh 0 currentColor, -5vh 1.5vh 0 currentColor, 0vh 1.5vh 0 currentColor, 5vh 1.5vh 0 currentColor, -6vh 3vh 0 currentColor, -8vh 4.5vh 0 currentColor, -4vh 4.5vh 0 currentColor, -4vh 4.5vh 0 currentColor, 3vh 6vh 0 currentColor, 1vh 7.5vh 0 currentColor, 1vh 4.5vh 0 currentColor",
-  opacity: 0.8,
+  opacity: 0.6,
   zIndex: -1,
   position: "absolute",
   animation: `${cloudAnimation} 40s linear infinite`,
@@ -129,9 +129,9 @@ globalStyle(`${cloud}::before, ${cloud}::after`, {
   position: "absolute",
 });
 
-globalStyle(`${cloud}::before`, {
-  transform: "translate3d(-30vh, 20vh, 0)",
-});
+// globalStyle(`${cloud}::before`, {
+//   transform: "translate3d(-30vh, 20vh, 0)",
+// });
 
 globalStyle(`${cloud}::after`, {
   transform: "translate3d(-60vh, -18vh, 0)",
@@ -144,8 +144,8 @@ export const stars = style({
   height: "0.35vh",
   borderRadius: "50%",
   background: colors.star,
-  top: "38%",
-  left: "64%",
+  top: "40%",
+  left: "54%",
   zIndex: -3,
   boxShadow: `
     20vh 10vh 0 ${colors.star}, -10vh 15vh 0 ${colors.star}, 15vh 20vh 0 ${colors.star}, 
@@ -158,15 +158,15 @@ export const stars = style({
 
 // 달 스타일
 export const moon = style({
-  width: "8vh",
-  height: "8vh",
+  width: "7vh",
+  height: "7vh",
   borderRadius: "50%",
   position: "absolute",
-  top: "19%",
+  top: "25%",
   left: "63%",
   backgroundColor: colors.moon,
   zIndex: -2,
-  filter: "blur(2px)",
+  filter: "blur(1px)",
 });
 
 // 부시 흔들림 애니메이션 키프레임
@@ -179,7 +179,7 @@ const bushWobble = keyframes({
 // 부시 스타일
 export const bush = style({
   width: "160vh",
-  height: "9vh",
+  height: "6vh",
   background: colors.bush,
   borderRadius: "50% 50% 0 0",
   position: "absolute",
@@ -194,8 +194,8 @@ export const bush = style({
 // 달력 스타일
 export const calendar = style({
   position: "absolute",
-  top: "45vh",
-  right: "25vw",
+  top: "17vh",
+  right: "2.5vw",
   backgroundColor: colors.calendarBackground,
   color: colors.calendarText,
   width: "12vh",
@@ -256,4 +256,13 @@ export const calendarHeader = style({
   fontWeight: "bold",
   color: colors.calendarText,
   textAlign: "center",
+});
+
+export const background = style({
+  // position: "relative",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
 });

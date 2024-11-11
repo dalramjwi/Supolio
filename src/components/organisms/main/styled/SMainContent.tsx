@@ -12,17 +12,17 @@ const SMainContent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCardClick = () => {
-    setIsModalOpen(true); // 명함 클릭 시 모달 열림
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // 모달 닫기 함수
+    setIsModalOpen(false);
   };
 
   return (
     <>
       <WindowBackground />
-      {/* <MainDog />
+      <MainDog />
       <Desk>
         <Div className={styles.pageContainer}>
           <Div className={styles.card} onClick={handleCardClick}>
@@ -45,7 +45,7 @@ const SMainContent: React.FC = () => {
             }
           />
         </Div>
-      </Desk> */}
+      </Desk>
     </>
   );
 };
