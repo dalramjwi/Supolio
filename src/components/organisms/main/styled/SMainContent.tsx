@@ -28,12 +28,12 @@ const SMainContent: React.FC = () => {
         <Div className={styles.pageContainer}>
           <Div className={styles.card} onClick={handleCardClick}>
             <Div className={styles.company}>
-              <p className={styles.contactTitle}>
+              <Div className={styles.contactTitle}>
                 <NameSection />
-              </p>
-              <p className={styles.position}>Cogito, ergo sum</p>
-              <p className={styles.contactInfo}>010 9823 3662</p>
-              <p className={styles.contactInfo}>dalramjwi@gmail.com</p>
+              </Div>
+              <Div className={styles.position}>Cogito, ergo sum</Div>
+              <Div className={styles.contactInfo}>010 9823 3662</Div>
+              <Div className={styles.contactInfo}>dalramjwi@gmail.com</Div>
             </Div>
           </Div>
           <Modal
