@@ -33,7 +33,7 @@ export const menuButton = style({
   borderRadius: "50%",
   width: "60px",
   height: "60px",
-  padding: "1.95vw", // 패딩 추가
+  padding: "40px", // 패딩 추가
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -42,6 +42,11 @@ export const menuButton = style({
   transition: "transform 0.3s ease",
   cursor: "pointer",
   boxShadow: `0px 2px 10px ${colors.shadow}`,
+  ":hover": {
+    backgroundColor: colors.text,
+    color: "black", // 색상 반전
+    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+  },
 });
 
 // 서브 메뉴 아이템 스타일
@@ -65,7 +70,7 @@ export const subMenuTwo = styleVariants({
   },
   visible: {
     opacity: 1,
-    transform: "translate3d(-65px, 79px, 0) scale(1)",
+    transform: "translate3d(-65px, 78.5px, 0) scale(1)",
     transition: "transform 1s ease, opacity 1s ease",
   },
 });
@@ -90,7 +95,7 @@ export const subMenuColors = {
     borderRadius: "50%",
     width: "50px",
     height: "50px",
-    padding: "1.75vw", // 패딩 추가
+    padding: "34px", // 패딩 추가
     fontSize: fontSizes.subMenuButton, // 서브 메뉴 폰트 크기 적용
     display: "flex",
     justifyContent: "center",
@@ -98,6 +103,11 @@ export const subMenuColors = {
     boxShadow: `0px 2px 8px ${colors.shadow}`,
     position: "absolute",
     bottom: "80px", // 메인 버튼 위로
+    ":hover": {
+      backgroundColor: colors.text,
+      color: colors.main, // 색상 반전
+      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+    },
   }),
   info: style({
     backgroundColor: colors.info,
@@ -105,7 +115,7 @@ export const subMenuColors = {
     borderRadius: "50%",
     width: "50px",
     height: "50px",
-    padding: "1.75vw", // 패딩 추가
+    padding: "34px", // 패딩 추가
     fontSize: fontSizes.subMenuButton, // 서브 메뉴 폰트 크기 적용
     display: "flex",
     justifyContent: "center",
@@ -113,6 +123,11 @@ export const subMenuColors = {
     boxShadow: `0px 2px 8px ${colors.shadow}`,
     position: "absolute",
     bottom: "140px",
+    ":hover": {
+      backgroundColor: colors.text,
+      color: colors.info, // 색상 반전
+      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+    },
   }),
   projects: style({
     backgroundColor: colors.projects,
@@ -120,7 +135,7 @@ export const subMenuColors = {
     borderRadius: "50%",
     width: "50px",
     height: "50px",
-    padding: "1.75vw", // 패딩 추가
+    padding: "34px", // 패딩 추가
     fontSize: fontSizes.subMenuButton, // 서브 메뉴 폰트 크기 적용
     display: "flex",
     justifyContent: "center",
@@ -129,5 +144,17 @@ export const subMenuColors = {
     position: "absolute",
     bottom: "200px",
     textAlign: "center",
+    ":hover": {
+      backgroundColor: colors.text,
+      color: colors.projects, // 색상 반전
+      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+    },
   }),
 };
+// 현재 위치에 따라 흑백 처리 스타일
+export const grayScale = style({
+  filter: "grayscale(100%)",
+  opacity: 0.5,
+  cursor: "default", // 흑백 상태에서 커서를 기본 화살표로 설정
+  pointerEvents: "none",
+});
