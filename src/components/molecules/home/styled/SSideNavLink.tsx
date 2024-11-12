@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CustomNavLink from "../../../atoms/base/NavLink.tsx";
 import * as styles from "../css/SideNavLink.css.ts";
-import Div from "../../../atoms/base/Div.tsx";
+
 const SSideNavLink: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,37 +10,42 @@ const SSideNavLink: React.FC = () => {
   };
 
   return (
-    <Div className={styles.linkContainer}>
-      <div className={styles.menuButton} onClick={toggleMenu}></div>
+    <div className={styles.linkContainer}>
+      {/* 메뉴 버튼 */}
+      <button className={styles.menuButton} onClick={toggleMenu}>
+        MENU
+      </button>
+
+      {/* 서브 메뉴 아이템 */}
       {isOpen && (
-        <Div className={styles.navLinksContainer}>
+        <>
           <CustomNavLink
-            to="/main"
-            className={`${styles.linkStyle} ${
-              isOpen ? styles.linkStyleOpen : ""
+            to="/project"
+            className={`${styles.subMenuOne[isOpen ? "visible" : "hidden"]} ${
+              styles.subMenuColors.main
             }`}
           >
-            About ME
+            Projects
           </CustomNavLink>
           <CustomNavLink
             to="/info"
-            className={`${styles.linkStyle} ${
-              isOpen ? styles.linkStyleOpen : ""
+            className={`${styles.subMenuTwo[isOpen ? "visible" : "hidden"]} ${
+              styles.subMenuColors.info
             }`}
           >
             Info
           </CustomNavLink>
           <CustomNavLink
-            to="/project"
-            className={`${styles.linkStyle} ${
-              isOpen ? styles.linkStyleOpen : ""
+            to="/main"
+            className={`${styles.subMenuThree[isOpen ? "visible" : "hidden"]} ${
+              styles.subMenuColors.projects
             }`}
           >
-            Projects
+            Read ME
           </CustomNavLink>
-        </Div>
+        </>
       )}
-    </Div>
+    </div>
   );
 };
 
