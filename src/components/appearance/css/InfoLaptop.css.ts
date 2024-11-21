@@ -43,8 +43,8 @@ export const laptopContainer = style({
 
 // 노트북 스타일
 export const notebook = style({
-  height: "70%",
-  width: "80%",
+  height: "90%",
+  width: "85%",
   position: "relative",
   "@media": {
     "screen and (max-width: 1350px)": {
@@ -63,7 +63,7 @@ export const notebook = style({
 // 디스플레이 스타일
 export const display = style({
   position: "relative",
-  height: "75.5vh",
+  height: "83.5vh",
   width: "100%",
   background: `linear-gradient(30deg, ${colors.displayBackgroundStart} 0%, ${colors.displayBackgroundStart} 50%, ${colors.displayBackgroundEnd} 50%, ${colors.displayBackgroundEnd} 100%)`,
   borderRadius: "10px",
