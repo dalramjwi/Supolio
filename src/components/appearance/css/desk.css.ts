@@ -3,22 +3,21 @@ import { style, keyframes } from "@vanilla-extract/css";
 // 색상 변수
 const colors = {
   tableBackground: "white",
-  table: "#deb778",
-  cupBody: "#1d80c2",
-  handleBorder: "#1d80c2", // cupBody와 같은 색상
-  cupInnerBorder: "#46a8eb",
-  notepadBackground: "#f17777",
-  displayBackgroundStart: "#333333",
-  displayBackgroundEnd: "#3b3b3b",
-  arrowColor: "#cccccc",
-  cursor: "#0000007d",
-  keyboardBackground: "#d7e2e6",
-  keyBackground: "#515555",
-  trackpadBackground: "#c2cdcf",
-  cupShadow: "rgba(172, 91, 20, 0.2)",
-  cupInner: "#6b4b28",
-  cupTopBackground: "#8f6739",
-  handleCord: "#fff5e6",
+  table: "#B6B6B6",
+  cupBody: "#cbcbcb ",
+  handleBorder: "#cbcbcb",
+  cupInnerBorder: "#d9d9d9fa",
+  notepadBackground: "#76888E",
+  displayBackgroundStart: "#2C2C2C",
+  displayBackgroundEnd: "#383838",
+  arrowColor: "#A8A8A8",
+  cursor: "rgba(0, 0, 0, 0.5)",
+  keyboardBackground: "#E1E6E8",
+  keyBackground: "#4E555A",
+  trackpadBackground: "#C7D3D7",
+  shadow: "rgba(150, 150, 150, 0.5)",
+  cupInner: "#816c4d",
+  cupTopBackground: "#6f6046",
 };
 
 // 애니메이션 키프레임
@@ -46,7 +45,7 @@ export const table = style({
   backgroundColor: colors.table,
   borderTopLeftRadius: "7px",
   borderTopRightRadius: "7px",
-  boxShadow: "inset 0 -16px 0 0 rgba(114, 72, 34, 0.4)",
+  boxShadow: `inset 0 -16px 0 0 ${colors.shadow}`,
   zIndex: "2",
 });
 
@@ -55,7 +54,7 @@ export const notepad = style({
   height: "193px",
   width: "136px",
   background: `linear-gradient(to bottom, ${colors.notepadBackground} 0px, ${colors.notepadBackground} 34px, #ffffff 34px, #ffffff 62px, #cee8ef 62px, #cee8ef 66px, #fffefe 66px, #ffffff 90px, #cee8ef 90px, #cee8ef 94px, #ffffff 94px, #ffffff 118px, #cee8ef 118px, #cee8ef 122px, #ffffff 122px, #ffffff 146px, #cee8ef 146px, #cee8ef 150px, #ffffff 150px, #ffffff 176px, #cee8ef 176px, #cee8ef 193px)`,
-  boxShadow: "-10px 0 0 0 rgba(172, 91, 20, 0.2)",
+  boxShadow: `-10px 0 0 0 ${colors.shadow}`,
   position: "absolute",
   bottom: "7vh",
   left: "6vw",
@@ -168,7 +167,7 @@ export const keyboard = style({
   width: "100%",
   backgroundColor: colors.keyboardBackground,
   borderRadius: "10px",
-  boxShadow: "inset 0 -15px 0 0 #959fa0, -15px 0 0 0 rgba(172, 91, 20, 0.2)",
+  boxShadow: `inset 0 -15px 0 0 #959fa0, -15px 0 0 0 ${colors.shadow}`,
 });
 
 // 각 키 스타일
@@ -237,11 +236,12 @@ export const cup = style({
 export const cupShadow = style({
   height: "56px",
   width: "100px",
-  backgroundColor: colors.cupShadow,
+  backgroundColor: colors.shadow,
   borderRadius: "50%",
   position: "absolute",
   bottom: "265px",
   left: "52px",
+  zIndex: "-2",
 });
 
 export const cupTop = style({
