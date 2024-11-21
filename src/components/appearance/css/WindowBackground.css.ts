@@ -2,21 +2,20 @@ import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 
 // 색상 변수 정의
 const colors = {
-  wall: "#322c3a",
-  sky: "#3a2e5d",
-  star: "wheat",
-  frame: "#201c26",
-  moon: "#eacd97",
-  cloud: "#322751",
-  frameShadow: "#75637e",
-  bush: "#131515",
-  calendarBackground: "#443f4a",
-  calendarText: "#1c1c1c",
-  lightGlow: "#f4e1b5",
-  calendarDot: "#000000",
+  wall: "#1B1A1F",
+  sky: "#4f5569",
+  star: "#E8D3A1",
+  frame: "#b6b6b6",
+  moon: "#D9BF8A",
+  cloud: "#6a6f7db5",
+  frameShadow: "#959fa0",
+  bush: "#101112",
+  calendarBackground: "#e1e6e8",
+  calendarText: "#252525",
+  calendarDot: "#121212",
   calendarDashedLine: "#1c1c1c",
-  calendarShadow: "rgba(0, 0, 0, 0.2)",
-  calendarBottomLineDark: "#2e2e2e",
+  calendarShadow: "rgba(0, 0, 0, 0.35)",
+  calendarBottomLineDark: "transparent",
 };
 
 // 구름 애니메이션 키프레임
@@ -50,7 +49,7 @@ export const outsideBackground = style({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: colors.sky,
+  backgroundColor: colors.wall,
   zIndex: -2,
 });
 
@@ -244,7 +243,7 @@ export const calendarDashedLine = style({
 // 겹쳐진 종이 효과
 export const calendarShadowPaper = style({
   position: "relative",
-  top: "2vh",
+  top: "1vh",
   width: "12vh",
   height: "0.5vh",
   backgroundColor: colors.calendarShadow,
@@ -268,6 +267,7 @@ export const calendarHeader = style({
   fontWeight: "bold",
   color: colors.calendarText,
   textAlign: "center",
+  marginTop: "3vh",
 });
 
 export const background = style({
