@@ -1,6 +1,6 @@
 import React from "react";
-import InfoList from "../components/organisms/info/base/InfoList.tsx";
-import { InfoInstance } from "../dataStructure/info/instance/infoInstance.ts";
+import InfoList from "../../organisms/info/base/InfoList.tsx";
+import { InfoInstance } from "../../../dataStructure/info/instance/infoInstance.ts";
 
 const Info: React.FC = () => {
   //todo css 변경 필요

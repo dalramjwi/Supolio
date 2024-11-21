@@ -5,7 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Main from "./components/templates/main/Main.tsx";
-import Info from "./pages/Info.tsx";
+import Info from "./components/templates/info/Info.tsx";
 import Project from "./pages/Project.tsx";
 import Home from "./components/templates/home/Home.tsx";
 
