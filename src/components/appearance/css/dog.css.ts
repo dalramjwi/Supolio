@@ -1,18 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
-
-// 색상 변수 설정
-export const colors = {
-  body: "#3C3C3C", // 강아지 몸통 색상
-  ear: "#222222", // 귀와 꼬리의 어두운 포인트 색상
-  headShadow: "#222222", // 머리 옆 그림자
-  eye: "black", // 눈 색상
-  nose: "#fbf1d8", // 코 색상
-  paw: "#222222", // 발 색상
-  tail: "#3C3C3C", // 꼬리 색상
-  laptopScreen: "#C7C3B4", // 노트북 화면 색상
-  keyboard: "#6F6660", // 노트북 키보드 색상
-};
-
+import * as colors from "./colors/colors.css.ts";
 // 애니메이션 정의
 const dogLeftType = keyframes({
   "50%": { transform: "none" },
@@ -80,7 +67,7 @@ export const ears2 = style({
   width: 0,
   position: "relative",
   left: "30px",
-  borderBottom: `27px solid ${colors.ear}`,
+  borderBottom: `27px solid ${colors.shadowBlack}`,
   borderLeft: "23px solid transparent",
   borderRight: "10px solid transparent",
 });
@@ -92,7 +79,7 @@ export const ears2Before = style({
   width: 0,
   position: "relative",
   left: "33px",
-  borderBottom: `27px solid ${colors.ear}`,
+  borderBottom: `27px solid ${colors.shadowBlack}`,
   borderLeft: "10px solid transparent",
   borderRight: "23px solid transparent",
 });
@@ -102,9 +89,9 @@ export const head2 = style({
   width: "140px",
   position: "relative",
   zIndex: 2,
-  boxShadow: `8px 0 0 ${colors.headShadow}`,
+  boxShadow: `8px 0 0 ${colors.shadowBlack}`,
   borderRadius: "35px",
-  background: colors.body,
+  background: colors.darkerLightGray,
 });
 
 export const eyes2 = style({
@@ -114,7 +101,7 @@ export const eyes2 = style({
   top: "37px",
   left: "50px",
   borderRadius: "50%",
-  background: colors.eye,
+  background: colors.black,
   animation: `${dogRead} 9s infinite`,
 });
 
@@ -126,7 +113,7 @@ export const eyes2Before = style({
   position: "relative",
   left: "18px",
   borderRadius: "50%",
-  background: colors.eye,
+  background: colors.black,
 });
 
 export const nose2 = style({
@@ -136,7 +123,7 @@ export const nose2 = style({
   top: "40px",
   left: "37px",
   borderRadius: "20px",
-  background: colors.nose,
+  background: colors.whiteBeige,
 });
 
 // 새로 추가된 nose2Before 스타일
@@ -161,7 +148,7 @@ export const body2 = style({
   top: "-30px",
   zIndex: 1,
   borderRadius: "55px",
-  background: colors.body,
+  background: colors.darkerLightGray,
 });
 
 export const leftPaw2 = style({
@@ -169,7 +156,7 @@ export const leftPaw2 = style({
   width: "37px",
   position: "relative",
   borderRadius: "12px",
-  background: colors.paw,
+  background: colors.shadowBlack,
   top: "70px",
   left: "15px",
   animation: `${dogLeftType} 9s infinite`,
@@ -180,7 +167,7 @@ export const rightPaw2 = style({
   width: "37px",
   position: "relative",
   borderRadius: "12px",
-  background: colors.paw,
+  background: colors.shadowBlack,
   top: "45px",
   left: "60px",
   animation: `${dogRightType} 9s infinite`,
@@ -194,7 +181,7 @@ export const tail2 = style({
   left: "150px",
   zIndex: 0,
   borderRadius: "0 17px 17px 0",
-  background: colors.tail,
+  background: colors.darkerLightGray,
 });
 
 export const ORlaptop = style({
@@ -208,7 +195,7 @@ export const ORscreen = style({
   width: "130px",
   borderRadius: "8px",
   transform: "skew(18deg)",
-  background: colors.laptopScreen,
+  background: colors.lightBrownGray,
 });
 
 export const ORkeyboard = style({
@@ -217,7 +204,7 @@ export const ORkeyboard = style({
   position: "relative",
   left: "14px",
   borderRadius: "6px 0 0 6px",
-  background: colors.keyboard,
+  background: colors.lightBrownDarkGray,
 });
 
 // 좌우 반전
