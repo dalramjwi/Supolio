@@ -1,14 +1,5 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-
-// 색상과 폰트 크기 변수 정의
-const colors = {
-  main: "pink",
-  info: "#70CC72",
-  projects: "#FE4365",
-  background: "#000",
-  text: "#FFF",
-  shadow: "rgba(0, 0, 0, 0.15)",
-};
+import * as colors from "../../../appearance/css/colors/colors.css.ts";
 
 const fontSizes = {
   mainButton: "1.2rem", // 메인 메뉴 버튼 폰트 크기
@@ -28,8 +19,8 @@ export const linkContainer = style({
 
 // 메인 메뉴 버튼 스타일 (고정 위치)
 export const menuButton = style({
-  background: colors.background,
-  color: colors.text,
+  background: colors.black,
+  color: colors.white,
   borderRadius: "50%",
   width: "60px",
   height: "60px",
@@ -41,11 +32,11 @@ export const menuButton = style({
   textDecoration: "none",
   transition: "transform 0.3s ease",
   cursor: "pointer",
-  boxShadow: `0px 2px 10px ${colors.shadow}`,
+  boxShadow: `0px 2px 10px ${colors.semisemiTransparent}`,
   ":hover": {
-    backgroundColor: colors.text,
+    backgroundColor: colors.white,
     color: "black", // 색상 반전
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+    boxShadow: `0px 4px 12px ${colors.semisemiTransparent}`,
   },
 });
 
@@ -70,7 +61,7 @@ export const subMenuTwo = styleVariants({
   },
   visible: {
     opacity: 1,
-    transform: "translate3d(-65px, 78.5px, 0) scale(1)",
+    transform: "translate3d(-65px, 79.5px, 0) scale(1)",
     transition: "transform 1s ease, opacity 1s ease",
   },
 });
@@ -90,8 +81,8 @@ export const subMenuThree = styleVariants({
 // 서브 메뉴 아이템 색상별 스타일
 export const subMenuColors = {
   main: style({
-    backgroundColor: colors.main,
-    color: colors.text,
+    backgroundColor: colors.pastelBlue,
+    color: colors.white,
     borderRadius: "50%",
     width: "50px",
     height: "50px",
@@ -100,18 +91,18 @@ export const subMenuColors = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    boxShadow: `0px 2px 8px ${colors.shadow}`,
+    boxShadow: `0px 2px 8px ${colors.semisemiTransparent}`,
     position: "absolute",
     bottom: "80px", // 메인 버튼 위로
     ":hover": {
-      backgroundColor: colors.text,
-      color: colors.main, // 색상 반전
-      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+      backgroundColor: colors.white,
+      color: colors.pastelBlue, // 색상 반전
+      boxShadow: `0px 4px 12px ${colors.semisemiTransparent}`,
     },
   }),
   info: style({
-    backgroundColor: colors.info,
-    color: colors.text,
+    backgroundColor: colors.softGrayBlue,
+    color: colors.white,
     borderRadius: "50%",
     width: "50px",
     height: "50px",
@@ -120,18 +111,18 @@ export const subMenuColors = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    boxShadow: `0px 2px 8px ${colors.shadow}`,
+    boxShadow: `0px 2px 8px ${colors.semisemiTransparent}`,
     position: "absolute",
     bottom: "140px",
     ":hover": {
-      backgroundColor: colors.text,
-      color: colors.info, // 색상 반전
+      backgroundColor: colors.white,
+      color: colors.softGrayBlue, // 색상 반전
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
     },
   }),
   projects: style({
-    backgroundColor: colors.projects,
-    color: colors.text,
+    backgroundColor: colors.mutedGreen,
+    color: colors.white,
     borderRadius: "50%",
     width: "50px",
     height: "50px",
@@ -140,14 +131,15 @@ export const subMenuColors = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    boxShadow: `0px 2px 8px ${colors.shadow}`,
+    boxShadow: `0px 2px 8px ${colors.semisemiTransparent}`,
     position: "absolute",
     bottom: "200px",
     textAlign: "center",
+    lineHeight: "19px",
     ":hover": {
-      backgroundColor: colors.text,
-      color: colors.projects, // 색상 반전
-      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)",
+      backgroundColor: colors.white,
+      color: colors.mutedGreen, // 색상 반전
+      boxShadow: `0px 4px 12px ${colors.semisemiTransparent}`,
     },
   }),
 };

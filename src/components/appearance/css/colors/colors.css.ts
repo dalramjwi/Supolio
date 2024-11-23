@@ -36,17 +36,6 @@ export const blackGray = "#121212";
 export const blackLightGray = "#1c1c1c";
 export const semisemiTransparent = "rgba(0, 0, 0, 0.35)";
 export const transparent = "transparent";
-// 색상 변수 정의
-const colors = {
-  frame: "#b6b6b6",
-  moon: "#D9BF8A",
-  cloud: "#6a6f7db5",
-  frameShadow: "#959fa0",
-  bush: "#101112",
-  calendarBackground: "#e1e6e8",
-  calendarText: "#252525",
-  calendarDot: "#121212",
-  calendarDashedLine: "#1c1c1c",
-  calendarShadow: "rgba(0, 0, 0, 0.35)",
-  calendarBottomLineDark: "transparent",
-};
+export const pastelBlue = "#6B93B6";
+export const softGrayBlue = "#7689A3";
+export const mutedGreen = "#8CA89A";
