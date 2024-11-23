@@ -13,7 +13,9 @@ export const darkSlateGray = "#515555";
 export const arrowGray = "#A8A8A8";
 export const semiTransparentBlack = "rgba(0, 0, 0, 0.5)";
 export const lightBlue = "#E1E6E8";
+export const beigeWhite = "#f5f5f5";
 export const deepBlue = "#4E555A";
+export const deepDarkBlue = "#4f5569";
 export const cyan = "#C7D3D7";
 export const shadowGray = "rgba(150, 150, 150, 0.5)";
 export const brownInner = "#816c4d";
@@ -23,13 +25,28 @@ export const lightBrownGray = "#C7C3B4";
 export const lightBrownDarkGray = "#6F6660";
 export const lightGreenGray = "#959fa0";
 export const darkerBlack = "#1B1A1F";
-// 색상 변수
+export const lightPurpleGray = "#7c85ab";
+export const lightYellow = "#E8D3A1";
+export const lightDarkGray = "#b6b6b6";
+export const lightDarkYellow = "#D9BF8A";
+export const purpleTransparent = "#6a6f7db5";
+export const darkerBlackTransparent = "#101112";
+export const darkBlackGray = "#252525";
+export const blackGray = "#121212";
+export const blackLightGray = "#1c1c1c";
+export const semisemiTransparent = "rgba(0, 0, 0, 0.35)";
+export const transparent = "transparent";
+// 색상 변수 정의
 const colors = {
-  displayBackgroundStart: "#2C2C2C",
-  displayBackgroundEnd: "#383838",
-  arrowColor: "#A8A8A8",
-  cursor: "rgba(0, 0, 0, 0.5)",
-  keyboardBackground: "#E1E6E8",
-  keyBackground: "#4E555A",
-  trackpadBackground: "#C7D3D7",
+  frame: "#b6b6b6",
+  moon: "#D9BF8A",
+  cloud: "#6a6f7db5",
+  frameShadow: "#959fa0",
+  bush: "#101112",
+  calendarBackground: "#e1e6e8",
+  calendarText: "#252525",
+  calendarDot: "#121212",
+  calendarDashedLine: "#1c1c1c",
+  calendarShadow: "rgba(0, 0, 0, 0.35)",
+  calendarBottomLineDark: "transparent",
 };

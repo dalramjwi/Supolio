@@ -1,22 +1,5 @@
 import { style, globalStyle, keyframes } from "@vanilla-extract/css";
-
-// 색상 변수 정의
-const colors = {
-  wall: "#1B1A1F",
-  sky: "#4f5569",
-  star: "#E8D3A1",
-  frame: "#b6b6b6",
-  moon: "#D9BF8A",
-  cloud: "#6a6f7db5",
-  frameShadow: "#959fa0",
-  bush: "#101112",
-  calendarBackground: "#e1e6e8",
-  calendarText: "#252525",
-  calendarDot: "#121212",
-  calendarDashedLine: "#1c1c1c",
-  calendarShadow: "rgba(0, 0, 0, 0.35)",
-  calendarBottomLineDark: "transparent",
-};
+import * as colors from "./colors/colors.css.ts";
 
 // 구름 애니메이션 키프레임
 const cloudAnimation = keyframes({
@@ -35,7 +18,7 @@ export const room = style({
   position: "relative",
   height: "100vh",
   overflow: "hidden",
-  backgroundColor: colors.wall,
+  backgroundColor: colors.darkerBlack,
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -49,7 +32,7 @@ export const outsideBackground = style({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: colors.wall,
+  backgroundColor: colors.darkerBlack,
   zIndex: -2,
 });
 
@@ -57,7 +40,7 @@ export const outsideBackground = style({
 export const window = style({
   height: "42vh", // 원래의 70vh에서 40% 축소
   width: "34.8vh", // 원래의 58vh에서 40% 축소
-  backgroundColor: colors.sky,
+  backgroundColor: colors.deepDarkBlue,
   borderRadius: "50% 50% 0 0 / 40% 40% 0 0",
   overflow: "hidden",
   position: "absolute",
@@ -73,8 +56,8 @@ globalStyle(`${window}::before`, {
   height: "100%",
   borderRadius: "inherit",
   border: "1.8vh solid", // 원래의 3vh에서 축소
-  borderColor: colors.frame,
-  boxShadow: `inset 0 0 0 0.6vh ${colors.frameShadow}`, // 원래의 1vh에서 축소
+  borderColor: colors.lightGray,
+  boxShadow: `inset 0 0 0 0.6vh ${colors.lightGreenGray}`, // 원래의 1vh에서 축소
 });
 
 globalStyle(`${window}::after`, {
@@ -83,8 +66,8 @@ globalStyle(`${window}::after`, {
   width: "calc(100% - 3.4vh)",
   height: "2.5vh",
   borderBottom: "2vh solid",
-  borderColor: colors.frame,
-  boxShadow: `inset 0 0 0 1vh ${colors.frameShadow}`,
+  borderColor: colors.lightGray,
+  boxShadow: `inset 0 0 0 1vh ${colors.lightGreenGray}`,
   top: "55%",
   left: "1.7vh",
   zIndex: 5,
@@ -97,8 +80,8 @@ export const windowSill = style({
   width: "39.6vh",
   height: "2.4vh",
   borderBottom: "1.8vh solid",
-  borderColor: colors.frame,
-  boxShadow: `inset 3vh 0 0 0 ${colors.frameShadow}, inset -3vh 0 0 0 ${colors.frameShadow}, inset 0 0 0 1vh ${colors.frameShadow}`,
+  borderColor: colors.lightGray,
+  boxShadow: `inset 3vh 0 0 0 ${colors.lightGreenGray}, inset -3vh 0 0 0 ${colors.lightGreenGray}, inset 0 0 0 1vh ${colors.lightGreenGray}`,
   zIndex: 1,
 });
 
@@ -106,8 +89,8 @@ export const windowSill = style({
 export const cloud = style({
   width: "6vh",
   height: "2vh",
-  background: colors.cloud,
-  color: colors.cloud,
+  background: colors.purpleTransparent,
+  color: colors.purpleTransparent,
   top: "14vh",
   left: "18vh",
   borderRadius: "0.5vh",
@@ -142,15 +125,15 @@ export const stars = style({
   width: "0.35vh",
   height: "0.35vh",
   borderRadius: "50%",
-  background: colors.star,
+  background: colors.lightYellow,
   top: "40%",
   left: "54%",
   zIndex: -3,
   boxShadow: `
-    20vh 10vh 0 ${colors.star}, -10vh 15vh 0 ${colors.star}, 15vh 20vh 0 ${colors.star}, 
-    -20vh -10vh 0 ${colors.star}, -30vh 5vh 0 ${colors.star}, 25vh -15vh 0 ${colors.star},
-    -15vh -20vh 0 ${colors.star}, 10vh -30vh 0 ${colors.star}, 5vh 25vh 0 ${colors.star},
-    -25vh 20vh 0 ${colors.star}, 30vh 15vh 0 ${colors.star}, -15vh 10vh 0 ${colors.star}
+    20vh 10vh 0 ${colors.lightYellow}, -10vh 15vh 0 ${colors.lightYellow}, 15vh 20vh 0 ${colors.lightYellow}, 
+    -20vh -10vh 0 ${colors.lightYellow}, -30vh 5vh 0 ${colors.lightYellow}, 25vh -15vh 0 ${colors.lightYellow},
+    -15vh -20vh 0 ${colors.lightYellow}, 10vh -30vh 0 ${colors.lightYellow}, 5vh 25vh 0 ${colors.lightYellow},
+    -25vh 20vh 0 ${colors.lightYellow}, 30vh 15vh 0 ${colors.lightYellow}, -15vh 10vh 0 ${colors.lightYellow}
   `,
   animation: `${starTwinkle} 3s ease-in-out infinite`,
 });
@@ -163,7 +146,7 @@ export const moon = style({
   position: "absolute",
   top: "25%",
   left: "63%",
-  backgroundColor: colors.moon,
+  backgroundColor: colors.lightDarkYellow,
   zIndex: -2,
   filter: "blur(1px)",
 });
@@ -179,7 +162,7 @@ const bushWobble = keyframes({
 export const bush = style({
   width: "160vh",
   height: "6vh",
-  background: colors.bush,
+  background: colors.darkerBlackTransparent,
   borderRadius: "50% 50% 0 0",
   position: "absolute",
   bottom: "5%",
@@ -195,8 +178,8 @@ export const calendar = style({
   position: "absolute",
   top: "17vh",
   right: "2.5vw",
-  backgroundColor: colors.calendarBackground,
-  color: colors.calendarText,
+  backgroundColor: colors.lightBlue,
+  color: colors.darkBlackGray,
   width: "12vh",
   height: "16vh",
   borderRadius: "2px",
@@ -228,7 +211,7 @@ export const calendarDot = style({
   width: "0.5vh",
   height: "0.5vh",
   borderRadius: "50%",
-  backgroundColor: colors.calendarDot,
+  backgroundColor: colors.blackGray,
   margin: "0.5vh auto",
 });
 
@@ -236,7 +219,7 @@ export const calendarDot = style({
 export const calendarDashedLine = style({
   width: "90%",
   height: "0",
-  borderTop: `1px dashed ${colors.calendarDashedLine}`,
+  borderTop: `1px dashed ${colors.blackLightGray}`,
   margin: "0.5vh 0",
 });
 
@@ -246,7 +229,7 @@ export const calendarShadowPaper = style({
   top: "1vh",
   width: "12vh",
   height: "0.5vh",
-  backgroundColor: colors.calendarShadow,
+  backgroundColor: colors.semisemiTransparent,
   borderRadius: "2px",
   zIndex: 0,
 });
@@ -256,7 +239,7 @@ export const calendarBottomLine = style({
   marginTop: "auto",
   width: "80%",
   height: "0.3vh",
-  background: `linear-gradient(to right, transparent 25%, ${colors.calendarBottomLineDark} 25%, ${colors.calendarBottomLineDark} 75%, transparent 75%)`,
+  background: `linear-gradient(to right, transparent 25%, ${colors.transparent} 25%, ${colors.transparent} 75%, transparent 75%)`,
   backgroundSize: "100% 0.1vh",
   boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1), 0 2px 0 rgba(0, 0, 0, 0.05)",
   marginBottom: "1vh",
@@ -265,7 +248,7 @@ export const calendarBottomLine = style({
 export const calendarHeader = style({
   fontSize: "2vh",
   fontWeight: "bold",
-  color: colors.calendarText,
+  color: colors.darkBlackGray,
   textAlign: "center",
   marginTop: "3vh",
 });

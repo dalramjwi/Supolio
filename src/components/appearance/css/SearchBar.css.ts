@@ -1,5 +1,6 @@
 // src/styles/searchBar.css.ts
 import { style, keyframes } from "@vanilla-extract/css";
+import * as colors from "./colors/colors.css.ts";
 
 // 깜빡이는 애니메이션 정의 (존재/사라짐, 공간 유지)
 const blink = keyframes({
@@ -15,7 +16,7 @@ export const searchContainer = style({
   width: "600px",
   padding: "18px 40px",
   borderRadius: "15px",
-  backgroundColor: "#f5f5f5",
+  backgroundColor: colors.beigeWhite,
   boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
 
   // 가운데 정렬 (기본 화면 크기에서)
@@ -47,7 +48,7 @@ export const searchContainer = style({
 
 export const placeholderText = style({
   fontSize: "20px",
-  color: "#7c85ab",
+  color: colors.lightPurpleGray,
   fontFamily: "inherit",
   display: "flex",
   alignItems: "center",
@@ -56,7 +57,7 @@ export const placeholderText = style({
 export const blinkingCursor = style({
   marginLeft: "5px",
   animation: `${blink} 1s steps(1) infinite`,
-  color: "#7c85ab",
+  color: colors.lightPurpleGray,
 });
 
 // 돋보기 아이콘 스타일
@@ -64,7 +65,7 @@ export const searchIcon = style({
   width: "20px",
   height: "20px",
   borderRadius: "50%",
-  border: "3px solid #7c85ab",
+  border: `3px solid ${colors.lightPurpleGray}`,
   position: "absolute",
   right: "30px",
   display: "flex",
@@ -77,7 +78,7 @@ export const searchIcon = style({
     content: '""',
     width: "12px", // 손잡이의 길이
     height: "3.25px", // 손잡이의 굵기
-    backgroundColor: "#7c85ab",
+    backgroundColor: colors.lightPurpleGray,
     position: "absolute",
     top: "14px",
     right: "-8.5px",
