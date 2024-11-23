@@ -21,3 +21,15 @@ export const brownTop = "#6f6046";
 export const whiteBeige = "#fbf1d8";
 export const lightBrownGray = "#C7C3B4";
 export const lightBrownDarkGray = "#6F6660";
+export const lightGreenGray = "#959fa0";
+export const darkerBlack = "#1B1A1F";
+// 색상 변수
+const colors = {
+  displayBackgroundStart: "#2C2C2C",
+  displayBackgroundEnd: "#383838",
+  arrowColor: "#A8A8A8",
+  cursor: "rgba(0, 0, 0, 0.5)",
+  keyboardBackground: "#E1E6E8",
+  keyBackground: "#4E555A",
+  trackpadBackground: "#C7D3D7",
+};

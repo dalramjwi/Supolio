@@ -149,7 +149,7 @@ export const keyboard = style({
   width: "100%",
   backgroundColor: colors.lightBlue,
   borderRadius: "10px",
-  boxShadow: `inset 0 -15px 0 0 #959fa0, -15px 0 0 0 ${colors.shadowGray}`,
+  boxShadow: `inset 0 -15px 0 0 ${colors.lightGreenGray}, -15px 0 0 0 ${colors.shadowGray}`,
 });
 
 // 각 키 스타일
