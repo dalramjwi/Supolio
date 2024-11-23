@@ -1,24 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
-
-// 색상 변수
-const colors = {
-  tableBackground: "white",
-  table: "#B6B6B6",
-  cupBody: "#cbcbcb ",
-  handleBorder: "#cbcbcb",
-  cupInnerBorder: "#d9d9d9fa",
-  notepadBackground: "#76888E",
-  displayBackgroundStart: "#2C2C2C",
-  displayBackgroundEnd: "#383838",
-  arrowColor: "#A8A8A8",
-  cursor: "rgba(0, 0, 0, 0.5)",
-  keyboardBackground: "#E1E6E8",
-  keyBackground: "#4E555A",
-  trackpadBackground: "#C7D3D7",
-  shadow: "rgba(150, 150, 150, 0.5)",
-  cupInner: "#816c4d",
-  cupTopBackground: "#6f6046",
-};
+import * as colors from "./colors/colors.css.ts";
 
 // 애니메이션 키프레임
 const blink = keyframes({
@@ -32,7 +13,7 @@ export const deskContainer = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-end",
-  backgroundColor: colors.tableBackground,
+  backgroundColor: colors.white,
   overflow: "hidden",
 });
 
@@ -42,10 +23,10 @@ export const table = style({
   height: "50vh",
   width: "100%",
   display: "flex",
-  backgroundColor: colors.table,
+  backgroundColor: colors.lightGray,
   borderTopLeftRadius: "7px",
   borderTopRightRadius: "7px",
-  boxShadow: `inset 0 -16px 0 0 ${colors.shadow}`,
+  boxShadow: `inset 0 -16px 0 0 ${colors.shadowGray}`,
   zIndex: "2",
 });
 
@@ -53,8 +34,8 @@ export const table = style({
 export const notepad = style({
   height: "193px",
   width: "136px",
-  background: `linear-gradient(to bottom, ${colors.notepadBackground} 0px, ${colors.notepadBackground} 34px, #ffffff 34px, #ffffff 62px, #cee8ef 62px, #cee8ef 66px, #fffefe 66px, #ffffff 90px, #cee8ef 90px, #cee8ef 94px, #ffffff 94px, #ffffff 118px, #cee8ef 118px, #cee8ef 122px, #ffffff 122px, #ffffff 146px, #cee8ef 146px, #cee8ef 150px, #ffffff 150px, #ffffff 176px, #cee8ef 176px, #cee8ef 193px)`,
-  boxShadow: `-10px 0 0 0 ${colors.shadow}`,
+  background: `linear-gradient(to bottom, ${colors.lightBlueGray} 0px, ${colors.lightBlueGray} 34px, ${colors.white} 34px, ${colors.white} 62px, #cee8ef 62px, #cee8ef 66px, #fffefe 66px, ${colors.white} 90px, #cee8ef 90px, #cee8ef 94px, ${colors.white} 94px, ${colors.white} 118px, #cee8ef 118px, #cee8ef 122px, ${colors.white} 122px, ${colors.white} 146px, #cee8ef 146px, #cee8ef 150px, ${colors.white} 150px, ${colors.white} 176px, #cee8ef 176px, #cee8ef 193px)`,
+  boxShadow: `-10px 0 0 0 ${colors.shadowGray}`,
   position: "absolute",
   bottom: "7vh",
   left: "6vw",
@@ -104,17 +85,18 @@ export const display = style({
   position: "relative",
   height: "290px",
   width: "100%",
-  background: `linear-gradient(30deg, ${colors.displayBackgroundStart} 0%, ${colors.displayBackgroundStart} 50%, ${colors.displayBackgroundEnd} 50%, ${colors.displayBackgroundEnd} 100%)`,
+  background: `linear-gradient(30deg, ${colors.darkGray} 0%, ${colors.darkGray} 50%, ${colors.darkerGray} 50%, ${colors.darkerGray} 100%)`,
   borderRadius: "10px",
   boxSizing: "border-box",
-  border: "25px solid #515555",
+  border: `25px solid ${colors.darkSlateGray}`,
 });
 
 // 화살표 스타일 (기본 부분)
 export const arrow = style({
   position: "absolute",
-  height: "12px",
+  // height: "12px",
   width: "36px",
+  backgroundColor: colors.arrowGray,
   borderRadius: "6px",
   top: "28px",
   left: "20px",
@@ -125,7 +107,7 @@ export const arrowBefore = style({
   position: "absolute",
   height: "12px",
   width: "36px",
-  backgroundColor: colors.arrowColor,
+  backgroundColor: colors.arrowGray,
   borderRadius: "6px",
   transform: "rotate(40deg)",
   top: "14px",
@@ -138,7 +120,7 @@ export const arrowAfter = style({
   position: "absolute",
   height: "12px",
   width: "36px",
-  backgroundColor: colors.arrowColor,
+  backgroundColor: colors.arrowGray,
   borderRadius: "6px",
   transform: "rotate(-40deg)",
   top: "8px",
@@ -151,7 +133,7 @@ export const cursor = style({
   height: "13px",
   width: "50px",
   borderRadius: "6px",
-  background: `${colors.cursor}`,
+  background: colors.semiTransparentBlack,
   position: "relative",
   top: "58px",
   left: "67px",
@@ -165,16 +147,16 @@ export const keyboard = style({
   position: "relative",
   height: "232px",
   width: "100%",
-  backgroundColor: colors.keyboardBackground,
+  backgroundColor: colors.lightBlue,
   borderRadius: "10px",
-  boxShadow: `inset 0 -15px 0 0 #959fa0, -15px 0 0 0 ${colors.shadow}`,
+  boxShadow: `inset 0 -15px 0 0 #959fa0, -15px 0 0 0 ${colors.shadowGray}`,
 });
 
 // 각 키 스타일
 export const key = style({
   height: "25px",
   width: "25px",
-  backgroundColor: colors.keyBackground,
+  backgroundColor: colors.deepBlue,
   borderRadius: "8px",
   position: "absolute",
 });
@@ -213,7 +195,7 @@ export const trackpad = style({
   height: "60px",
   width: "124px",
   borderRadius: "6px",
-  backgroundColor: colors.trackpadBackground,
+  backgroundColor: colors.cyan,
   position: "absolute",
   top: "134px",
   left: "167px",
@@ -223,7 +205,7 @@ export const trackpad = style({
 export const cup = style({
   height: "155px",
   width: "131px",
-  backgroundColor: colors.cupBody,
+  backgroundColor: colors.mediumGray,
   position: "absolute",
   bottom: "269px",
   left: "60px",
@@ -236,7 +218,7 @@ export const cup = style({
 export const cupShadow = style({
   height: "56px",
   width: "100px",
-  backgroundColor: colors.shadow,
+  backgroundColor: colors.shadowGray,
   borderRadius: "50%",
   position: "absolute",
   bottom: "265px",
@@ -248,10 +230,10 @@ export const cupTop = style({
   height: "97px",
   width: "131px",
   borderRadius: "50%",
-  backgroundColor: colors.cupTopBackground,
+  backgroundColor: colors.brownTop,
   boxSizing: "border-box",
-  border: `12px solid ${colors.cupInnerBorder}`,
-  boxShadow: `inset 0 50px 0 -20px ${colors.cupInner}`,
+  border: `12px solid ${colors.lightBeige}`,
+  boxShadow: `inset 0 50px 0 -20px ${colors.brownInner}`,
   position: "relative",
 });
 
@@ -259,7 +241,7 @@ export const handle = style({
   height: "66px",
   width: "60px",
   backgroundColor: "transparent",
-  border: `16px solid ${colors.handleBorder}`,
+  border: `16px solid ${colors.mediumGray}`,
   borderTopLeftRadius: "50%",
   borderBottomLeftRadius: "80% 60%",
   position: "absolute",
@@ -267,6 +249,7 @@ export const handle = style({
   left: "-31px",
   zIndex: "-1",
 });
+
 export const cupLocation = style({
   position: "absolute",
   top: "49vh",
