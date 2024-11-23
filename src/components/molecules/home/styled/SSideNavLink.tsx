@@ -45,7 +45,7 @@ const SSideNavLink: React.FC = () => {
               styles.subMenuColors.projects
             } ${isCurrentPath("/main") ? styles.grayScale : ""}`}
           >
-            Read ME
+            About ME
           </CustomNavLink>
         </>
       )}
