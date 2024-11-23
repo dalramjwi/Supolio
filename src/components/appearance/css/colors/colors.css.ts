@@ -1,0 +1,17 @@
+// colors.css.ts
+export const white = "white";
+export const lightGray = "#B6B6B6";
+export const mediumGray = "#cbcbcb";
+export const lightBeige = "#d9d9d9fa";
+export const lightBlueGray = "#76888E";
+export const darkGray = "#2C2C2C";
+export const darkerGray = "#383838";
+export const darkSlateGray = "#515555";
+export const arrowGray = "#A8A8A8";
+export const semiTransparentBlack = "rgba(0, 0, 0, 0.5)";
+export const lightBlue = "#E1E6E8";
+export const deepBlue = "#4E555A";
+export const cyan = "#C7D3D7";
+export const shadowGray = "rgba(150, 150, 150, 0.5)";
+export const brownInner = "#816c4d";
+export const brownTop = "#6f6046";
