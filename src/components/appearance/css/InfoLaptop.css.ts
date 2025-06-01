@@ -24,10 +24,10 @@ export const infodesk = style({
   zIndex: 2,
   "@media": {
     "screen and (max-width: 768px)": {
-      height: "30vh", // 태블릿에서 높이 증가
+      height: "30vh",
     },
     "screen and (max-width: 480px)": {
-      height: "35vh", // 모바일에서 높이 증가
+      height: "35vh",
     },
   },
 });
@@ -45,7 +45,7 @@ export const laptopContainer = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  zIndex: 10, // 최상단으로 설정
+  zIndex: 10,
   "@media": {
     "screen and (max-width: 768px)": {
       width: "80vw",
@@ -62,7 +62,7 @@ export const laptopContainer = style({
 export const notebook = style({
   width: "100%",
   position: "relative",
-  aspectRatio: "16/10", // 노트북에 더 적합한 비율
+  aspectRatio: "16/10",
   zIndex: 10,
 });
 
@@ -73,13 +73,15 @@ export const display = style({
   left: "0",
   width: "100%",
   height: "100%",
-  background: `linear-gradient(30deg, ${colors.darkGray} 0%, ${colors.darkGray} 50%, ${colors.darkerGray} 50%, ${colors.darkerGray} 100%)`,
+  background: `url(https://images.frandroid.com/wp-content/uploads/2019/12/windows-10-wallpaper.jpg) center/cover no-repeat`,
   borderRadius: "10px",
   boxSizing: "border-box",
   border: `25px solid ${colors.darkSlateGray}`,
   display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  gap: "20px",
   "@media": {
     "screen and (max-width: 768px)": {
       border: `20px solid ${colors.darkSlateGray}`,
@@ -90,67 +92,156 @@ export const display = style({
   },
 });
 
-// Keyboard style
-export const keyboard = style({
-  position: "absolute",
-  left: "0",
-  width: "100%",
-  backgroundColor: colors.lightBlue,
-  borderRadius: "10px",
-  boxShadow: `inset 0 -15px 0 0 ${colors.lightGreenGray}`,
-  bottom: "-40%",
-  height: "40%",
-  "@media": {
-    "screen and (max-width: 768px)": {
-      bottom: "-35%",
-      height: "35%",
-    },
-    "screen and (max-width: 480px)": {
-      bottom: "-30%",
-      height: "30%",
-    },
-  },
-});
-
-// Display content style
-export const displayContent = style({
+// 아이콘 스타일 (세로 정렬)
+export const desktop = style({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   alignItems: "center",
-  height: "100%",
-  gap: "10px",
-  color: colors.lightGray,
-  "@media": {
-    "screen and (max-width: 768px)": {
-      gap: "8px",
-    },
-    "screen and (max-width: 480px)": {
-      gap: "6px",
-    },
-  },
+  gap: "20px",
+  color: "white",
 });
 
-// 컨테이너 스케일 조정
-export const responsiveContainer = style({
-  position: "relative",
-  width: "100%",
-  maxWidth: "1200px",
-  margin: "0 auto",
-  overflow: "visible", // 노트북이 desk 위에 올라가도록
+export const iconDesktop = style({
+  width: "70px",
+  margin: "10px",
+  textAlign: "center",
+  cursor: "pointer",
+  color: "white",
+  marginLeft: "2vw",
+  marginTop: "2vw",
+});
+
+export const iconDesktopLink = style({
+  textDecoration: "none",
+  color: "white",
+});
+
+export const iconDesktopImg = style({
+  width: "48px",
+  height: "48px",
+});
+
+export const iconDesktopLabel = style({
+  fontSize: "11px",
+  display: "block",
+  marginTop: "5px",
+});
+
+// 크롬 팝업 스타일
+export const chromePopup = style({
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "900px",
+  height: "500px",
+  background: "white",
+  border: "2px solid #004275",
   zIndex: 10,
-  "@media": {
-    "screen and (max-width: 1440px)": {
-      transform: "scale(0.95)",
-    },
-    "screen and (max-width: 1024px)": {
-      transform: "scale(0.85)",
-    },
-    "screen and (max-width: 768px)": {
-      transform: "scale(0.75)",
-    },
-    "screen and (max-width: 480px)": {
-      transform: "scale(0.65)",
-    },
-  },
+  overflow: "hidden",
+  display: "none",
+});
+
+export const chromePopupVisible = style({
+  display: "block",
+});
+
+export const iframe = style({
+  width: "100%",
+  height: "100%",
+  border: "none",
+});
+
+// 태스크바 스타일
+// export const taskbar = style({
+//   position: "absolute",
+//   bottom: 0,
+//   height: "43px",
+//   width: "100%",
+//   background: "#004172",
+//   display: "flex",
+//   justifyContent: "space-between",
+// });
+// taskbar + blur 오버레이 통합 구성
+// InfoLaptop.css.ts – taskbar 관련 style 수정 및 추가
+export const taskbar = style({
+  position: "absolute",
+  bottom: 0,
+  width: "100%",
+  height: "43px",
+  zIndex: 10,
+  overflow: "hidden",
+});
+
+// 블러 배경 (더 강한 투명 느낌)
+export const taskbarBlurOverlay = style({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundImage:
+    "url('https://images.frandroid.com/wp-content/uploads/2019/12/windows-10-wallpaper.jpg')",
+  backgroundAttachment: "fixed",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  filter: "blur(6px)",
+  opacity: 0.5,
+  zIndex: 1,
+});
+
+// 상단 1px 검정 테두리 + 투명 그라데이션
+export const taskbarOverlayTint = style({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  background:
+    "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%)",
+  borderTop: "1px solid black",
+  zIndex: 2,
+});
+
+// 실제 아이콘/시간 등 내용 표시 영역
+export const taskbarContent = style({
+  position: "relative",
+  zIndex: 3,
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+});
+
+export const taskbarLeft = style({
+  display: "flex",
+  alignItems: "center",
+});
+
+export const taskbarRight = style({
+  display: "flex",
+  alignItems: "center",
+});
+
+export const taskbarIcon = style({
+  width: "49px",
+  height: "43px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "contain",
+  cursor: "pointer",
+});
+
+export const datetime = style({
+  color: "white",
+  textAlign: "center",
+  fontSize: "11.3px",
+  lineHeight: 1.2,
+  padding: "0 10px",
 });
